@@ -25,10 +25,17 @@ function FAQ() {
 
   const content = faqData.map((item) => {
     return (
-      <details className="" key={item.id}>
-        <summary className="">{item.question}</summary>
-        {item.answer}
-      </details>
+      <>
+        <div className="background--shadow">
+          <details
+            className="mt-5 mb-5 rounded-lg p-2 text-gray-500 outline outline-2 outline-black"
+            key={item.id}
+          >
+            <summary className="text-dark-grey">{item.question}</summary>
+            {item.answer}
+          </details>
+        </div>
+      </>
     );
   });
 
