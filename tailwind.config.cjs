@@ -17,6 +17,9 @@ module.exports = {
         "off-white": "#D9D9D9",
         "dark-grey": "#2D2D2D",
       },
+      boxShadow: {
+        'answer': '3px 3px 1px black'
+      },
       fontFamily: {
         inter: [`inter`, "serif"],
       },
