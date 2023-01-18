@@ -10,7 +10,7 @@ function App() {
   const location = useLocation();
 
   return (
-    <>
+    <div className=" md:p-16">
       <Header />
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home />} />
@@ -18,7 +18,7 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
-    </>
+    </div>
   );
 }
 
