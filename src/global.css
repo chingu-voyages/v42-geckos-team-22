@@ -3,6 +3,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .btn-answer-primary {
+    @apply bg-light-orange border border-black h-1/3 m-2 hover:bg-green;
+  }
+}
+
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   background-color: #f7f7f7;
