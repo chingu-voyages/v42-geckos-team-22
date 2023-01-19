@@ -11,9 +11,9 @@ function Game () {
                 </button>
                 <div className='flex justify-center md:border-4 md:border-black md:flex-grow md:h-96'>
                     <div className='m-1 md:flex-1 md:flex md:justify-center'>
-                        <img className='' src='src\assets\card3.jpg' alt='Three' />
+                        <img className='md:ml-10' src='src\assets\card3.jpg' alt='Three' />
                     </div>
-                    <button type='button' className='hidden md:flex md:mr-1 md:mt-1'>
+                    <button type='button' className='hidden max-h-14 max-w-14 md:flex md:mr-1 md:mt-2'>
                         <img className='' src='src\assets\btn-more-options.png' />
                     </button>
                 </div>
