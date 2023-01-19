@@ -1,4 +1,5 @@
 import React from 'react';
+import { MoreOptions } from '../GameComponents/utilities';
 
 function GamePlayWindow () {
 
@@ -7,9 +8,7 @@ function GamePlayWindow () {
             <div className='m-1 md:flex-1 md:flex md:justify-center'>
                 <img className='md:ml-10' src='src\assets\card3.jpg' alt='Three' />
             </div>
-            <button type='button' className='hidden max-h-14 max-w-14 md:flex md:mr-1 md:mt-2'>
-                <img className='' src='src\assets\btn-more-options.png' />
-            </button>
+            <MoreOptions cname='hidden max-h-14 max-w-14 md:flex md:mr-1 md:mt-2'/>
         </div>
     )
 }
