@@ -1,9 +1,9 @@
 import React from 'react';
 
-function GameHeading () {
+function GameHeading (props) {
 
     return (
-        <div>
+        <div className={props.cname}>
             <p>Flashy Flash Card</p>
         </div>
     )

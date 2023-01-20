@@ -1,10 +1,10 @@
 import React from "react";
 import { SkipLeft, SkipRight, MoreOptions } from '../GameComponents/utilities';
 
-function GameControls () {
+function GameControls (props) {
 
     return (
-        <div className='flex justify-around items-center m-1 md:hidden'>
+        <div className={props.cname}>
             <SkipLeft cname='flex-none'/>
             <MoreOptions cname='flex-none' />
             <SkipRight cname='flex-none' />

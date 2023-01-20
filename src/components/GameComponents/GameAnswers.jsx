@@ -1,9 +1,9 @@
 import React from 'react';
 
-function GameAnswers () {
+function GameAnswers (props) {
 
     return (
-        <div className='flex flex-col md:flex-row px-12 md:-my-10 md:h-44 md:mx-6'>
+        <div className={props.cname}>
             <button type='button' className='btn-answer flex-1'>
                 <span className='btn-answer-text'>
                     ONE
