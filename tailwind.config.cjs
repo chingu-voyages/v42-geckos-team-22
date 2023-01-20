@@ -24,6 +24,13 @@ module.exports = {
         "off-white": "#D9D9D9",
         "dark-grey": "#2D2D2D",
       },
+      flexGrow: {
+        '0' : 0,
+        '1' : 1,
+        '2' : 2,
+        '3' : 3,
+        '4' : 4,
+      },
       boxShadow: {
         'answer': '3px 3px 1px black'
       },
