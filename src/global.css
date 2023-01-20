@@ -31,3 +31,7 @@ body {
   overflow-x: hidden;
   font-family: "Inter", sans-serif;
 }
+
+.burgerMenu {
+  @apply ml-[0.6rem] block h-1 w-7 bg-stone-200;
+}
