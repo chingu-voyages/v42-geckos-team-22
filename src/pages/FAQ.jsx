@@ -60,7 +60,7 @@ function FAQ() {
           Frequently
         </span>
         <span className="hidden pl-36 text-5xl font-light md:block lg:pl-72 lg:pt-8 lg:text-7xl">
-          asked question
+          asked questions
         </span>
       </section>
       {content}
