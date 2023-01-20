@@ -1,13 +1,13 @@
 import React from 'react';
 
-function GameLoadingWindow ({setGameState}) {
+function GameLoadingWindow ({setGameState}, props) {
 
     setTimeout(() => {
         setGameState("play")
       }, 3000);
 
     return (
-        <div className='flex justify-center md:border-4 md:border-black md:flex-grow md:h-96'>
+        <div className={props.cname}>
             <p>Loading...</p>
         </div>
     )

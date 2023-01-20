@@ -1,9 +1,9 @@
 import React from 'react';
 
-function GameLandingWindow ({handlePlayGame}) {
+function GameLandingWindow ({handlePlayGame}, props) {
 
     return (
-        <div className='flex justify-center md:border-4 md:border-black md:flex-grow md:h-96'>
+        <div className={props.cname}>
             
             <button onClick={handlePlayGame}>
                 <span>Play</span>

@@ -31,8 +31,16 @@ function Game () {
                     </div>
                     <GameControls cname='flex justify-around items-center m-1 md:hidden row-span-2'/>
                 </>
-            : gameState == "loading" ? <GameLoadingWindow setGameState={setGameState}/>
-            : gameState == "landing" ? <GameLandingWindow handlePlayGame={handlePlayGame}/>
+            : gameState == "loading" 
+                ? <GameLoadingWindow 
+                    setGameState={setGameState} 
+                    cname='flex justify-center md:border-4 md:border-black md:flex-grow md:h-96'
+                    />
+            : gameState == "landing" 
+                ? <GameLandingWindow 
+                    handlePlayGame={handlePlayGame}
+                    cname='row-span-6 flex justify-center md:border-4 md:border-black md:flex-grow md:h-96'
+                    />
             : null
                 }
         </div>
