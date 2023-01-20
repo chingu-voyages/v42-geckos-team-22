@@ -12,6 +12,18 @@
   }
 }
 
+@layer utilities {
+  .header-stripes {
+    background: 
+    repeating-linear-gradient(
+    -45deg,
+    #D3332E,
+    #D3332E 2px,
+    #EF3E38 5px,
+    #EF3E38 20px
+  );
+  }
+}
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   background-color: #f7f7f7;
