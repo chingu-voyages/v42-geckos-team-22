@@ -33,7 +33,7 @@ function NotFound() {
           <line
             enableBackground="new"
             fill="none"
-            opacity="0.17"
+            opacity=".17"
             stroke="#6E6E96"
             strokeLinecap="round"
             strokeLinejoin="round"
