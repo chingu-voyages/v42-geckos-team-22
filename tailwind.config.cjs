@@ -27,7 +27,7 @@ module.exports = {
         slideleft: "slideleft 1s ease-in-out",
         slideright: "slideright 1s ease-in-out",
         wave: "wave 1.2s linear infinite",
-        float: "hoverMe 2.5s infinite",
+        float: "float 2.5s infinite",
       },
       keyframes: {
         slideleft: {

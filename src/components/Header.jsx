@@ -13,7 +13,7 @@ function Header() {
           </Link>
         </li>
         <li
-          onClick={{}}
+          // onClick={{}}
           className="my-2 flex h-10 w-12 cursor-pointer flex-col gap-y-1 shadow hover:bg-light-orange focus:outline-none"
         >
           <span className="burgerMenu mt-2"></span>
