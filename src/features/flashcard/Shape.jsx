@@ -1,13 +1,9 @@
 import React from "react";
-import { DropDown } from "../components/DropDown";
 
-function Home() {
+export const Shape = () => {
   return (
     <div className="grid h-screen place-items-center text-4xl font-bold">
-      HOME PAGE
-      <DropDown />
+      Shape Game Component
     </div>
   );
-}
-
-export default Home;
+};

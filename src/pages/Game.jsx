@@ -1,13 +1,11 @@
 import React from "react";
-import { DropDown } from "../components/DropDown";
 
-function Home() {
+function Game() {
   return (
     <div className="grid h-screen place-items-center text-4xl font-bold">
-      HOME PAGE
-      <DropDown />
+      THIS IS THE MAIN GAME PAGE
     </div>
   );
 }
 
-export default Home;
+export default Game;
