@@ -1,14 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
-function GameLoadingWindow ({setGameState}, props) {
 
-    setTimeout(() => {
-        setGameState("play")
-      }, 3000);
+function GameLoadingWindow (props) {
 
+    const [progress, setProgress ] = useState(0)
+
+    useEffect(() => {
+        setInterval(() => {
+            setProgress(prev => prev + 5)
+        }, 100);
+    }, [])
+
+    if(progress >= 100) {
+        props.setGameState("play")
+    }
+
+      console.log("progress", progress)
     return (
         <div className={props.cname}>
-            <p>Loading...</p>
+            <div className='grow-2 w-full bg-black' />
+            <div className='grow-4 flex flex-col justify-center text-center mx-10'>   
+                <p className='text-7xl my-4'>Loading...</p>
+                <div className="w-full h-16 bg-white border-2 border-black flex flex-col justify-center">
+                    <div className="h-12 hashed-progress" style={{width: `${progress}%`} }/>   
+                </div>
+            </div>
         </div>
     )
 }

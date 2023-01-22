@@ -10,6 +10,13 @@
   .btn-answer-text {
     @apply text-xl font-bold tracking-wide;
   }
+  .game-window {
+    @apply row-span-6 flex justify-center md:border-4 md:border-black md:flex-grow md:h-96
+  }
+  .game-window__border {
+    @apply m-1 border-4 border-black h-4/6 mb-6 mt-12 mx-3 md:border-0 grid grid-rows-4
+  }
+
 }
 
 @layer utilities {
@@ -22,6 +29,10 @@
     #EF3E38 5px,
     #EF3E38 20px
   );
+  }
+  .hashed-progress {
+    background:
+    repeating-linear-gradient(90deg,#D9D9D9 0 28px, transparent 0 34px) bottom;
   }
 }
 

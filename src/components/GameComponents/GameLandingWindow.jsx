@@ -1,12 +1,15 @@
 import React from 'react';
 
-function GameLandingWindow ({handlePlayGame}, props) {
+function GameLandingWindow (props) {
 
     return (
         <div className={props.cname}>
             
-            <button onClick={handlePlayGame}>
-                <span>Play</span>
+            <button 
+                className='btn-answer flex-initial mx-10'
+                type='button'
+                onClick={props.handlePlayGame}>
+                <span className='btn-answer-text'>Play</span>
             </button>
         </div>
     )

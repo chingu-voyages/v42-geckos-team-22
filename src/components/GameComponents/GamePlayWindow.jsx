@@ -1,10 +1,10 @@
 import React from 'react';
 import { MoreOptions } from '../GameComponents/utilities';
 
-function GamePlayWindow () {
+function GamePlayWindow (props) {
 
     return (
-        <div className='flex justify-center md:border-4 md:border-black md:flex-grow md:h-96'>
+        <div className={props.cname}>
             <div className='m-1 md:flex-1 md:flex md:justify-center'>
                 <img className='md:ml-10' src='src\assets\card3.jpg' alt='Three' />
             </div>

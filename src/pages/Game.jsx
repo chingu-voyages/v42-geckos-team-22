@@ -21,10 +21,10 @@ function Game () {
             <div className='container mx-auto md:row-span-4 row-span-4'>
                 { gameState == "play"
                     ? <div className=''>
-                        <div className='m-1 border-4 border-black h-4/6 mb-6 mt-12 mx-3 md:border-0 grid grid-rows-4' >
+                        <div className='game-window__border' >
                             <div className='md:flex row-span-3'>
                             <SkipLeft cname='hidden md:block md:mr-1' />
-                            <GamePlayWindow />   
+                            <GamePlayWindow cname='game-window'/>   
                             <SkipRight cname='hidden md:block md:ml-1' />
                             </div>
                             <GameAnswers cname='flex flex-col md:flex-row px-12 md:-my-10 md:h-44 md:mx-6 row-span-1'/>
@@ -32,15 +32,19 @@ function Game () {
                         <GameControls cname='flex justify-around items-center m-1 md:hidden row-span-2'/>
                     </div>
                 : gameState == "loading" 
-                    ? <GameLoadingWindow 
+                    ? <div className='game-window__border my-10 min-h-full'>
+                        <GameLoadingWindow 
                         setGameState={setGameState} 
-                        cname='flex justify-center md:border-4 md:border-black md:flex-grow md:h-96'
+                        cname='game-window flex flex-col'
                         />
-                : gameState == "landing" 
-                    ? <GameLandingWindow 
+                    </div>
+                : gameState == "landing"
+                    ? <div className='game-window__border my-10 min-h-full'>
+                        <GameLandingWindow 
                         handlePlayGame={handlePlayGame}
-                        cname='row-span-6 flex justify-center md:border-4 md:border-black md:flex-grow md:h-96'
+                        cname='game-window flex flex-col'
                         />
+                    </div>
                 : null
                     }
             </div>
