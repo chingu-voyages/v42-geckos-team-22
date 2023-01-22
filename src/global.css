@@ -41,5 +41,5 @@ body {
 }
 
 .dropDownIcons {
-  @apply mr-1 rounded bg-turquoise p-1;
+  @apply mx-1 rounded bg-turquoise;
 }

@@ -6,7 +6,7 @@ import { RiHome2Fill } from "react-icons/ri";
 import { DropDown } from "./DropDown";
 
 function Header() {
-  const [expandDropDown, setExpandDropDown] = useState(null);
+  const [expandDropDown, setExpandDropDown] = useState(false);
   const [showMobileNav, setShowMobileNav] = useState(false);
 
   return (
@@ -19,7 +19,7 @@ function Header() {
         </li>
         <li
           onClick={() => setShowMobileNav(!showMobileNav)}
-          className="my-2 flex h-10 w-12 cursor-pointer flex-col gap-y-[0.32rem] shadow hover:bg-light-orange focus:outline-none"
+          className="my-2 flex h-10 w-12 cursor-pointer flex-col gap-y-[0.32rem] shadow hover:bg-red-orange focus:outline-none"
         >
           <span className="burgerMenu mt-2"></span>
           <span className="burgerMenu"></span>
@@ -34,9 +34,16 @@ function Header() {
           <li>
             <NavLink to="/">home</NavLink>
           </li>
-          <li className="flex flex-row items-center">
-            <NavLink>game type</NavLink>
-            <BsCaretDownFill />
+          <li
+            onMouseLeave={() => setExpandDropDown(false)}
+            onMouseEnter={() => setExpandDropDown(true)}
+            className="cursor-pointer uppercase"
+          >
+            <span className="flex flex-row items-center">
+              <p>game type</p>
+              <BsCaretDownFill />
+            </span>
+            {expandDropDown && <DropDown />}
           </li>
           <li>
             <NavLink to="/faq">faq</NavLink>
