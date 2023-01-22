@@ -35,8 +35,8 @@ function Header() {
             <NavLink to="/">home</NavLink>
           </li>
           <li
+            onMouseEnter={() => setExpandDropDown(!expandDropDown)}
             onMouseLeave={() => setExpandDropDown(false)}
-            onMouseEnter={() => setExpandDropDown(true)}
             className="cursor-pointer uppercase"
           >
             <span className="flex flex-row items-center">

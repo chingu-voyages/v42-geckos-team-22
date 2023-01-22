@@ -24,7 +24,7 @@ module.exports = {
         inter: [`inter`, "serif"],
       },
       animation: {
-        dropDown: "dropDown 400ms ease-out",
+        dropDown: "dropDown 300ms ease-out",
         slideOut: "slideOut 400ms ease-in",
         slideIn: "slideIn 400ms ease-out",
         wave: "wave 1.2s linear infinite",
@@ -32,7 +32,7 @@ module.exports = {
       },
       keyframes: {
         dropDown: {
-          from: { opacity: 0, transform: "translateY(-100%)" },
+          from: { opacity: 0, transform: "translateY(-10%)" },
           to: { opacity: 1, transform: "translateY(0)" },
         },
         slideOut: {
