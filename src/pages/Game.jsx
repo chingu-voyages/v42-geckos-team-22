@@ -16,8 +16,8 @@ function Game () {
     }
     
     return(
-        <div className='grid grid-rows-6'>
-            <GameHeading cname='hidden md:block md:border-2 md:border-black md:row-span-2 md:flex'/> 
+        <div className='grid grid-rows-3'>
+            <GameHeading cname='hidden md:block md:border-2 md:border-black md:row-span-1 md:flex  max-h-72'/> 
             <div className='container mx-auto md:row-span-4 row-span-4'>
                 { gameState == "play"
                     ? <div className=''>
