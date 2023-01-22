@@ -6,29 +6,29 @@ import { FaShapes } from "react-icons/fa";
 
 export const DropDown = () => {
   return (
-    <ul className="uppercase">
-      <li>
-        <Link to="/game/color" className="flex flex-row">
+    <ul className="bg-red-orange uppercase text-white">
+      <li className="hover:bg-orange">
+        <Link to="/game/color" className="dropDown">
+          <IoColorPaletteSharp className="dropDownIcons" />
           <p>colors</p>
-          <IoColorPaletteSharp />
         </Link>
       </li>
-      <li>
-        <Link to="/game/letter" className="flex flex-row">
-          letters
-          <TbLetterCase />
+      <li className="hover:bg-orange">
+        <Link to="/game/letter" className="dropDown">
+          <TbLetterCase className="dropDownIcons" />
+          <p>letters</p>
         </Link>
       </li>
-      <li>
-        <Link to="/game/number" className="flex flex-row">
+      <li className="hover:bg-orange">
+        <Link to="/game/number" className="dropDown">
+          <TbNumbers className="dropDownIcons" />
           numbers
-          <TbNumbers />
         </Link>
       </li>
-      <li>
-        <Link to="/game/shape" className="flex flex-row">
+      <li className="hover:bg-orange">
+        <Link to="/game/shape" className="dropDown">
+          <FaShapes className="dropDownIcons" />
           shapes
-          <FaShapes />
         </Link>
       </li>
     </ul>
