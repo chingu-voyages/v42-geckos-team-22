@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer/Footer";
 import Home from "../src/pages/Home";
 import Game from "../src/pages/Game";
 import FAQ from "../src/pages/FAQ";
