@@ -18,9 +18,9 @@ function GameLoadingWindow (props) {
       console.log("progress", progress)
     return (
         <div className={props.cname}>
-            <div className='grow-2 w-full bg-black' />
+            <div className='grow-2 w-full bg-red-orange' />
             <div className='grow-4 flex flex-col justify-center text-center mx-10'>   
-                <p className='text-7xl my-4'>Loading...</p>
+                <p className='text-7xl'>Loading...</p>
                 <div className="w-full h-16 bg-white border-2 border-black flex flex-col justify-center">
                     <div className="h-12 hashed-progress" style={{width: `${progress}%`} }/>   
                 </div>

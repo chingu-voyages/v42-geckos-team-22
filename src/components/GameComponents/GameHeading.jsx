@@ -4,6 +4,7 @@ import Logo from '../../assets/FlashyLogo.png'
 function GameHeading (props) {
 
     const PERSONNAME = "PERSON NAME"
+    
     return (
         <div className={props.cname}>
             <div className='border-2 border-black  md:w-2/5 lg:w-1/5 aspect-square bg-light-orange flex flex-col justify-around'>
