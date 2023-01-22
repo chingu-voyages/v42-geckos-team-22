@@ -3,6 +3,7 @@ import Logo from '../../assets/FlashyLogo.png'
 
 function GameHeading (props) {
 
+    const PERSONNAME = "PERSON NAME"
     return (
         <div className={props.cname}>
             <div className='border-2 border-black  md:w-2/5 lg:w-1/5 aspect-square bg-light-orange flex flex-col justify-around'>
@@ -11,7 +12,7 @@ function GameHeading (props) {
                     <img src='src\assets\profile-dots.png' className='absolute z-10'/>
                 </div>
                 <div className='flex flex-col justify-center'>
-                    <p className='font-semibold text-2xl text-center'>PERSON NAME</p>
+                    <p className='font-semibold text-2xl text-center'>{PERSONNAME}</p>
                 </div>
             </div>
             <div className='z-20 border-2 border-black flex-auto md:w-4/5 bg-red-orange flex justify-around header-stripes'>
