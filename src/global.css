@@ -37,7 +37,7 @@ body {
 }
 
 .dropDown {
-  @apply flex flex-row items-center justify-start;
+  @apply flex flex-row items-center justify-center md:justify-start;
 }
 
 .dropDownIcons {
