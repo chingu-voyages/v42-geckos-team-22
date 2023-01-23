@@ -45,5 +45,9 @@ body {
 }
 
 .socialIcons {
-  @apply cursor-pointer rounded-full bg-gray-200 p-2 text-4xl text-turquoise hover:bg-gray-100;
+  @apply cursor-pointer rounded-full bg-gray-300 p-2 text-4xl text-turquoise hover:bg-gray-100;
+}
+
+.footerLinks {
+  @apply cursor-pointer hover:text-gray-100;
 }
