@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { increment } from './../redux/slices/testSlice'
+import { increment, decrement } from './../redux/slices/testSlice'
 
 function Home() {
 
@@ -9,15 +9,32 @@ function Home() {
 
   const handleCounterAdd = () => {
     dispatch(increment())
-    console.log("in Home")
+    console.log("in Home increment")
+  }
+
+  const handleCounterDec = () => {
+    dispatch(decrement())
+    console.log("in Home decrement")
   }
 
   return (
     <div>
       <h2>HOME PAGE</h2>
-      <button onClick={() => dispatch(increment())}>Counter Add</button>
+      <button 
+        onClick={() => dispatch(increment())}
+        className='border-2 border-black m-10'
+      >
+        Counter Add
+      </button>
 
-      <div>
+      <button 
+        onClick={() => dispatch(decrement())}
+        className='border-2 border-black m-10'
+      >
+        Counter Dec
+      </button>
+
+      <div className='m-10'>
         <p>the counter is: </p>{counter}
       </div>
     </div>
