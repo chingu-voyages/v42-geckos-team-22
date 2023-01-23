@@ -10,6 +10,9 @@ module.exports = {
       '6': '6px',
     },
     extend: {
+      backgroundImage: {
+        bg_nav: "url('/src/assets/bg_nav.svg')",
+      },
       colors: {
         turquoise: "#16ABAC",
         "light-orange": "#FCA02D",
@@ -42,6 +45,7 @@ module.exports = {
         slideleft: "slideleft 1s ease-in-out",
         slideright: "slideright 1s ease-in-out",
         wave: "wave 1.2s linear infinite",
+        float: "float 2.5s infinite",
       },
       keyframes: {
         slideleft: {
@@ -56,6 +60,11 @@ module.exports = {
           "0%": { transform: "scale(0)" },
           "50%": { transform: "scale(1)" },
           "100%": { transform: "scale(0)" },
+        },
+        float: {
+          "33% ": { transform: "translateY(0px)" },
+          "66% ": { transform: "translateY(20px)" },
+          "100% ": { transform: "translateY(0px)" },
         },
       },
     },
