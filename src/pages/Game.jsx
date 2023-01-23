@@ -18,7 +18,7 @@ function Game () {
     return(
         <div className='grid grid-rows-3'>
             <GameHeading cname='hidden md:block md:border-2 md:border-black md:row-span-1 md:flex  max-h-72'/> 
-            <div className='container mx-auto md:row-span-4 row-span-4'>
+            <div className='container mx-auto md:row-span-4' >
                 { gameState == "play"
                     ? <div className=''>
                         <div className='game-window__border' >
@@ -32,14 +32,14 @@ function Game () {
                         <GameControls cname='flex justify-around items-center m-1 md:hidden row-span-2'/>
                     </div>
                 : gameState == "loading" 
-                    ? <div className='game-window__border my-10 min-h-full'>
+                    ? <div className='game-window__border my-10'>
                         <GameLoadingWindow 
                         setGameState={setGameState} 
                         cname='game-window flex flex-col'
                         />
                     </div>
                 : gameState == "landing"
-                    ? <div className='game-window__border my-10 min-h-full'>
+                    ? <div className='game-window__border my-10'>
                         <GameLandingWindow 
                         handlePlayGame={handlePlayGame}
                         cname='game-window flex flex-col'
