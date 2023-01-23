@@ -2,19 +2,35 @@ import React from 'react';
 
 function GameAnswers (props) {
 
+    const handleAnswer = () => {
+        props.setGameState('end')
+    }
+
     return (
         <div className={props.cname}>
-            <button type='button' className='btn-answer flex-1'>
+            <button 
+                onClick={handleAnswer}
+                type='button' 
+                className='btn-answer flex-1'
+            >
                 <span className='btn-answer-text'>
                     ONE
                 </span>
             </button>
-            <button type='button' className='btn-answer flex-1'>
+            <button
+                onClick={handleAnswer} 
+                type='button' 
+                className='btn-answer flex-1'
+            >
                 <span className='btn-answer-text'>
                     TWO
                 </span>
             </button>
-            <button type='button' className='btn-answer flex-1'>
+            <button 
+                onClick={handleAnswer}
+                type='button' 
+                className='btn-answer flex-1'
+            >
                 <span className='btn-answer-text'>
                     THREE
                 </span>
