@@ -35,4 +35,6 @@ body {
 .background--shadow {
   box-shadow: 8px 9px rgb(2, 3, 3);
   border-radius: 10px;
+.burgerMenu {
+  @apply ml-[0.6rem] block h-1 w-7 bg-stone-200;
 }
