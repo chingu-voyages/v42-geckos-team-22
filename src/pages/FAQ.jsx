@@ -28,10 +28,12 @@ function FAQ() {
       <>
         <div className="background--shadow">
           <details
-            className="mt-5 mb-5 cursor-pointer rounded-lg p-2 text-gray-500 outline outline-2 outline-black hover:bg-gray-200 md:mt-0 md:mb-14 md:p-10"
+            className="mt-5 mb-5 rounded-lg p-2 text-gray-500 outline outline-2 outline-black hover:bg-gray-200 md:mt-0 md:mb-14 md:p-10"
             key={item.id}
           >
-            <summary className="text-dark-grey">{item.question}</summary>
+            <summary className="cursor-pointer text-dark-grey">
+              {item.question}
+            </summary>
             {item.answer}
           </details>
         </div>
