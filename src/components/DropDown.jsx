@@ -22,13 +22,13 @@ export const DropDown = () => {
       <li className="w-full py-4 hover:bg-orange">
         <Link to="/game/number" className="dropDown">
           <TbNumbers className="dropDownIcons" />
-          numbers
+          <p>numbers</p>
         </Link>
       </li>
       <li className="w-full py-4 hover:bg-orange">
         <Link to="/game/shape" className="dropDown">
           <FaShapes className="dropDownIcons" />
-          shapes
+          <p>shapes</p>
         </Link>
       </li>
     </ul>

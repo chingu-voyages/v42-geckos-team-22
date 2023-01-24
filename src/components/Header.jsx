@@ -40,7 +40,7 @@ function Header() {
             className="cursor-pointer uppercase"
           >
             <span className="flex flex-row items-center">
-              <p>game type</p>
+              <Link to="/game">game type</Link>
               <BsCaretDownFill />
             </span>
             {expandDropDown && <DropDown />}
