@@ -19,7 +19,7 @@ export default function SuccessModal({ toggleModal, showModal }) {
           >
             <img
               src="src/assets/pawl.svg"
-              className="absolute right-6 top-6 w-12"
+              className="absolute right-6 top-6 w-12 z-50"
               alt="pawl"
               onClick={toggleModal}
             />
