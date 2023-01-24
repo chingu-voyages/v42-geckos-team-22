@@ -9,16 +9,6 @@ function Footer() {
     <footer className="w-screen bg-turquoise text-gray-300">
       <div className="w-full pt-20 md:flex md:flex-row md:justify-evenly md:px-40 md:pb-20">
         <div className="md:mr-80 md:flex md:flex-col">
-          <div className="mb-10 flex flex-col items-center justify-center gap-y-4 md:items-start">
-            <h2 className="text-lg font-bold uppercase text-gray-200">
-              download
-            </h2>
-            <figure className="flex flex-row flex-wrap">
-              <PlayStore />
-              <AppStore />
-            </figure>
-          </div>
-
           <div className="mb-10 flex flex-col items-center justify-center gap-y-4 md:mb-0 md:items-start">
             <h2 className="text-lg font-bold uppercase text-gray-200">
               connect
@@ -49,23 +39,6 @@ function Footer() {
             <li className="footerLinks">About Us</li>
             <li className="footerLinks">Careers</li>
             <li className="footerLinks">Terms of Use</li>
-            <li className="my-4">
-              <span className="flex flex-col items-center justify-center md:items-start">
-                <p>42 Developer Street</p>
-                <p>San Francisco, CA 94105</p>
-              </span>
-            </li>
-            <li>+1 (415) - HIRE - MEEH</li>
-          </ul>
-        </div>
-
-        <div className="flex flex-col items-center justify-center gap-y-4 pb-20 md:items-start md:justify-start md:pb-0">
-          <h2 className="text-lg font-bold uppercase text-gray-200">shop</h2>
-          <ul className="flex flex-col items-center justify-center md:items-start">
-            <li className="footerLinks">Amazon</li>
-            <li className="footerLinks">Merch</li>
-            <li className="footerLinks">eBooks</li>
-            <li className="footerLinks">iTunes</li>
           </ul>
         </div>
       </div>
