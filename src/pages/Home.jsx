@@ -7,10 +7,12 @@ function Home() {
 
       {/* Container for top left of banner*/}
       <div className="flex flex-row flex-wrap md:w-screen">
+        {/* Off-white background section */}
         <div className="relative h-56 w-screen md:h-96 md:w-5/12 bg-off-white border-black md:border-2 md:border-t-0 md:border-l-0">
+          {/* Fading dots background image, flips horizontally in mobile screens */}
           <img className="absolute w-20 transform -scale-x-100 md:scale-x-100 md:max-h-14 right-4 z-10 md:left-2 top-4" src="/src/assets/homedots.svg"></img>
 
-          {/* Slogan text only appears in md-size screens*/}
+          {/* Slogan text that only appears in md-size screens*/}
           <p className="hidden md:block absolute z-10 right-0 top-14 uppercase font-black text-8xl leading-tight">The only<br />you need</p>
           
           {/* Banner content for mobile screens */}
@@ -24,7 +26,7 @@ function Home() {
         <div className="hidden md:flex flex-col md:w-7/12">
           {/* Orange section */}
           <div className="relative md:h-72 bg-orange border-black md:border-2 md:border-t-0 md:border-r-0">
-            {/* Remaining section of slogan */}
+            {/* Remaining section of slogan, positioned in orange section*/}
             <p className="absolute z-10 left-0 top-14 uppercase font-black text-8xl leading-tight">flash card</p>
             <img className="absolute max-h-10 left-2 bottom-8" src="/src/assets/slashes.svg"></img>
           </div>
@@ -34,9 +36,11 @@ function Home() {
         </div>
 
         {/* Slogans under banner*/}
+        {/* Purple slogan */}
         <div className="w-screen md:w-5/12 h-12 md:h-20 bg-purple border-black md:border-2 md:border-b-4 md:border-l-0 text-white text-center text-lg md:text-2xl font-semibold md:font-medium p-0 m-0 flex justify-center items-center">
           <p className="md:uppercase">Effective Memory-Aid Tools</p>
         </div>
+        {/* Dark grey slogan */}
         <div className="w-screen md:w-7/12 h-12 md:h-20 bg-dark-grey border-black md:border-2  md:border-b-4 md:border-r-0 text-white text-center text-lg md:text-2xl font-medium md:font-medium p-0 m-0 flex justify-center items-center">
           <p className="md:uppercase">Learn New Material Quickly</p>
         </div>
