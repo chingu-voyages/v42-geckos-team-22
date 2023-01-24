@@ -1,5 +1,6 @@
 import React from "react";
-import Modal from "../components/Modal";
+import SuccessModal from "../components/SuccessModal";
+import NameModal from "../components/NameModal";
 
 function Home() {
   const [showModal, setShowModal] = React.useState(false);
@@ -10,7 +11,8 @@ function Home() {
 
   return (
     <>
-      <Modal showModal={showModal} toggleModal={toggleModal} />
+      {/* <SuccessModal showModal={showModal} toggleModal={toggleModal} /> */}
+      <NameModal showModal={showModal} toggleModal={toggleModal} />
       <button onClick={toggleModal}>Open modal</button>
     </>
   );
