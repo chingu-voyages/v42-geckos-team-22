@@ -13,7 +13,7 @@ function Home() {
           <img className="absolute w-20 transform -scale-x-100 md:scale-x-100 md:max-h-14 right-4 z-10 md:left-2 top-4" src="/src/assets/homedots.svg"></img>
 
           {/* Slogan text that only appears in md-size screens*/}
-          <p className="hidden md:block absolute z-10 right-0 top-14 uppercase font-black text-8xl leading-tight">The only<br />you need</p>
+          <p className="hidden md:block absolute z-10 right-0 top-14 uppercase font-black text-8xl leading-tight whitespace-nowrap">The only<br />you need</p>
           
           {/* Banner content for mobile screens */}
           <div className="md:hidden absolute h-36 w-11/12 bg-orange right-0 top-14 flex items-center">
@@ -27,11 +27,11 @@ function Home() {
           {/* Orange section */}
           <div className="relative md:h-72 bg-orange border-black md:border-2 md:border-t-0 md:border-r-0">
             {/* Remaining section of slogan, positioned in orange section*/}
-            <p className="absolute z-10 left-0 top-14 uppercase font-black text-8xl leading-tight">flash card</p>
+            <p className="absolute z-10 left-0 top-14 uppercase font-black text-8xl leading-tight  whitespace-nowrap">flash card</p>
             <img className="absolute max-h-10 left-2 bottom-8" src="/src/assets/slashes.svg"></img>
           </div>
           {/* Pink section with wave background */}
-          <div className="h-24 bg-pink border-black border-2 md:border-r-0 bg-center bg-[url('/src/assets/waves.svg')]  bg-repeat">
+          <div className="h-24 bg-pink border-black border-2 md:border-r-0 bg-left bg-[url('/src/assets/homewaves.svg')] bg-repeat-x">
           </div>
         </div>
 
@@ -49,11 +49,11 @@ function Home() {
       </div>
 
       {/* Games list */}
-      <div className="border-black border-4 h-28 w-64 mx-auto">
-        <p>NUMBER</p>
+      <div className="border-black border-4 h-28 w-4/6 m-11 mx-auto flex items-center justify-center">
+        <p className="uppercase text-lg font-semibold">Animals</p>
       </div>
-      <div className="border-black border-4 h-28 w-64 mx-auto">
-        <p>SHAPE</p>
+      <div className="border-black border-4 h-28 w-4/6 m-11 mx-auto flex items-center justify-center">
+        <p className="uppercase text-lg font-semibold">Shapes</p>
       </div>
     </div>
   );
