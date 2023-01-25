@@ -1,4 +1,6 @@
+import { NavLink } from "react-router-dom";
 import React from "react";
+
 
 function Home() {
   return (
@@ -51,10 +53,11 @@ function Home() {
       {/* Container for games list */}
       <div className="md:flex md:w-screen">
         <div className="border-black border-4 md:border-0 md:border-r-4 md:border-b-4 h-28 w-4/6 m-11 mx-auto md:w-5/12 md:h-64 md:m-0 flex items-center justify-center">
-          <p className="uppercase text-lg md:text-2xl font-semibold md:font-black">Animals</p>
+          {/* <p className="uppercase text-lg md:text-2xl font-semibold md:font-black">Animals</p> */}
+          <NavLink className="uppercase text-lg md:text-2xl font-semibold md:font-black" to="/Game.jsx">Animals</NavLink>
         </div>
         <div className="border-black border-4 md:border-0 md:border-b-4 h-28 w-4/6 m-11 mx-auto md:w-7/12 md:h-64 md:m-0 flex items-center justify-center">
-          <p className="uppercase text-lg md:text-2xl font-semibold md:font-black">Shapes</p>
+          <NavLink className="uppercase text-lg md:text-2xl font-semibold md:font-black" to="/Game.jsx">Shapes</NavLink>
         </div>
       </div>
 
