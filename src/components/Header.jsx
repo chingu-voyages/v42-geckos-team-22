@@ -27,7 +27,7 @@ function Header() {
         </li>
       </ul>
 
-      {showMobileNav ? <MobileNav toggleMobileNav={showMobileNav} /> : null}
+      {showMobileNav ? <MobileNav /> : null}
 
       <nav className="hidden h-full uppercase md:mx-32 md:flex md:flex-row md:items-center md:justify-between">
         <ul className="md:flex md:flex-row md:items-center md:gap-24">
