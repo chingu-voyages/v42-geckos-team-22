@@ -1,13 +1,11 @@
 import React from "react";
-import AppStore from "./AppStore";
-import PlayStore from "./PlayStore";
 import { FaFacebookF, FaTwitter, FaTiktok, FaYoutube } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 
 function Footer() {
   return (
     <footer className="w-screen bg-turquoise text-gray-300">
-      <div className="w-full pt-20 md:flex md:flex-row md:justify-evenly md:px-40 md:pb-20">
+      <div className="w-full pt-12 md:flex md:flex-row md:justify-evenly md:px-40 md:pb-12">
         <div className="md:mr-80 md:flex md:flex-col">
           <div className="mb-10 flex flex-col items-center justify-center gap-y-4 md:mb-0 md:items-start">
             <h2 className="text-lg font-bold uppercase text-gray-200">
@@ -43,7 +41,7 @@ function Footer() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center  justify-center bg-slate-800 bg-opacity-60 py-3 md:flex-row md:justify-between md:px-32">
+      <div className="flex flex-col items-center justify-center bg-slate-800 bg-opacity-60 py-3 md:flex-row md:justify-between md:px-32">
         <p className="text-sm">
           © 2023 | Made with 🧡 & 🥑 by Team{" "}
           <a
