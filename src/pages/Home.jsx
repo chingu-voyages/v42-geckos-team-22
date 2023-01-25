@@ -5,9 +5,9 @@ function Home() {
     // Container for entire page
     <div>
 
-      {/* Container for top left of banner*/}
+      {/* Container for entire banner*/}
       <div className="flex flex-row flex-wrap md:w-screen">
-        {/* Off-white background section */}
+        {/* Container for top left of banner */}
         <div className="relative h-56 w-screen md:h-96 md:w-5/12 bg-off-white border-black md:border-2 md:border-t-0 md:border-l-0">
           {/* Fading dots background image, flips horizontally in mobile screens */}
           <img className="absolute w-20 transform -scale-x-100 md:scale-x-100 md:max-h-14 right-4 z-10 md:left-2 top-4" src="/src/assets/homedots.svg"></img>
@@ -48,13 +48,16 @@ function Home() {
       {/* Close container for banner*/}
       </div>
 
-      {/* Games list */}
-      <div className="border-black border-4 h-28 w-4/6 m-11 mx-auto flex items-center justify-center">
-        <p className="uppercase text-lg font-semibold">Animals</p>
+      {/* Container for games list */}
+      <div className="md:flex md:w-screen">
+        <div className="border-black border-4 md:border-0 md:border-r-4 md:border-b-4 h-28 w-4/6 m-11 mx-auto md:w-5/12 md:h-64 md:m-0 flex items-center justify-center">
+          <p className="uppercase text-lg md:text-2xl font-semibold md:font-black">Animals</p>
+        </div>
+        <div className="border-black border-4 md:border-0 md:border-b-4 h-28 w-4/6 m-11 mx-auto md:w-7/12 md:h-64 md:m-0 flex items-center justify-center">
+          <p className="uppercase text-lg md:text-2xl font-semibold md:font-black">Shapes</p>
+        </div>
       </div>
-      <div className="border-black border-4 h-28 w-4/6 m-11 mx-auto flex items-center justify-center">
-        <p className="uppercase text-lg font-semibold">Shapes</p>
-      </div>
+
     </div>
   );
 }
