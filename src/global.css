@@ -33,7 +33,7 @@ body {
 }
 
 .burgerMenu {
-  @apply ml-[0.6rem] block h-1 w-7 rounded-sm bg-stone-200;
+  @apply mx-auto mt-0.5 text-4xl;
 }
 
 .dropDown {
