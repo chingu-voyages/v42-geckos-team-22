@@ -43,7 +43,7 @@ export default function EmailModal({
             </div>
             <input
               className="mt-10 w-full rounded-xl border-none bg-white py-5 text-center text-black focus:outline-none sm:mt-6"
-              type="text"
+              type="email"
               name="email"
               placeholder="Email"
             />
