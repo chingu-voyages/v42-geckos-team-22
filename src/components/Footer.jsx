@@ -5,29 +5,25 @@ import { RiInstagramFill } from "react-icons/ri";
 function Footer() {
   return (
     <footer className="w-screen bg-turquoise text-gray-300">
-      <div className="w-full pt-12 md:flex md:flex-row md:justify-evenly md:px-40 md:pb-12">
-        <div className="md:mr-80 md:flex md:flex-col">
-          <div className="mb-10 flex flex-col items-center justify-center gap-y-4 md:mb-0 md:items-start">
-            <h2 className="text-lg font-bold uppercase text-gray-200">
-              connect
-            </h2>
-            <div className="flex flex-row gap-x-3">
-              <span>
-                <FaFacebookF className="socialIcons" />
-              </span>
-              <span>
-                <FaTwitter className="socialIcons" />
-              </span>
-              <span>
-                <FaYoutube className="socialIcons" />
-              </span>
-              <span>
-                <RiInstagramFill className="socialIcons" />
-              </span>
-              <span>
-                <FaTiktok className="socialIcons" />
-              </span>
-            </div>
+      <div className="w-full pt-12 md:flex md:flex-row md:justify-around md:pb-12">
+        <div className="mb-10 flex flex-col items-center justify-center gap-y-4 md:mb-0 md:items-start md:justify-start">
+          <h2 className="text-lg font-bold uppercase text-gray-200">connect</h2>
+          <div className="flex flex-row gap-x-3">
+            <span>
+              <FaFacebookF className="socialIcons" />
+            </span>
+            <span>
+              <FaTwitter className="socialIcons" />
+            </span>
+            <span>
+              <FaYoutube className="socialIcons" />
+            </span>
+            <span>
+              <RiInstagramFill className="socialIcons" />
+            </span>
+            <span>
+              <FaTiktok className="socialIcons" />
+            </span>
           </div>
         </div>
 
