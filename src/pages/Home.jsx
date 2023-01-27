@@ -6,7 +6,6 @@ function Home() {
   return (
     // Container for entire page
     <div>
-
       {/* Container for entire banner*/}
       <div className="flex flex-row flex-wrap md:w-screen">
         {/* Container for top left of banner */}
