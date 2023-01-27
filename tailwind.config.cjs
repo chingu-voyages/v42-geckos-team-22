@@ -3,6 +3,9 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      boxShadow: {
+        answer: "3px 3px 1px black",
+      },
       backgroundImage: {
         bg_nav: "url('/src/assets/bg_nav.svg')",
       },

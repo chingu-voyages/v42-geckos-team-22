@@ -1,11 +1,12 @@
 import React from "react";
 import { DropDown } from "../components/DropDown";
 import MobileNav from "../components/MobileNav";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
-    <div className="grid h-screen place-items-center text-4xl font-bold">
-      <h1>HOME</h1>
+    <div className="h-screen w-screen">
+      <h2>HOME</h2>
     </div>
   );
 }

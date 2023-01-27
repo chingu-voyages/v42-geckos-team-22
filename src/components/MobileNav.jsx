@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { DropDown } from "./DropDown";
-import { BsCaretDownFill } from "react-icons/bs";
+import { BsCaretDownFill, BsCaretLeftFill } from "react-icons/bs";
 // import { IoColorPaletteSharp } from "react-icons/io5";
 // import { TbLetterCase, TbNumbers } from "react-icons/tb";
 // import { FaShapes } from "react-icons/fa";
@@ -16,15 +16,14 @@ function MobileNav() {
       <li className="text-gray-100 hover:text-white">
         <Link to="/">home</Link>
       </li>
-      <li className="flex flex-col items-center justify-center text-gray-100 hover:text-white">
+      <li className="mx-auto flex flex-col items-center justify-center text-gray-100 hover:text-white">
         <button
           onClick={() => setExpandDropDown(!expandDropDown)}
-          className="flex flex-row items-center justify-center"
+          className="flex cursor-pointer flex-row items-center justify-center"
         >
-          <p className="pr-1">GAME TYPES</p> <BsCaretDownFill />
+          <p className="pr-1">GAME TYPES</p>{" "}
+          {expandDropDown ? <BsCaretDownFill /> : <BsCaretLeftFill />}
         </button>
-      </li>
-      <li className={`${expandDropDown ? "inline-block" : "hidden"}`}>
         {expandDropDown && <DropDown />}
       </li>
       <li className="text-gray-100 hover:text-white">

@@ -35,8 +35,8 @@ function Header() {
       {showMobileNav && <MobileNav />}
 
       <nav className="hidden h-full uppercase md:mx-32 md:flex md:flex-row md:items-center md:justify-between">
-        <ul className="md:flex md:flex-row md:items-center md:gap-24">
-          <li>
+        <ul className="text-gray-100 md:flex md:flex-row md:items-center md:gap-24">
+          <li className="hover:font-extrabold hover:text-white">
             <NavLink to="/">home</NavLink>
           </li>
           <li
@@ -44,17 +44,19 @@ function Header() {
             onMouseLeave={() => setExpandDropDown(false)}
             className="cursor-pointer uppercase"
           >
-            <span className="flex flex-row items-center">
+            <span className="flex flex-row items-center hover:font-extrabold hover:text-white">
               <Link to="/game">game type</Link>
               <BsCaretDownFill />
             </span>
             {expandDropDown && <DropDown />}
           </li>
-          <li>
+          <li className="hover:font-extrabold hover:text-white">
             <NavLink to="/faq">faq</NavLink>
           </li>
         </ul>
-        <button className="hidden uppercase md:inline-block">register</button>
+        <button className="hidden uppercase text-gray-100 hover:font-extrabold hover:text-white md:inline-block">
+          register
+        </button>
       </nav>
     </header>
   );
