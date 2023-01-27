@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import Home from "../src/pages/Home";
 import Game from "../src/pages/Game";
 import FAQ from "../src/pages/FAQ";
+import Game from "../src/pages/Game";
 import NotFound from "../src/pages/404";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { Color } from "./features/flashcard/Color";
@@ -15,9 +16,9 @@ function App() {
   const location = useLocation();
 
   return (
-    <>
+    <div className=" md:p-16">
       <Header />
-      <Routes location={location} key={location.pathname}>
+      <Routes location={location} key={location.pathname} >
         <Route path="/" element={<Home />} />
         <Route path="game" element={<Game />}>
           <Route path="color" element={<Color />} />
@@ -26,10 +27,11 @@ function App() {
           <Route path="shape" element={<Shape />} />
         </Route>
         <Route path="/faq" element={<FAQ />} />
+        <Route path="/game" element={<Game />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
-    </>
+    </div>
   );
 }
 

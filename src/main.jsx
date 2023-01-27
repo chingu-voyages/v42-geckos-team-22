@@ -7,7 +7,7 @@ import "./global.css";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <App className='max-w-screen-2x1'/>
     </BrowserRouter>
   </React.StrictMode>
 );
