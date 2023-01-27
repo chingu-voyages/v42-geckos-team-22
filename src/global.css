@@ -81,5 +81,21 @@ body {
 }
 
 .burgerMenu {
-  @apply ml-[0.6rem] block h-1 w-7 bg-stone-200;
+  @apply ml-[0.6rem] block h-1 w-7 rounded-sm bg-stone-200;
+}
+
+.dropDown {
+  @apply flex flex-row items-center justify-center md:justify-start;
+}
+
+.dropDownIcons {
+  @apply mx-1 rounded bg-turquoise;
+}
+
+.socialIcons {
+  @apply cursor-pointer rounded-full bg-gray-300 p-2 text-4xl text-turquoise hover:bg-gray-100;
+}
+
+.footerLinks {
+  @apply cursor-pointer hover:text-gray-100;
 }
