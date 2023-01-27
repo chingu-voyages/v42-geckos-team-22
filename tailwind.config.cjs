@@ -18,7 +18,7 @@ module.exports = {
         "light-orange": "#FCA02D",
         "red-orange": "#EF3E38",
         yellow: "#F6E614",
-        blue: "#974FF",
+        blue: "#5974FF",
         orange: "#FF5B48",
         "green": "#00CE73",
         pink: "#FFABE5",
@@ -42,18 +42,23 @@ module.exports = {
         inter: [`inter`, "serif"],
       },
       animation: {
-        slideleft: "slideleft 1s ease-in-out",
-        slideright: "slideright 1s ease-in-out",
+        dropDown: "dropDown 300ms ease-out",
+        slideOut: "slideOut 400ms ease-in",
+        slideIn: "slideIn 400ms ease-out",
         wave: "wave 1.2s linear infinite",
         float: "float 2.5s infinite",
       },
       keyframes: {
-        slideleft: {
-          from: { opacity: 0, transform: "translateX(-20px)" },
-          to: { opacity: 1, transform: "translateX(0)" },
+        dropDown: {
+          from: { opacity: 0, transform: "translateY(-10%)" },
+          to: { opacity: 1, transform: "translateY(0)" },
         },
-        slideright: {
-          from: { opacity: 0, transform: "translateX(20px)" },
+        slideOut: {
+          from: { opacity: 0, transform: "translateX(0)" },
+          to: { opacity: 1, transform: "translateX(100vw)" },
+        },
+        slideIn: {
+          from: { opacity: 0, transform: "translateX(100vw)" },
           to: { opacity: 1, transform: "translateX(0)" },
         },
         wave: {
