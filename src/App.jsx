@@ -15,7 +15,7 @@ function App() {
   const location = useLocation();
 
   return (
-    <div className=" md:p-16">
+    <div className="">
       <Header />
       <Routes location={location} key={location.pathname} >
         <Route path="/" element={<Home />} />
