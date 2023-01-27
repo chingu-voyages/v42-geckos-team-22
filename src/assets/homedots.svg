@@ -1,0 +1,18 @@
+<svg width="110" height="110" viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="10" cy="10" r="10" fill="black"/>
+<circle opacity="0.8" cx="10" cy="70" r="10" fill="black"/>
+<circle cx="10" cy="40" r="10" fill="black"/>
+<circle opacity="0.6" cx="10" cy="100" r="10" fill="black"/>
+<circle cx="40" cy="10" r="10" fill="black"/>
+<circle opacity="0.6" cx="40" cy="70" r="10" fill="black"/>
+<circle opacity="0.8" cx="40" cy="40" r="10" fill="black"/>
+<circle opacity="0.4" cx="40" cy="100" r="10" fill="black"/>
+<circle opacity="0.8" cx="70" cy="10" r="10" fill="black"/>
+<circle opacity="0.4" cx="70" cy="70" r="10" fill="black"/>
+<circle opacity="0.6" cx="70" cy="40" r="10" fill="black"/>
+<circle opacity="0.2" cx="70" cy="100" r="10" fill="black"/>
+<circle opacity="0.6" cx="100" cy="10" r="10" fill="black"/>
+<circle opacity="0.2" cx="100" cy="70" r="10" fill="black"/>
+<circle opacity="0.4" cx="100" cy="40" r="10" fill="black"/>
+<circle opacity="0.05" cx="100" cy="100" r="10" fill="black"/>
+</svg>
