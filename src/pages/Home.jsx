@@ -1,7 +1,4 @@
 import React from "react";
-import { DropDown } from "../components/DropDown";
-import MobileNav from "../components/MobileNav";
-import { Link } from "react-router-dom";
 
 function Home() {
   return (
