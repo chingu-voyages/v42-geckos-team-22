@@ -14,10 +14,7 @@ function MobileNav(props) {
       >
         <Link to="/">home</Link>
       </li>
-      <li
-        // onClick={props.closeMenu}
-        className="mx-auto flex flex-col items-center justify-center text-gray-100 hover:text-white"
-      >
+      <li className="mx-auto flex flex-col items-center justify-center text-gray-100 hover:text-white">
         <button
           onClick={() => setExpandDropDown(!expandDropDown)}
           className="flex cursor-pointer flex-row items-center justify-center"
