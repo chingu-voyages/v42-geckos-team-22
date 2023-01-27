@@ -21,8 +21,8 @@ function Header() {
           </Link>
         </li>
         <li
-          onClick={() => setShowMobileNav(!showMobileNav)}
-          className="my-2 flex h-10 w-12 cursor-pointer flex-col gap-y-[0.32rem] shadow hover:bg-red-orange focus:outline-none"
+          onClick={closeMenu}
+          className="my-2 flex h-10 w-12 cursor-pointer flex-col gap-y-[0.32rem] shadow transition-all duration-300 ease-in-out hover:bg-red-orange focus:outline-none"
         >
           {showMobileNav ? (
             <CgClose className="burgerMenu" />
