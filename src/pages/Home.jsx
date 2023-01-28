@@ -1,7 +1,6 @@
 import { NavLink } from "react-router-dom";
 import React from "react";
 
-
 function Home() {
   return (
     // Container for entire page
@@ -59,7 +58,6 @@ function Home() {
           <NavLink className="uppercase text-lg md:text-2xl font-semibold md:font-black" to="/Game.jsx">Shapes</NavLink>
         </div>
       </div>
-
     </div>
   );
 }
