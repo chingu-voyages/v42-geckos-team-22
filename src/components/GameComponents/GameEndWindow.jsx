@@ -9,12 +9,10 @@ function GameEndWindow (props) {
 
     const handleEnd = () => {
         navigate('/')
-        console.log('handleEnd')
     }
 
     const handlePlayAgain = () => {
         props.setGameState("play")
-        console.log('handleEnd')
     }
 
     return (
