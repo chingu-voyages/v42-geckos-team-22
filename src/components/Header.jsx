@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import MobileNav from "./MobileNav";
 import { DropDown } from "./DropDown";
 import { NavLink, Link } from "react-router-dom";
-import { BsCaretDownFill } from "react-icons/bs";
+import { BsCaretDownFill, BsCaretUpFill } from "react-icons/bs";
 import { RiHome2Fill } from "react-icons/ri";
 import { CgClose, CgMenu } from "react-icons/cg";
 import EmailModal from "./EmailModal";
@@ -13,10 +13,10 @@ import SuccessModal from "./SuccessModal";
 function Header() {
   const [expandDropDown, setExpandDropDown] = useState(false);
   const [showMobileNav, setShowMobileNav] = useState(false);
-  const closeMenu = () => setShowMobileNav(!showMobileNav);
   const [showModal, setShowModal] = useState(false);
   const [page, setPage] = useState(0);
 
+  const closeMenu = () => setShowMobileNav(!showMobileNav);
   function toggleModal() {
     setShowModal((prevModalState) => !prevModalState);
   }
@@ -87,8 +87,10 @@ function Header() {
               className="cursor-pointer uppercase"
             >
               <span className="flex flex-row items-center hover:font-extrabold hover:text-white">
-                <Link to="/game">game type</Link>
-                <BsCaretDownFill />
+                <Link className="pr-1" to="/game">
+                  game type
+                </Link>
+                {expandDropDown ? <BsCaretUpFill /> : <BsCaretDownFill />}
               </span>
               {expandDropDown && <DropDown />}
             </li>

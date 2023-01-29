@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { DropDown } from "./DropDown";
-import { BsCaretDownFill, BsCaretLeftFill } from "react-icons/bs";
+import { BsCaretDownFill, BsCaretUpFill } from "react-icons/bs";
+import { useSelector, useDispatch } from "react-redux";
+import { toggleMenu } from "../redux/headerSlice";
 
 function MobileNav(props) {
   const [expandDropDown, setExpandDropDown] = useState(false);
+  const menu = useSelector((state) => state.header.value);
+  const dispatch = useDispatch();
 
   return (
     <ul className="absolute z-50 flex h-screen w-screen animate-slideIn flex-col items-center justify-evenly bg-turquoise text-3xl uppercase text-white md:hidden">
@@ -19,8 +23,8 @@ function MobileNav(props) {
           onClick={() => setExpandDropDown(!expandDropDown)}
           className="flex cursor-pointer flex-row items-center justify-center"
         >
-          <p className="pr-1">GAME TYPES</p>{" "}
-          {expandDropDown ? <BsCaretDownFill /> : <BsCaretLeftFill />}
+          <p className="pr-1">GAME TYPES</p>
+          {expandDropDown ? <BsCaretUpFill /> : <BsCaretDownFill />}
         </button>
         {expandDropDown && <DropDown closeMenu={props.closeMenu} />}
       </li>

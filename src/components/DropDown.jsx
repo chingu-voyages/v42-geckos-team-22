@@ -6,7 +6,7 @@ import { FaShapes } from "react-icons/fa";
 
 export const DropDown = (props) => {
   return (
-    <ul className="z-50 flex w-screen flex-col bg-red-orange p-1 text-2xl uppercase text-off-white md:absolute md:w-auto md:animate-dropDown md:p-2">
+    <ul className="z-50 flex w-screen flex-col bg-red-orange p-1 text-2xl uppercase text-off-white md:absolute md:w-auto md:animate-dropDown md:p-4">
       <li onClick={props.closeMenu} className="w-full py-4 hover:bg-orange">
         <Link to="/game/color" className="dropDown">
           <IoColorPaletteSharp className="dropDownIcons" />
