@@ -1,3 +1,8 @@
+import Circle from './assets/Shapes/Circle.png'
+import Oval from './assets/Shapes/Oval.png'
+import Square from './assets/Shapes/Square.png'
+import Triangle from './assets/Shapes/Triangle.png'
+
 const dataJson = [
   {
     id: 1,
@@ -17,4 +22,36 @@ const dataJson = [
       },
     ],
   },
+  {
+    id: 2,
+    gameType: "Shapes", //use on homepage and nav for game type selection
+    games: [
+      {
+        img: {Circle},
+        name: "Circle",
+        options: ["Circle", "Square", "Triangle"],
+        correctAnswer: "Circle", //if this found in "options", user win
+      },
+      {
+        img: {Oval},
+        name: "Oval",
+        options: ["Circle", "Oval", "Triangle"],
+        correctAnswer: "Oval", //if this found in "options", user win
+      },
+      {
+        img: {Square},
+        name: "Square",
+        options: ["Circle", "Square", "Triangle"],
+        correctAnswer: "Square", //if this found in "options", user win
+      },
+      {
+        img: {Triangle},
+        name: "Triangle",
+        options: ["Oval", "Square", "Triangle"],
+        correctAnswer: "Triangle", //if this found in "options", user win
+      },
+    ],
+  },
 ];
+
+export default dataJson

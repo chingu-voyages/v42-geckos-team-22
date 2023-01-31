@@ -1,10 +1,12 @@
 import React from 'react';
+import GameData from '../../data'
 
 function GameAnswers (props) {
 
     const handleAnswer = () => {
         props.setGameState('end')
     }
+
 
     return (
         <div className={props.cname}>

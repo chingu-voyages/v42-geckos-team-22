@@ -1,9 +1,12 @@
 import { NavLink } from "react-router-dom";
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { increment, decrement } from './../redux/slices/testSlice'
 
 
 function Home() {
 
+<<<<<<< HEAD
   return (
     // Container for entire page
     <div>
@@ -59,6 +62,40 @@ function Home() {
         <div className="border-black border-4 md:border-0 md:border-b-4 h-28 w-4/6 m-11 mx-auto md:w-7/12 md:h-64 md:m-0 flex items-center justify-center">
           <NavLink className="uppercase text-lg md:text-2xl font-semibold md:font-black" to="/Game.jsx">Shapes</NavLink>
         </div>
+=======
+  const counter = useSelector(state => state.test.value)
+  const dispatch = useDispatch();
+
+  const handleCounterAdd = () => {
+    dispatch(increment())
+    console.log("in Home increment")
+  }
+
+  const handleCounterDec = () => {
+    dispatch(decrement())
+    console.log("in Home decrement")
+  }
+
+  return (
+    <div>
+      <h2>HOME PAGE</h2>
+      <button 
+        onClick={() => dispatch(increment())}
+        className='border-2 border-black m-10'
+      >
+        Counter Add
+      </button>
+
+      <button 
+        onClick={() => dispatch(decrement())}
+        className='border-2 border-black m-10'
+      >
+        Counter Dec
+      </button>
+
+      <div className='m-10'>
+        <p>the counter is: </p>{counter}
+>>>>>>> 286081fa205d6a8ab98605698fc863f7d9d1172f
       </div>
     </div>
   );
