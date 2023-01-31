@@ -23,6 +23,6 @@ export const gameFunctionSlice = createSlice({
   },
 });
 
-export const { startGame } = gameFunctionSlice.actions;
+export const { startGame, assignAnswers } = gameFunctionSlice.actions;
 
 export default gameFunctionSlice.reducer;

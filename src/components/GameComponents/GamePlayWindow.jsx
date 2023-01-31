@@ -8,7 +8,7 @@ import Oval from '../../assets/Shapes/Oval.png'
 import Square from '../../assets/Shapes/Square.png'
 import Triangle from '../../assets/Shapes/Triangle.png'
 import gameData from '../../data'
-import { startGame } from '../../redux/slices/gameFunctionSlice'
+import { startGame, assignAnswers } from '../../redux/slices/gameFunctionSlice'
 
 
 
@@ -42,6 +42,7 @@ const findCurrentGame = () => {
 const playCurrentGame = () => {
     for (const property in currentGame) {
         console.log("in playCurrentGame",`${property}: ${currentGame[property].options}`)
+        dispatch((assignAnswers(currentGame[property].options)))
     }
 }
     
@@ -52,6 +53,7 @@ useEffect(()=> {
     dispatch(startGame(gameName))
     findCurrentGame();
     console.log("in useEffect CurrentGame", currentGame)
+    playCurrentGame();
 }, []);  
 
 

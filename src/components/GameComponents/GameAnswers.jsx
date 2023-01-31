@@ -1,5 +1,5 @@
 import React from 'react';
-import GameData from '../../data'
+import { useSelector } from 'react-redux'
 
 function GameAnswers (props) {
 
@@ -7,6 +7,9 @@ function GameAnswers (props) {
         props.setGameState('end')
     }
 
+    const answerArr = useSelector(state=>state.gameFunction.answers)
+
+    console.log("In Game Answers", answerArr)
 
     return (
         <div className={props.cname}>
@@ -16,7 +19,7 @@ function GameAnswers (props) {
                 className='btn-answer flex-1'
             >
                 <span className='btn-answer-text'>
-                    ONE
+                    {answerArr[0]}
                 </span>
             </button>
             <button
@@ -25,7 +28,7 @@ function GameAnswers (props) {
                 className='btn-answer flex-1'
             >
                 <span className='btn-answer-text'>
-                    TWO
+                    {answerArr[1]}
                 </span>
             </button>
             <button 
@@ -34,7 +37,7 @@ function GameAnswers (props) {
                 className='btn-answer flex-1'
             >
                 <span className='btn-answer-text'>
-                    THREE
+                    {answerArr[2]}  
                 </span>
             </button>
         </div>
