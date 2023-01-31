@@ -5,10 +5,10 @@ import { NavLink, Link } from "react-router-dom";
 import { BsCaretDownFill, BsCaretUpFill } from "react-icons/bs";
 import { RiHome2Fill } from "react-icons/ri";
 import { CgClose, CgMenu } from "react-icons/cg";
-import EmailModal from "./EmailModal";
-import NameModal from "./NameModal";
-import PasswordModal from "./PasswordModal";
-import SuccessModal from "./SuccessModal";
+import EmailModal from "./RegistrationComponents/EmailModal";
+import NameModal from "./RegistrationComponents/NameModal";
+import PasswordModal from "./RegistrationComponents/PasswordModal";
+import SuccessModal from "./RegistrationComponents/SuccessModal";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleMenu } from "../redux/headerSlice";
 
