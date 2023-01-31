@@ -15,9 +15,9 @@ function App() {
   const location = useLocation();
 
   return (
-    <div className="">
+    <>
       <Header />
-      <Routes location={location} key={location.pathname} >
+      <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home />} />
         <Route path="game" element={<Game />}>
           <Route path="color" element={<Color />} />
@@ -30,7 +30,7 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
-    </div>
+    </>
   );
 }
 

@@ -3,11 +3,11 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     borderWidth: {
-      '0': '0px',
-      '2': '2px',
-      '3': '3px',
-      '4': '4px',
-      '6': '6px',
+      0: "0px",
+      2: "2px",
+      3: "3px",
+      4: "4px",
+      6: "6px",
     },
     extend: {
       boxShadow: {
@@ -23,7 +23,7 @@ module.exports = {
         yellow: "#F6E614",
         blue: "#5974FF",
         orange: "#FF5B48",
-        "green": "#00CE73",
+        green: "#00CE73",
         pink: "#FFABE5",
         "light-blue": "#12D5F0",
         purple: "#7E38F9",
@@ -31,15 +31,12 @@ module.exports = {
         "dark-grey": "#2D2D2D",
       },
       flexGrow: {
-        '0' : 0,
-        '1' : 1,
-        '2' : 2,
-        '3' : 3,
-        '4' : 4,
-        '5' : 5,
-      },
-      boxShadow: {
-        'answer': '3px 3px 1px black'
+        0: 0,
+        1: 1,
+        2: 2,
+        3: 3,
+        4: 4,
+        5: 5,
       },
       fontFamily: {
         inter: [`inter`, "serif"],
