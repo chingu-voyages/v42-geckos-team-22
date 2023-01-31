@@ -6,7 +6,7 @@ import Triangle from './assets/Shapes/Triangle.png'
 const dataJson = [
   {
     id: 1,
-    gameType: "Number", //use on homepage and nav for game type selection
+    gameType: "number", //use on homepage and nav for game type selection
     games: [
       {
         img: "https://www.freepnglogos.com/uploads/1-number-png/cartoon-1-number-five-for-friday-time-beach-sand-3.png",
@@ -24,7 +24,7 @@ const dataJson = [
   },
   {
     id: 2,
-    gameType: "Shapes", //use on homepage and nav for game type selection
+    gameType: "shape", //use on homepage and nav for game type selection
     games: [
       {
         img: {Circle},
