@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { SkipLeft, SkipRight } from '../components/GameComponents/GameUtilities';
+import {useSelector, useDispatch} from 'react-redux'
 import GameHeading from '../components/GameComponents/GameHeading';
 import GameControls from '../components/GameComponents/GameControls';
 import GameAnswers from '../components/GameComponents/GameAnswers';
@@ -11,7 +12,7 @@ function Game () {
 
 
     // handlePlayGame(), gameState == "loading", gameState == "landing" are commented out to remove from development. May be added back in later once game is funcitonal. 
-    const [ gameState, setGameState ] = useState("play")
+    const gameState = useSelector(state=>state.gameFunction.gameState)
     
     // const handlePlayGame = () => {
     //     setGameState("loading")
@@ -26,11 +27,14 @@ function Game () {
                         <div className='game-window-play__border' >
                             <div className='md:flex row-span-3'>
                             <SkipLeft cname='hidden md:block md:mr-1' />
-                            <GamePlayWindow cname='game-window-play'/>   
+                            <GamePlayWindow 
+                                // setGameState={setGameState} 
+                                cname='game-window-play'
+                                />   
                             <SkipRight cname='hidden md:block md:ml-1' />
                             </div>
                             <GameAnswers 
-                                setGameState={setGameState} 
+                                // setGameState={setGameState} 
                                 cname='flex flex-col md:flex-row px-12 md:-my-10 md:h-44 md:mx-6 row-span-1'
                             />
                         </div>
@@ -53,7 +57,7 @@ function Game () {
                 : gameState == "end"
                     ? <div className='md:game-window__border h-96'>
                         <GameEndWindow 
-                        setGameState={setGameState}
+                        //setGameState={setGameState}
                         cname='grid grid-rows-4 h-full'
                         />
                     </div>

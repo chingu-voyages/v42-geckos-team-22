@@ -7,7 +7,7 @@ import {useSelector, useDispatch} from 'react-redux'
 // import Square from '../../assets/Shapes/Square.png'
 // import Triangle from '../../assets/Shapes/Triangle.png'
 import gameData from '../../data'
-import { startGame, assignAnswers, assignQuestionImage, assignCorrectAnswer } from '../../redux/slices/gameFunctionSlice'
+import { startGame, assignAnswers, assignQuestionImage, assignCorrectAnswer, assignGameState } from '../../redux/slices/gameFunctionSlice'
 
 //pixelbay API Key 33121417-d326c5dfd781e6d9400ae77ef
 
@@ -18,9 +18,10 @@ function GamePlayWindow (props) {
 let gameName = useSelector(state=>state.gameFunction.gameType)
 let answers = useSelector(state=>state.gameFunction.answers)
 let currentGame = null;
-let currentAnswer = useSelector(state=>state.gameFunction.currentQuestionImage)
+let currentQuestionImage = useSelector(state=>state.gameFunction.currentQuestionImage)
+let correctAnswer = useSelector(state=>state.gameFunction.correctAnswer)
+let currentQuestion = useSelector(state=>state.gameFunction.currentQuestion)
 
-const [ image, setImage ] = useState(currentAnswer);
 
 const dispatch = useDispatch()
 
@@ -39,12 +40,17 @@ const findCurrentGame = () => {
     }
 };
 
-const playCurrentGame = () => {
-    let i = 0;
-    dispatch((assignAnswers(currentGame[i].options)))
-    dispatch((assignQuestionImage(currentGame[i].img)))
-    
-    console.log("in playCurrentGame correct Answer", currentGame[i].name)
+const playCurrentGame = (props) => {
+    console.log("inPlayCurrentGame currentQuestion", currentQuestion, currentGame.length)
+    if (currentQuestion < currentGame.length){
+        dispatch((assignAnswers(currentGame[currentQuestion].options)))
+        dispatch((assignQuestionImage(currentGame[currentQuestion].img)))
+        dispatch((assignCorrectAnswer(currentGame[currentQuestion].name)))
+        console.log("in playCurrentGame correct Answer", currentGame[currentQuestion].name)
+    } else {
+        dispatch(assignGameState('end'))
+    }
+
     // for ( i in currentGame) {
     //     //console.log("in playCurrentGame name",`${property}: ${currentGame[property].name}`)
 
@@ -52,10 +58,10 @@ const playCurrentGame = () => {
     //     console.log("In playCurrentGame img ", currentGame[i].img)
     
     //     dispatch((assignAnswers(currentGame[i].options)))
-    //     currentAnswer = currentGame[i].img
-    //     dispatch((assignQuestionImage(currentAnswer)))
-    //     // console.log("in showCurrentQuestion", currentAnswer)S
-    //     setImage(currentAnswer)
+    //     currentQuestionImage = currentGame[i].img
+    //     dispatch((assignQuestionImage(currentQuestionImage)))
+    //     // console.log("in showCurrentQuestion", currentQuestionImage)S
+    //     setImage(currentQuestionImage)
        
     // }
 }
@@ -67,13 +73,13 @@ useEffect(()=> {
     findCurrentGame();
     //console.log("in useEffect CurrentGame", currentGame)
     playCurrentGame();
-}, []);  
+}, [currentQuestion]);  
 
     return (
         <div className={props.cname}>
             <div className='md:ml-14 md:flex-1 md:flex md:justify-center mt-14 md:mt-0'>
                 <p>{gameName}</p>
-                <img className='' method='post' encType='multipart/form-data' src={currentAnswer} alt="" />
+                <img className='' method='post' encType='multipart/form-data' src={currentQuestionImage} alt={correctAnswer} />
             </div>
             <MoreOptions cname='hidden max-h-14 max-w-14 md:flex md:mr-1 md:mt-2'/>
         </div>

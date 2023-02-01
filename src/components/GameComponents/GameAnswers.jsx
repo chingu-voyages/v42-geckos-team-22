@@ -1,29 +1,34 @@
 import React, { useEffect } from 'react';
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+import { assignCurrentQuestion } from '../../redux/slices/gameFunctionSlice'
 
 function GameAnswers (props) {
 
     const answerArr = useSelector(state=>state.gameFunction.answers)
     const correctAnswer = useSelector(state=>state.gameFunction.correctAnswer)
+    const currentQuestion = useSelector(state=>state.gameFunction.currentQuestion)
+
+    const dispatch = useDispatch();
+    
     //console.log("In Game Answers", answerArr)
     
     const handleAnswer = (e) => {
         // props.setGameState('end')
         const id = e.target.id
 
-        console.log("in handleAnswer correctAnswer", correctAnswer)
-        // if(correctAnswer == id) {
-        //     console.log("yes!", id, correctAnswer)
-            
-        // } else {
-        //     console.log("no!", id, correctAnswer)
-        // }
+      //  console.log("in handleAnswer correctAnswer", typeof(correctAnswer), typeof(id))
+        if(correctAnswer === id) {
+            console.log("yes!", id, correctAnswer)
+            dispatch(assignCurrentQuestion())
+        } else {
+            console.log("no!", id, correctAnswer)
+        }
        
     }
 
     useEffect(()=> {
-        
-    }, [correctAnswer]);  
+        console.log(answerArr)
+    }, [answerArr]);  
     
    
 
