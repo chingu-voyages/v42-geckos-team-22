@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SkipLeft, SkipRight } from '../components/GameComponents/utilities';
+import { SkipLeft, SkipRight } from '../components/GameComponents/GameUtilities';
 import GameHeading from '../components/GameComponents/GameHeading';
 import GameControls from '../components/GameComponents/GameControls';
 import GameAnswers from '../components/GameComponents/GameAnswers';

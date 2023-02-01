@@ -27,25 +27,25 @@ const dataJson = [
     gameType: "shape", //use on homepage and nav for game type selection
     games: [
       {
-        img: {Circle},
+        img: "..\\..\\src\\assets\\Shapes\\Circle.png",
         name: "Circle",
         options: ["Circle", "Square", "Triangle"],
         correctAnswer: "Circle", //if this found in "options", user win
       },
       {
-        img: {Oval},
+        img: "..\\..\\src\\assets\\Shapes\\Oval.png",
         name: "Oval",
         options: ["Circle", "Oval", "Triangle"],
         correctAnswer: "Oval", //if this found in "options", user win
       },
       {
-        img: {Square},
+        img: "..\\..\\src\\assets\\Shapes\\Square.png",
         name: "Square",
         options: ["Circle", "Square", "Triangle"],
         correctAnswer: "Square", //if this found in "options", user win
       },
       {
-        img: {Triangle},
+        img: "..\\..\\src\\assets\\Shapes\\Triangle.png",
         name: "Triangle",
         options: ["Oval", "Square", "Triangle"],
         correctAnswer: "Triangle", //if this found in "options", user win
