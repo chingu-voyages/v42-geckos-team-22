@@ -1,18 +1,23 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import {useSelector, useDispatch} from 'react-redux';
+import { assignGameState } from '../../redux/slices/gameFunctionSlice'
 
 function GameEndWindow (props) {
 
     const score = "10"
+    const gameState = useSelector(state=>state.gameFunction.gameState)
+
 
     const navigate = useNavigate();
+    const dispatch = useDispatch();
 
     const handleEnd = () => {
         navigate('/')
     }
 
     const handlePlayAgain = () => {
-        props.setGameState("play")
+        dispatch(assignGameState('play'))
     }
 
     return (
