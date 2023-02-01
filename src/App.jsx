@@ -1,7 +1,8 @@
 import React from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Home from "./pages/Home";
+// import Home from "./pages/Home";
+import HomePage from "./pages/HomePage";
 import Game from "./pages/Game";
 import FAQ from "./pages/FAQ";
 import NotFound from "./pages/404";
@@ -18,7 +19,7 @@ function App() {
     <>
       <Header />
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="game" element={<Game />}>
           <Route path="color" element={<Color />} />
           <Route path="letter" element={<Letter />} />
