@@ -4,7 +4,7 @@ import { IoColorPaletteSharp } from "react-icons/io5";
 import { TbLetterCase, TbNumbers } from "react-icons/tb";
 import { FaShapes } from "react-icons/fa";
 import { useDispatch } from "react-redux";
-import { toggleMenu } from "../redux/headerSlice";
+import { toggleMenu } from "../../redux/headerSlice";
 
 export const DropDown = () => {
   const dispatch = useDispatch();
