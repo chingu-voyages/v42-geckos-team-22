@@ -17,6 +17,7 @@ export const gameFunctionSlice = createSlice({
   reducers: {
     startGame: (state, action) => {
       state.gameType = action.payload;
+      state.score = 0
       //console.log("in Slice", state.gameType)
     },
     assignAnswers: (state, action) => {
@@ -38,10 +39,13 @@ export const gameFunctionSlice = createSlice({
     },
     assignGameState: (state, action) => {
       state.gameState = action.payload
+    },
+    calculateScore: (state) => {
+      state.score++
     }
   },
 });
 
-export const { startGame, assignAnswers, assignQuestionImage, assignCorrectAnswer, advanceCurrentQuestion, assignGameState, resetCurrentQuestion } = gameFunctionSlice.actions;
+export const { startGame, assignAnswers, assignQuestionImage, assignCorrectAnswer, advanceCurrentQuestion, assignGameState, resetCurrentQuestion, calculateScore } = gameFunctionSlice.actions;
 
 export default gameFunctionSlice.reducer;

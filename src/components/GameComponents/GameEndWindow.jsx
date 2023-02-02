@@ -5,9 +5,9 @@ import { assignGameState, resetCurrentQuestion } from '../../redux/slices/gameFu
 
 function GameEndWindow (props) {
 
-    const score = "10"
     const gameState = useSelector(state=>state.gameFunction.gameState)
     let currentQuestion = useSelector(state=>state.gameFunction.currentQuestion)
+    const score = useSelector(state=>state.gameFunction.gameState)
 
     const navigate = useNavigate();
     const dispatch = useDispatch();
