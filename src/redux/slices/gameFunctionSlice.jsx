@@ -28,9 +28,13 @@ export const gameFunctionSlice = createSlice({
     assignCorrectAnswer: (state, action) => {
       state.correctAnswer = action.payload
     },
-    assignCurrentQuestion: (state) => {
+    advanceCurrentQuestion: (state) => {
       state.currentQuestion++
       console.log(state.currentQuestion)
+    },
+    resetCurrentQuestion: (state, action) => {
+      state.currentQuestion = action.payload
+      console.log("in resetCurrentQuestion")
     },
     assignGameState: (state, action) => {
       state.gameState = action.payload
@@ -38,6 +42,6 @@ export const gameFunctionSlice = createSlice({
   },
 });
 
-export const { startGame, assignAnswers, assignQuestionImage, assignCorrectAnswer, assignCurrentQuestion, assignGameState } = gameFunctionSlice.actions;
+export const { startGame, assignAnswers, assignQuestionImage, assignCorrectAnswer, advanceCurrentQuestion, assignGameState, resetCurrentQuestion } = gameFunctionSlice.actions;
 
 export default gameFunctionSlice.reducer;

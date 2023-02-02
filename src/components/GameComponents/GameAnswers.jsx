@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
-import { assignCurrentQuestion } from '../../redux/slices/gameFunctionSlice'
+import { advanceCurrentQuestion } from '../../redux/slices/gameFunctionSlice'
 
 function GameAnswers (props) {
 
@@ -19,7 +19,7 @@ function GameAnswers (props) {
       //  console.log("in handleAnswer correctAnswer", typeof(correctAnswer), typeof(id))
         if(correctAnswer === id) {
             console.log("yes!", id, correctAnswer)
-            dispatch(assignCurrentQuestion())
+            dispatch(advanceCurrentQuestion())
         } else {
             console.log("no!", id, correctAnswer)
         }

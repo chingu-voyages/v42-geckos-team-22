@@ -16,7 +16,7 @@ import { startGame, assignAnswers, assignQuestionImage, assignCorrectAnswer, ass
 function GamePlayWindow (props) {
 
 let gameName = useSelector(state=>state.gameFunction.gameType)
-let answers = useSelector(state=>state.gameFunction.answers)
+// let answers = useSelector(state=>state.gameFunction.answers)
 let currentGame = null;
 let currentQuestionImage = useSelector(state=>state.gameFunction.currentQuestionImage)
 let correctAnswer = useSelector(state=>state.gameFunction.correctAnswer)

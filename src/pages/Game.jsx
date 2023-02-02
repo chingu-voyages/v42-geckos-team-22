@@ -28,13 +28,11 @@ function Game () {
                             <div className='md:flex row-span-3'>
                             <SkipLeft cname='hidden md:block md:mr-1' />
                             <GamePlayWindow 
-                                // setGameState={setGameState} 
                                 cname='game-window-play'
                                 />   
                             <SkipRight cname='hidden md:block md:ml-1' />
                             </div>
                             <GameAnswers 
-                                // setGameState={setGameState} 
                                 cname='flex flex-col md:flex-row px-12 md:-my-10 md:h-44 md:mx-6 row-span-1'
                             />
                         </div>
@@ -57,7 +55,6 @@ function Game () {
                 : gameState == "end"
                     ? <div className='md:game-window__border h-96'>
                         <GameEndWindow 
-                        //setGameState={setGameState}
                         cname='grid grid-rows-4 h-full'
                         />
                     </div>
