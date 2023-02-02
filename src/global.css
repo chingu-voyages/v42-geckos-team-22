@@ -14,7 +14,9 @@
     @apply text-xl font-bold tracking-wide;
   }
   .game-window-play {
-    @apply flex md:border-4 md:border-black md:flex-grow justify-center
+    @apply 
+      flex md:flex-grow 
+      md:border-4 md:border-black justify-center
   }
   .game-window-play__border {
     @apply m-1 border-4 border-black h-4/6 mb-6 mt-12 mx-3 md:border-0 grid grid-rows-4

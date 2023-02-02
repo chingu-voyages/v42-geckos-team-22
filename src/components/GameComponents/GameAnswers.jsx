@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux'
-import { advanceCurrentQuestion } from '../../redux/slices/gameFunctionSlice'
+import { useSelector, useDispatch } from 'react-redux';
+import { advanceCurrentQuestion } from '../../redux/slices/gameFunctionSlice';
 
 function GameAnswers (props) {
 
@@ -27,8 +27,8 @@ function GameAnswers (props) {
     }
 
     useEffect(()=> {
-        console.log(answerArr)
-    }, [answerArr]);  
+        console.log("in Useeffect GameAnswers", answerArr, correctAnswer)
+    });  
     
    
 
