@@ -6,34 +6,38 @@ function GameAnswers (props) {
 
     const answerArr = useSelector(state=>state.gameFunction.answers)
     const correctAnswer = useSelector(state=>state.gameFunction.correctAnswer)
-    const currentQuestion = useSelector(state=>state.gameFunction.currentQuestion)
+    const score = useSelector(state=>state.gameFunction.score)
 
     const dispatch = useDispatch();
     
     //console.log("In Game Answers", answerArr)
-    
+    let tryNum = 0
+
     const handleAnswer = (e) => {
         // props.setGameState('end')
         const id = e.target.id
-        let tryNum = 0
+        
+
+        console.log("outside IF handleAnswer tryNum", tryNum)
 
       //  console.log("in handleAnswer correctAnswer", typeof(correctAnswer), typeof(id))
         if(correctAnswer === id && tryNum === 0) {
-            tryNum = 1
-            console.log("yes!", id, correctAnswer)
+            console.log("yes! if, id, cA, tryNum", id, correctAnswer, tryNum)
             dispatch(advanceCurrentQuestion())
             dispatch(calculateScore())
         } else if (correctAnswer === id && tryNum === 1 ) {
             dispatch(advanceCurrentQuestion())
+            console.log("yes else if, tryNum",id, correctAnswer, tryNum)
         } else {
             tryNum = 1
-            console.log("no!", id, correctAnswer)
+            console.log("no! id cA, tryNum", id, correctAnswer, tryNum)
         }
        
     }
 
     useEffect(()=> {
         console.log("in Useeffect GameAnswers", answerArr, correctAnswer)
+        console.log("in UseEffect Game Answers, score", score)
     });  
     
    
