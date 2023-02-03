@@ -53,10 +53,6 @@ function GameEndWindow (props) {
                     <span className='btn-answer-text'>End Game</span>
                 </button> 
             </div> 
-                
-           
-            
-            
         </div>
     )
 }

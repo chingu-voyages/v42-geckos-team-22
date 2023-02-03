@@ -1,8 +1,14 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { advanceCurrentQuestion, calculateScore } from '../../redux/slices/gameFunctionSlice';
+import { advanceCurrentQuestion, calculateScore, toggleConfetti } from '../../redux/slices/gameFunctionSlice';
+
+
+
 
 function GameAnswers (props) {
+
+    
+ 
 
     const answerArr = useSelector(state=>state.gameFunction.answers)
     const correctAnswer = useSelector(state=>state.gameFunction.correctAnswer)
@@ -24,8 +30,13 @@ function GameAnswers (props) {
         if(correctAnswer === id && tryNum === 0) {
             score++
             console.log("yes! if, id, cA, tryNum", id, correctAnswer, tryNum)
-            dispatch(advanceCurrentQuestion())
-            dispatch(calculateScore(score))
+            
+            dispatch(toggleConfetti("visible"))
+            setTimeout(() => {
+                dispatch(advanceCurrentQuestion())
+                dispatch(calculateScore(score))
+                dispatch(toggleConfetti("hidden"))
+                }, 5000);
         } else if (correctAnswer === id && tryNum === 1 ) {
             dispatch(advanceCurrentQuestion())
             console.log("yes else if, tryNum",id, correctAnswer, tryNum)

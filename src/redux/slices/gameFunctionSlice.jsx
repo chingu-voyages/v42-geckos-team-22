@@ -3,12 +3,13 @@ import gameData from '../../data'
 
 const initialState = {
   gameType: "Nothing Yet",
-  answers:["test1", "test2", "test3"],
-  currentQuestionImage:"",
-  correctAnswer:"",
-  currentQuestion:0,
-  score:0,
-  gameState:"play"
+  answers: ["test1", "test2", "test3"],
+  currentQuestionImage: "",
+  correctAnswer: "",
+  currentQuestion: 0,
+  score: 0,
+  success: "hidden",
+  gameState: "play"
 }
 
 export const gameFunctionSlice = createSlice({
@@ -43,10 +44,14 @@ export const gameFunctionSlice = createSlice({
     calculateScore: (state, action) => {
       state.score = action.payload
     //  console.log("in slice calculateScore", state.score)
-    }
+    },
+    toggleConfetti: (state, action) => {
+      state.success = action.payload
+      console.log(state.success)
+    },
   },
 });
 
-export const { startGame, assignAnswers, assignQuestionImage, assignCorrectAnswer, advanceCurrentQuestion, assignGameState, resetCurrentQuestion, calculateScore } = gameFunctionSlice.actions;
+export const { startGame, assignAnswers, assignQuestionImage, assignCorrectAnswer, advanceCurrentQuestion, assignGameState, resetCurrentQuestion, calculateScore, toggleConfetti } = gameFunctionSlice.actions;
 
 export default gameFunctionSlice.reducer;

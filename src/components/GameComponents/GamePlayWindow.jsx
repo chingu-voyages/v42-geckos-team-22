@@ -3,7 +3,8 @@ import React, { useState, useEffect } from 'react';
 import { MoreOptions } from './GameUtilities';
 import {useSelector, useDispatch} from 'react-redux'
 import gameData from '../../data'
-import { startGame, assignAnswers, assignQuestionImage, assignCorrectAnswer, assignGameState } from '../../redux/slices/gameFunctionSlice'
+import { startGame, assignAnswers, assignQuestionImage, assignCorrectAnswer, assignGameState, toggleConfetti } from '../../redux/slices/gameFunctionSlice'
+import Confetti from 'react-confetti'
 
 //pixelbay API Key 33121417-d326c5dfd781e6d9400ae77ef
 
@@ -16,6 +17,7 @@ function GamePlayWindow (props) {
     let currentQuestionImage = useSelector(state=>state.gameFunction.currentQuestionImage)
     let correctAnswer = useSelector(state=>state.gameFunction.correctAnswer)
     let currentQuestion = useSelector(state=>state.gameFunction.currentQuestion)
+    let success = useSelector(state=>state.gameFunction.success)
 
     const dispatch = useDispatch()
 
@@ -24,9 +26,7 @@ function GamePlayWindow (props) {
             if (gameData[property].gameType == gameName) {
                 currentGame = gameData[property].games
             }
-            
            // console.log("in FindCurrentGame", currentGame)
-        
         }
     };
 
@@ -47,13 +47,15 @@ function GamePlayWindow (props) {
         dispatch(startGame(gameName))
         findCurrentGame();
         playCurrentGame();
-        console.log("in GamePlayWindow useEffect correct Answer", correctAnswer)
+        
+        console.log("in GamePlayWindow useEffect correct Answer success", correctAnswer, success)
     });  
 
     return (
         <div className={props.cname}>
             <div className='md:ml-14 md:flex-1 md:flex md:justify-center mt-14 md:mt-0'>
-                <p>{gameName}</p>
+                <div
+                    style={{visibility: success}}>{<Confetti />}</div>
                 <img className='' method='post' encType='multipart/form-data' src={currentQuestionImage} alt={correctAnswer} />
             </div>
             <MoreOptions cname='hidden max-h-14 max-w-14 md:flex md:mr-1 md:mt-2'/>
