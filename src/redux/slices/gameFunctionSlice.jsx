@@ -9,6 +9,7 @@ const initialState = {
   currentQuestion: 0,
   score: 0,
   success: "hidden",
+  failure: true,
   gameState: "play"
 }
 

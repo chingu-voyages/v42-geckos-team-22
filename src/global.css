@@ -7,6 +7,9 @@
   .btn-answer {
     @apply bg-light-orange border-2 border-black h-1/3 m-2.5 hover:bg-green shadow-answer;
   }
+  .btn-answer-fail {
+    @apply bg-red-700 border-2 border-black h-1/3 m-2.5 shadow-answer;
+  }
   .btn-end {
     @apply bg-light-orange border-2 border-black h-1/3 m-2.5 hover:bg-green shadow-answer mx-10 p-5;
   }

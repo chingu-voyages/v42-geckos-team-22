@@ -12,6 +12,7 @@ function GameAnswers (props) {
 
     const answerArr = useSelector(state=>state.gameFunction.answers)
     const correctAnswer = useSelector(state=>state.gameFunction.correctAnswer)
+    const failure = useSelector(state=>state.gameFunction.failure)
     let score = useSelector(state=>state.gameFunction.score)
 
     const dispatch = useDispatch();
@@ -30,7 +31,6 @@ function GameAnswers (props) {
         if(correctAnswer === id && tryNum === 0) {
             score++
             console.log("yes! if, id, cA, tryNum", id, correctAnswer, tryNum)
-            
             dispatch(toggleConfetti("visible"))
             setTimeout(() => {
                 dispatch(advanceCurrentQuestion())
@@ -39,7 +39,7 @@ function GameAnswers (props) {
                 }, 5000);
         } else if (correctAnswer === id && tryNum === 1 ) {
             dispatch(advanceCurrentQuestion())
-            console.log("yes else if, tryNum",id, correctAnswer, tryNum)
+            console.log("yes else if, tryNum", id, correctAnswer, tryNum)
         } else {
             tryNum = 1
             console.log("no! id cA, tryNum", id, correctAnswer, tryNum)
@@ -52,7 +52,7 @@ function GameAnswers (props) {
             <button 
                 onClick={handleAnswer}
                 type='button' 
-                className='btn-answer flex-1'
+                className={`${failure ? `btn-answer` : `btn-answer-fail`} flex-1`}
                 id={answerArr[0]}
             >
                 <span className='btn-answer-text'>
@@ -62,7 +62,7 @@ function GameAnswers (props) {
             <button
                 onClick={handleAnswer} 
                 type='button' 
-                className='btn-answer flex-1'
+                className={`${failure ? `btn-answer` : `btn-answer-fail`} flex-1`}
                 id={answerArr[1]}
             >
                 <span className='btn-answer-text'>
@@ -72,7 +72,7 @@ function GameAnswers (props) {
             <button 
                 onClick={handleAnswer}
                 type='button' 
-                className='btn-answer flex-1'
+                className={`${failure ? `btn-answer` : `btn-answer-fail`} flex-1`}
                 id={answerArr[2]} 
             >
                 <span className='btn-answer-text'>
