@@ -1,7 +1,3 @@
-import Circle from './assets/Shapes/Circle.png'
-import Oval from './assets/Shapes/Oval.png'
-import Square from './assets/Shapes/Square.png'
-import Triangle from './assets/Shapes/Triangle.png'
 
 const dataJson = [
   {
@@ -49,6 +45,30 @@ const dataJson = [
         name: "Triangle",
         options: ["Oval", "Square", "Triangle"],
         correctAnswer: "Triangle", //if this found in "options", user win
+      },
+    ],
+  },
+  {
+    id: 3,
+    gameType: "color", //use on homepage and nav for game type selection
+    games: [
+      {
+        img: "colors coming soon",
+        name: "green",
+        options: ["red", "blue", "green"],
+        correctAnswer: "green", //if this found in "options", user win
+      },
+    ],
+  },
+  {
+    id: 4,
+    gameType: "letter", //use on homepage and nav for game type selection
+    games: [
+      {
+        img: "letters coming soon",
+        name: "a",
+        options: ["A", "B", "C"],
+        correctAnswer: "A", //if this found in "options", user win
       },
     ],
   },

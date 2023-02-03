@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { SkipLeft, SkipRight } from '../components/GameComponents/GameUtilities';
-import {useSelector, useDispatch} from 'react-redux'
+import { useSelector } from 'react-redux'
 import GameHeading from '../components/GameComponents/GameHeading';
 import GameControls from '../components/GameComponents/GameControls';
 import GameAnswers from '../components/GameComponents/GameAnswers';
