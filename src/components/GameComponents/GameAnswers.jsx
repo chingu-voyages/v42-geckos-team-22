@@ -36,7 +36,7 @@ function GameAnswers (props) {
                 dispatch(advanceCurrentQuestion())
                 dispatch(calculateScore(score))
                 dispatch(toggleConfetti("hidden"))
-                }, 5000);
+                }, 3000);
         } else if (correctAnswer === id && tryNum === 1 ) {
             dispatch(advanceCurrentQuestion())
             console.log("yes else if, tryNum", id, correctAnswer, tryNum)
