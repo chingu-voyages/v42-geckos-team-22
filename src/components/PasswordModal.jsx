@@ -5,12 +5,12 @@ import {
 } from "react-icons/md";
 
 export default function PasswordModal({
-  handleForwardClick,
   handleBackClick,
   toggleModal,
   showModal,
   registerNewUser,
   savePassword,
+  handleKeyDown,
 }) {
   return (
     <>
@@ -42,11 +42,13 @@ export default function PasswordModal({
             </div>
             <div className="mt-10 flex w-full flex-wrap  place-content-center">
               <input
+                autoFocus
                 className="rounded-l-xl  border-none bg-white py-5 text-center text-black focus:outline-none"
                 type="password"
                 name="password"
                 placeholder="Password"
                 onChange={savePassword}
+                onKeyDown={handleKeyDown}
               />
               <button
                 onClick={registerNewUser}

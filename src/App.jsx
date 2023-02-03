@@ -38,13 +38,18 @@ function App() {
   const handleForwardClick = () => {
     setPage((prevPage) => prevPage + 1);
   };
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      setPage((prevPage) => prevPage + 1);
+    }
+  };
 
   // Registration
   const [registerName, setRegisterName] = React.useState("");
   const [registerEmail, setRegisterEmail] = React.useState("");
   const [registerPassword, setRegisterPassword] = React.useState("");
 
-  const saveName= (e) => {
+  const saveName = (e) => {
     setRegisterName(e.target.value);
   };
 
@@ -60,7 +65,7 @@ function App() {
     const user = await createUserWithEmailAndPassword(
       auth,
       registerEmail,
-      registerPassword,
+      registerPassword
     );
     // Update display name
     await updateProfile(auth.currentUser, {
@@ -70,7 +75,7 @@ function App() {
       accessToken: user.accessToken,
     });
     await handleForwardClick();
-    console.log(user)
+    console.log(user);
   };
 
   // //Sign in existing users
@@ -113,6 +118,7 @@ function App() {
           toggleModal={toggleModal}
           handleForwardClick={handleForwardClick}
           saveName={saveName}
+          handleKeyDown={handleKeyDown}
         />
       )}
       {page === 1 && (
@@ -122,6 +128,7 @@ function App() {
           handleBackClick={handleBackClick}
           handleForwardClick={handleForwardClick}
           saveEmail={saveEmail}
+          handleKeyDown={handleKeyDown}
         />
       )}
       {page === 2 && (
@@ -132,6 +139,7 @@ function App() {
           handleForwardClick={handleForwardClick}
           registerNewUser={registerNewUser}
           savePassword={savePassword}
+          handleKeyDown={handleKeyDown}
         />
       )}
       {page === 3 && (

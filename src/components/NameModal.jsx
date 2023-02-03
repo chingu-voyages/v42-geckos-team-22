@@ -6,6 +6,7 @@ export default function NameModal({
   toggleModal,
   showModal,
   saveName,
+  handleKeyDown,
 }) {
   return (
     <>
@@ -36,11 +37,13 @@ export default function NameModal({
             </div>
             <div className="mt-10 flex w-full flex-wrap  place-content-center">
               <input
+                autoFocus
                 className="rounded-l-xl  border-none bg-white py-5 text-center text-black focus:outline-none"
                 type="text"
                 name="name"
                 placeholder="Display Name"
                 onChange={saveName}
+                onKeyDown={handleKeyDown}
               />
               <button
                 onClick={handleForwardClick}

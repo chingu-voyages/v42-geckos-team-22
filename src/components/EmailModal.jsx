@@ -10,6 +10,7 @@ export default function EmailModal({
   toggleModal,
   showModal,
   saveEmail,
+  handleKeyDown,
 }) {
   return (
     <>
@@ -44,11 +45,13 @@ export default function EmailModal({
             </div>
             <div className="mt-10 flex w-full flex-wrap  place-content-center">
               <input
-                className="rounded-l-xl  border-none bg-white py-5 text-center text-black focus:outline-none"
+                autoFocus
+                className="rounded-l-xl  border-none bg-white py-5 text-center text-black focus:outline-none "
                 type="email"
                 name="email"
                 placeholder="Email"
                 onChange={saveEmail}
+                onKeyDown={handleKeyDown}
               />
               <button
                 onClick={handleForwardClick}
