@@ -36,13 +36,6 @@ function GameAnswers (props) {
        
     }
 
-    // useEffect(()=> {
-    //     console.log("in Useeffect GameAnswers", answerArr, correctAnswer)
-    //     console.log("in UseEffect Game Answers, score", score)
-    // });  
-    
-   
-
     return (
         <div className={props.cname}>
             <button 
