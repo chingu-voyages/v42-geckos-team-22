@@ -6,7 +6,7 @@ function GameAnswers (props) {
 
     const answerArr = useSelector(state=>state.gameFunction.answers)
     const correctAnswer = useSelector(state=>state.gameFunction.correctAnswer)
-    const score = useSelector(state=>state.gameFunction.score)
+    let score = useSelector(state=>state.gameFunction.score)
 
     const dispatch = useDispatch();
     
@@ -22,9 +22,10 @@ function GameAnswers (props) {
 
       //  console.log("in handleAnswer correctAnswer", typeof(correctAnswer), typeof(id))
         if(correctAnswer === id && tryNum === 0) {
+            score++
             console.log("yes! if, id, cA, tryNum", id, correctAnswer, tryNum)
             dispatch(advanceCurrentQuestion())
-            dispatch(calculateScore())
+            dispatch(calculateScore(score))
         } else if (correctAnswer === id && tryNum === 1 ) {
             dispatch(advanceCurrentQuestion())
             console.log("yes else if, tryNum",id, correctAnswer, tryNum)

@@ -17,7 +17,7 @@ export const gameFunctionSlice = createSlice({
   reducers: {
     startGame: (state, action) => {
       state.gameType = action.payload;
-      //console.log("in Slice", state.gameType)
+      console.log("in Slice startGame", state.gameType)
     },
     assignAnswers: (state, action) => {
       state.answers = action.payload
@@ -30,17 +30,18 @@ export const gameFunctionSlice = createSlice({
     },
     advanceCurrentQuestion: (state) => {
       state.currentQuestion++
-      console.log(state.currentQuestion)
+      console.log("inSlice advanceCurrentQuestions", state.currentQuestion)
     },
     resetCurrentQuestion: (state, action) => {
       state.currentQuestion = action.payload
-      console.log("in resetCurrentQuestion")
+      console.log("in resetCurrentQuestion", state.currentQuestion)
     },
     assignGameState: (state, action) => {
       state.gameState = action.payload
+      console.log("inslice assignGameState'", state.gameState)
     },
-    calculateScore: (state) => {
-      state.score++
+    calculateScore: (state, action) => {
+      state.score = action.payload
       console.log("in slice calculateScore", state.score)
     }
   },
