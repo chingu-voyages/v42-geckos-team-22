@@ -14,7 +14,7 @@ module.exports = {
         answer: "3px 3px 1px black",
       },
       backgroundImage: {
-        bg_nav: "url('/src/assets/bg_nav.svg')",
+        bg_nav: "url('/src/assets/header/bg_nav.svg')",
       },
       colors: {
         turquoise: "#16ABAC",
