@@ -2,13 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { advanceCurrentQuestion, calculateScore, toggleConfetti } from '../../redux/slices/gameFunctionSlice';
 
-
-
-
-function GameAnswers (props) {
-
-    
- 
+function GameAnswers (props, e) {
 
     const answerArr = useSelector(state=>state.gameFunction.answers)
     const correctAnswer = useSelector(state=>state.gameFunction.correctAnswer)
@@ -22,15 +16,15 @@ function GameAnswers (props) {
 
     const handleAnswer = (e) => {
         // props.setGameState('end')
+        
         const id = e.target.id
         
-
-        console.log("outside IF handleAnswer tryNum", tryNum)
-
-      //  console.log("in handleAnswer correctAnswer", typeof(correctAnswer), typeof(id))
+        //console.log("outside IF handleAnswer tryNum", tryNum)
+        //  console.log("in handleAnswer correctAnswer", typeof(correctAnswer), typeof(id))
+        console.log("in handle answer id & answerArr", id, answerArr[0])
         if(correctAnswer === id && tryNum === 0) {
             score++
-            console.log("yes! if, id, cA, tryNum", id, correctAnswer, tryNum)
+            //console.log("yes! if, id, cA, tryNum", id, correctAnswer, tryNum)
             dispatch(toggleConfetti("visible"))
             setTimeout(() => {
                 dispatch(advanceCurrentQuestion())
@@ -39,12 +33,16 @@ function GameAnswers (props) {
                 }, 3000);
         } else if (correctAnswer === id && tryNum === 1 ) {
             dispatch(advanceCurrentQuestion())
-            console.log("yes else if, tryNum", id, correctAnswer, tryNum)
+           // console.log("yes else if, tryNum", id, correctAnswer, tryNum)
         } else {
             tryNum = 1
-            console.log("no! id cA, tryNum", id, correctAnswer, tryNum)
+          //  console.log("no! id cA, tryNum", id, correctAnswer, tryNum)
         }
-       
+       return id
+    }
+
+    const styleIncorrect = (btnID) => {
+        return `${failure ? `btn-answer` : `btn-answer-fail`} flex-1`
     }
 
     return (
