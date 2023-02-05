@@ -11,19 +11,17 @@ function GameAnswerButton ({btnid}) {
 
     const dispatch = useDispatch();
 
-    
     const handleAnswer = () => {
-        
-        let tryNum = 0
+      
         // props.setGameState('end')
         
         
         //console.log("outside IF handleAnswer tryNum", tryNum)
         //console.log("in handleAnswer correctAnswer", typeof(correctAnswer), typeof(id))
-        console.log("in handle answer answerArr[btnid], try Num", answerArr[btnid], tryNum)
-        if(correctAnswer === answerArr[btnid] && tryNum === 0) {
+       // console.log("in handle answer answerArr[btnid], try Num", answerArr[btnid], tryNum)
+        if(correctAnswer === answerArr[btnid] && failure.length === 0) {
            
-            //console.log("yes! if, id, cA, tryNum", id, correctAnswer, tryNum)
+            console.log("yes! if, id, cA, failure.length", answerArr[btnid], correctAnswer, failure.length)
             dispatch(toggleConfetti("visible"))
             
             setTimeout(() => {
@@ -32,14 +30,14 @@ function GameAnswerButton ({btnid}) {
                 dispatch(toggleConfetti("hidden"))
                 dispatch(advanceCurrentQuestion())
                 }, 3000);
-        } else if (correctAnswer === answerArr[btnid] && tryNum === 1 ) {
+        } else if (correctAnswer === answerArr[btnid] && failure.length > 0 ) {
             dispatch(clearFailures())
             dispatch(advanceCurrentQuestion())
-           // console.log("yes else if, tryNum", id, correctAnswer, tryNum)
+           console.log("yes else if, failure.length", answerArr[btnid], correctAnswer, failure.length)
         } else {
             dispatch(recordFailures(btnid))
-            tryNum = 1
-            console.log("no! id cA, tryNum", answerArr[btnid], correctAnswer, tryNum)
+          
+            console.log("no! id cA, failure.length", answerArr[btnid], correctAnswer, failure.length)
         }
 
     }

@@ -6,7 +6,7 @@ import GameAnswerButton from './GameAnswerButton';
 function GameAnswers (props) {
 
     const failure = useSelector(state=>state.gameFunction.failure)
-
+    
   
     useEffect(() => {
         console.log("in GameAnsewr useEffect", failure, props)
