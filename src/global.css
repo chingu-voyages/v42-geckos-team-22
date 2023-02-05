@@ -8,7 +8,8 @@
     @apply m-2.5 h-1/3 border-2 border-black bg-light-orange shadow-answer hover:bg-green;
   }
   .btn-answer-fail {
-    @apply bg-red-700 border-2 border-black h-1/3 m-2.5 shadow-answer;
+    @apply bg-red-700 border-2 border-black h-1/3 m-2.5 shadow-answer cursor-default line-through decoration-4;
+
   }
   .btn-end {
     @apply m-2.5 mx-10 h-1/3 border-2 border-black bg-light-orange p-5 shadow-answer hover:bg-green;

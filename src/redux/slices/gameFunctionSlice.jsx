@@ -9,7 +9,7 @@ const initialState = {
   currentQuestion: 0,
   score: 0,
   success: "hidden",
-  failure: true,
+  failure: [],
   gameState: "play"
 }
 
@@ -38,6 +38,13 @@ export const gameFunctionSlice = createSlice({
       state.currentQuestion = action.payload
      // console.log("in resetCurrentQuestion", state.currentQuestion)
     },
+    recordFailures: (state,action) => {
+      state.failure.push(action.payload)
+      console.log("in slice RecordFailures", state.failure)
+    },
+    clearFailures: (state) => {
+      state.failure = []
+    },
     assignGameState: (state, action) => {
       state.gameState = action.payload
     //  console.log("inslice assignGameState'", state.gameState)
@@ -53,6 +60,6 @@ export const gameFunctionSlice = createSlice({
   },
 });
 
-export const { startGame, assignAnswers, assignQuestionImage, assignCorrectAnswer, advanceCurrentQuestion, assignGameState, resetCurrentQuestion, calculateScore, toggleConfetti } = gameFunctionSlice.actions;
+export const { startGame, assignAnswers, assignQuestionImage, assignCorrectAnswer, advanceCurrentQuestion, assignGameState, resetCurrentQuestion, calculateScore, toggleConfetti, recordFailures, clearFailures } = gameFunctionSlice.actions;
 
 export default gameFunctionSlice.reducer;

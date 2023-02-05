@@ -55,7 +55,10 @@ function GamePlayWindow (props) {
         <div className={props.cname}>
             <div className='mt-14 md:ml-14 md:mt-0 md:flex md:flex-1 md:justify-center'>
                 <div
-                    style={{visibility: success}}>{<Confetti />}</div>
+                    style={{visibility: success}}
+                >
+                    {<Confetti />}
+                </div>
                 <img className='' method='post' encType='multipart/form-data' src={currentQuestionImage} alt={correctAnswer} />
             </div>
             <MoreOptions cname='hidden max-h-14 max-w-14 md:flex md:mr-1 md:mt-2'/>
