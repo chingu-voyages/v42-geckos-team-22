@@ -1,5 +1,5 @@
 import React from "react";
-import { SkipLeft, SkipRight, MoreOptions } from '../GameComponents/utilities';
+import { SkipLeft, SkipRight, MoreOptions } from '../GameComponents/GameUtilities';
 
 function GameControls (props) {
 

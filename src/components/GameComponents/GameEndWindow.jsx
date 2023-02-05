@@ -1,20 +1,32 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import {useSelector, useDispatch} from 'react-redux';
+import { assignGameState, resetCurrentQuestion, calculateScore } from '../../redux/slices/gameFunctionSlice'
 
 function GameEndWindow (props) {
 
-    const score = "10"
+    let gameState = useSelector(state=>state.gameFunction.gameState)
+    let currentQuestion = useSelector(state=>state.gameFunction.currentQuestion)
+    const score = useSelector(state=>state.gameFunction.score)
 
     const navigate = useNavigate();
+    const dispatch = useDispatch();
 
     const handleEnd = () => {
+        gameState = 'play'
+        currentQuestion = 0
+        dispatch(assignGameState(gameState))
+        dispatch(resetCurrentQuestion(currentQuestion))
+        dispatch(calculateScore(0))
         navigate('/')
-        console.log('handleEnd')
     }
 
     const handlePlayAgain = () => {
-        props.setGameState("play")
-        console.log('handleEnd')
+        currentQuestion = 0
+        gameState = 'play'
+        dispatch(resetCurrentQuestion(currentQuestion));
+        dispatch(assignGameState(gameState));
+        dispatch(calculateScore(0));
     }
 
     return (
@@ -41,10 +53,6 @@ function GameEndWindow (props) {
                     <span className='btn-answer-text'>End Game</span>
                 </button> 
             </div> 
-                
-           
-            
-            
         </div>
     )
 }

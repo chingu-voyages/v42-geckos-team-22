@@ -1,34 +1,62 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 // import Axios from 'axios';
-import { MoreOptions } from '../GameComponents/utilities';
-import DummyCard from '../../assets/card3.jpg'
+import { MoreOptions } from './GameUtilities';
+import {useSelector, useDispatch} from 'react-redux'
+import gameData from '../../data'
+import { startGame, assignAnswers, assignQuestionImage, assignCorrectAnswer, assignGameState, toggleConfetti } from '../../redux/slices/gameFunctionSlice'
+import Confetti from 'react-confetti'
 
 //pixelbay API Key 33121417-d326c5dfd781e6d9400ae77ef
 
 // api format https://pixabay.com/api/?key=33121417-d326c5dfd781e6d9400ae77ef&id=159731
 
 function GamePlayWindow (props) {
-    
-   
 
-    const [ image, setImage ] = useState("");
+    let gameName = useSelector(state=>state.gameFunction.gameType)
+    let currentGame = null;
+    let currentQuestionImage = useSelector(state=>state.gameFunction.currentQuestionImage)
+    let correctAnswer = useSelector(state=>state.gameFunction.correctAnswer)
+    let currentQuestion = useSelector(state=>state.gameFunction.currentQuestion)
+    let success = useSelector(state=>state.gameFunction.success)
 
-    // Axios
-    //     .get('https://pixabay.com/api/?key=33121417-d326c5dfd781e6d9400ae77ef&id=159731',, {headers: {"Access-Control-Allow-Origin": "*"}, })
-    //     .then(
-    //     (response) => {
-    //         console.log(response.data.hits[0].pageURL);
-    //         setImage(response.data.hits[0].pageURL)
-    //     }
-    // );
-    
+    const dispatch = useDispatch()
 
-//, {headers: {"Access-Control-Allow-Origin": "*"}, }
+    const findCurrentGame = () => {
+        for(const property in gameData) {
+            if (gameData[property].gameType == gameName) {
+                currentGame = gameData[property].games
+            }
+           // console.log("in FindCurrentGame", currentGame)
+        }
+    };
+
+    const playCurrentGame = () => {
+      //  console.log("inPlayCurrentGame currentQuestion", currentQuestion, currentGame.length)
+        if (currentQuestion < currentGame.length){
+            dispatch((assignAnswers(currentGame[currentQuestion].options)))
+            dispatch((assignQuestionImage(currentGame[currentQuestion].img)))
+            dispatch((assignCorrectAnswer(currentGame[currentQuestion].name)))
+           // console.log("in playCurrentGame correct Answer", currentGame[currentQuestion].name)
+        } else {
+            dispatch(assignGameState('end'))
+        }
+    }
+
+    useEffect(()=> {
+        gameName = window.location.pathname.slice(6)
+        dispatch(startGame(gameName))
+        findCurrentGame();
+        playCurrentGame();
+        
+        console.log("in GamePlayWindow useEffect correct Answer success", correctAnswer, success)
+    });  
 
     return (
         <div className={props.cname}>
             <div className='md:ml-14 md:flex-1 md:flex md:justify-center mt-14 md:mt-0'>
-                <img className='' method='post' encType='multipart/form-data' src={image} alt='Cow' />
+                <div
+                    style={{visibility: success}}>{<Confetti />}</div>
+                <img className='' method='post' encType='multipart/form-data' src={currentQuestionImage} alt={correctAnswer} />
             </div>
             <MoreOptions cname='hidden max-h-14 max-w-14 md:flex md:mr-1 md:mt-2'/>
         </div>
