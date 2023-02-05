@@ -10,6 +10,14 @@ module.exports = {
       6: "6px",
     },
     extend: {
+      fontSize: {
+        headingFont: [
+          "calc(4rem + (6.5 - 3) * ((100vw - 769px) / (900 - 769)))",
+          {
+            lineHeight: "6.5rem",
+          },
+        ],
+      },
       boxShadow: {
         answer: "3px 3px 1px black",
       },
