@@ -53,7 +53,7 @@ function GamePlayWindow (props) {
 
     return (
         <div className={props.cname}>
-            <div className='md:ml-14 md:flex-1 md:flex md:justify-center mt-14 md:mt-0'>
+            <div className='mt-14 md:ml-14 md:mt-0 md:flex md:flex-1 md:justify-center'>
                 <div
                     style={{visibility: success}}>{<Confetti />}</div>
                 <img className='' method='post' encType='multipart/form-data' src={currentQuestionImage} alt={correctAnswer} />
@@ -63,4 +63,4 @@ function GamePlayWindow (props) {
     )
 }
 
-export default GamePlayWindow
+export default GamePlayWindow;
