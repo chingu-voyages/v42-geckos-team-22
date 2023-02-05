@@ -15,7 +15,7 @@ export const DropDown = () => {
         onClick={() => dispatch(toggleMenu())}
         className="shadow-top w-full py-4 hover:bg-[#217382] md:shadow-none"
       >
-        <Link to="/game/color" className="dropDown">
+        <Link to="/game/number" className="dropDown">
           <TbNumbers className="dropDownIcons" />
           <p>number</p>
         </Link>
@@ -24,7 +24,7 @@ export const DropDown = () => {
         onClick={() => dispatch(toggleMenu())}
         className="w-full py-4 hover:bg-[#217382]"
       >
-        <Link to="/game/letter" className="dropDown">
+        <Link to="/game/shape" className="dropDown">
           <FaShapes className="dropDownIcons" />
           <p>shape</p>
         </Link>
@@ -33,7 +33,7 @@ export const DropDown = () => {
         onClick={() => dispatch(toggleMenu())}
         className="w-full py-4 hover:bg-[#217382]"
       >
-        <Link to="/game/number" className="dropDown">
+        <Link to="/game/color" className="dropDown">
           <GiPanda className="dropDownIcons" />
           <p>animal</p>
         </Link>
@@ -42,7 +42,7 @@ export const DropDown = () => {
         onClick={() => dispatch(toggleMenu())}
         className="shadow-bottom w-full py-4 hover:bg-[#217382] md:shadow-none"
       >
-        <Link to="/game/shape" className="dropDown">
+        <Link to="/game/letter" className="dropDown">
           <TbLetterCase className="dropDownIcons" />
           <p>lettercase</p>
         </Link>
