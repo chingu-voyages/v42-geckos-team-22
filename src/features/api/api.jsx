@@ -20,11 +20,11 @@ function App() {
     }
   }, []);
 
-  //   return (
-  //     <div className="App">
-  //       <img className="w-80" src={panda} alt="panda" />
-  //     </div>
-  //   );
+  return (
+    <div className="App">
+      <img className="w-80" src={panda} alt="panda" />
+    </div>
+  );
 }
 
 export default App;
