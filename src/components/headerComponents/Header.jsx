@@ -5,16 +5,15 @@ import { NavLink, Link } from "react-router-dom";
 import { BsCaretDownFill, BsCaretUpFill } from "react-icons/bs";
 import { RiHome2Fill } from "react-icons/ri";
 import { CgClose, CgMenu } from "react-icons/cg";
-import EmailModal from "./RegistrationComponents/EmailModal";
-import NameModal from "./RegistrationComponents/NameModal";
-import PasswordModal from "./RegistrationComponents/PasswordModal";
-import SuccessModal from "./RegistrationComponents/SuccessModal";
+import EmailModal from "../modalComponents/EmailModal";
+import NameModal from "../modalComponents/NameModal";
+import PasswordModal from "../modalComponents/PasswordModal";
+import SuccessModal from "../modalComponents/SuccessModal";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleMenu } from "../redux/headerSlice";
+import { toggleMenu } from "../../redux/headerSlice";
 
 function Header() {
   const [expandDropDown, setExpandDropDown] = useState(false);
-  // const [showMobileNav, setShowMobileNav] = useState(false);
   const dispatch = useDispatch();
   const { isOpen } = useSelector((store) => store.header);
   const [showModal, setShowModal] = useState(false);
@@ -50,7 +49,7 @@ function Header() {
         </li>
       </ul>
 
-      {isOpen && <MobileNav />}
+      {isOpen && <MobileNav toggleModal={toggleModal} />}
 
       {page === 0 && (
         <NameModal

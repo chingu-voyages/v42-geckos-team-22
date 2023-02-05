@@ -1,4 +1,6 @@
 import React from "react";
+import faqVector from "../assets/faqPage/faqVector.svg";
+import faqVector1 from "../assets/faqPage/faqVector1.svg";
 
 function FAQ() {
   //Update questions and answers here:
@@ -25,38 +27,33 @@ function FAQ() {
 
   const content = faqData.map((item) => {
     return (
-      <>
-        <div className="background--shadow">
-          <details
-            className="mt-5 mb-5 rounded-lg p-2 text-gray-500 outline outline-2 outline-black hover:bg-gray-200 md:mt-0 md:mb-14 md:p-10"
-            key={item.id}
-          >
-            <summary className="cursor-pointer text-dark-grey">
-              {item.question}
-            </summary>
-            {item.answer}
-          </details>
-        </div>
-      </>
+      <div key={item.id} className="background--shadow mx-auto md:w-11/12">
+        <details className="mt-5 mb-5 rounded-lg p-2 text-gray-500 outline outline-2 outline-black hover:bg-gray-200 md:mt-0 md:mb-14 md:p-10">
+          <summary className="cursor-pointer text-dark-grey">
+            {item.question}
+          </summary>
+          {item.answer}
+        </details>
+      </div>
     );
   });
 
   return (
-    <div className="relative p-5 md:p-0">
+    <div className="relative h-screen p-5 md:p-0">
       <div className="lg:translate-y-30 absolute hidden h-40 w-5 translate-y-20 bg-purple md:block lg:h-60 lg:w-8"></div>
       <div className="absolute right-0 -z-20 hidden h-40 w-4/6 bg-light-orange md:block lg:h-60">
         <img
           className="absolute left-44 w-28 lg:left-96 lg:w-40"
-          src="src/assets/faqVector.svg"
+          src={faqVector}
           alt="faq vector"
         />
         <img
           className="absolute right-0 -bottom-14 w-44 lg:-bottom-20 lg:w-60"
-          src="src/assets/faqVector1.svg"
+          src={faqVector1}
           alt="faq vector"
         />
       </div>
-      <section className="md:pt-16 md:pb-16">
+      <section className="pb-12 md:pt-16 md:pb-24">
         <h2 className="text-7xl font-extrabold md:hidden">FAQ</h2>
         <span className="hidden text-7xl font-extrabold md:block md:pl-14 md:pb-6 lg:pl-32 lg:text-9xl">
           Frequently
