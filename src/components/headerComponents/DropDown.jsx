@@ -16,7 +16,7 @@ export const DropDown = () => {
         className="shadow-top w-full py-4 hover:bg-[#217382] md:shadow-none"
       >
         <Link to="/game/number" className="dropDown">
-          <TbNumbers className="dropDownIcons" /> 
+          <TbNumbers className="dropDownIcons" />
           <p>number</p>
         </Link>
       </li>

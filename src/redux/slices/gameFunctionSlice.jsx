@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import gameData from '../../data'
+import gameData from "../../data";
 
 const initialState = {
   gameType: "Nothing Yet",
@@ -10,8 +10,8 @@ const initialState = {
   score: 0,
   success: "hidden",
   failure: true,
-  gameState: "play"
-}
+  gameState: "play",
+};
 
 export const gameFunctionSlice = createSlice({
   name: "GameFunction",
@@ -19,40 +19,50 @@ export const gameFunctionSlice = createSlice({
   reducers: {
     startGame: (state, action) => {
       state.gameType = action.payload;
-     // console.log("in Slice startGame", state.gameType)
+      // console.log("in Slice startGame", state.gameType)
     },
     assignAnswers: (state, action) => {
-      state.answers = action.payload
+      state.answers = action.payload;
     },
     assignQuestionImage: (state, action) => {
-      state.currentQuestionImage = action.payload
+      state.currentQuestionImage = action.payload;
     },
     assignCorrectAnswer: (state, action) => {
-      state.correctAnswer = action.payload
+      state.correctAnswer = action.payload;
     },
     advanceCurrentQuestion: (state) => {
-      state.currentQuestion++
-    //  console.log("inSlice advanceCurrentQuestions", state.currentQuestion)
+      state.currentQuestion++;
+      //  console.log("inSlice advanceCurrentQuestions", state.currentQuestion)
     },
     resetCurrentQuestion: (state, action) => {
-      state.currentQuestion = action.payload
-     // console.log("in resetCurrentQuestion", state.currentQuestion)
+      state.currentQuestion = action.payload;
+      // console.log("in resetCurrentQuestion", state.currentQuestion)
     },
     assignGameState: (state, action) => {
-      state.gameState = action.payload
-    //  console.log("inslice assignGameState'", state.gameState)
+      state.gameState = action.payload;
+      //  console.log("inslice assignGameState'", state.gameState)
     },
     calculateScore: (state, action) => {
-      state.score = action.payload
-    //  console.log("in slice calculateScore", state.score)
+      state.score = action.payload;
+      //  console.log("in slice calculateScore", state.score)
     },
     toggleConfetti: (state, action) => {
-      state.success = action.payload
-      console.log(state.success)
+      state.success = action.payload;
+      console.log(state.success);
     },
   },
 });
 
-export const { startGame, assignAnswers, assignQuestionImage, assignCorrectAnswer, advanceCurrentQuestion, assignGameState, resetCurrentQuestion, calculateScore, toggleConfetti } = gameFunctionSlice.actions;
+export const {
+  startGame,
+  assignAnswers,
+  assignQuestionImage,
+  assignCorrectAnswer,
+  advanceCurrentQuestion,
+  assignGameState,
+  resetCurrentQuestion,
+  calculateScore,
+  toggleConfetti,
+} = gameFunctionSlice.actions;
 
 export default gameFunctionSlice.reducer;
