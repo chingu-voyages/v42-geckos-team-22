@@ -54,7 +54,7 @@ function HomePage() {
           </p>
         </div>
         <Link
-          to="/"
+          to="/game/number"
           className="mt-5 mb-16 h-full w-4/6 py-14 ring-8 ring-black md:row-span-3 md:mb-0 md:mt-0 md:grid md:w-full md:place-items-center md:py-0 md:ring-2"
         >
           <h2 className="text-center text-2xl font-bold uppercase tracking-wide">
@@ -65,7 +65,7 @@ function HomePage() {
           </span>
         </Link>
         <Link
-          to="/"
+          to="/game/shape"
           className="mb-16 h-full w-4/6 py-14 ring-8 ring-black md:row-span-3 md:mb-0 md:grid md:w-full md:place-items-center md:py-0 md:ring-2"
         >
           <h2 className="text-center text-2xl font-bold uppercase tracking-wide">
@@ -76,7 +76,7 @@ function HomePage() {
           </span>
         </Link>
         <Link
-          to="/"
+          to="/game/color"
           className="mb-16 h-full w-4/6 py-14 ring-8 ring-black md:row-span-3 md:mb-0 md:grid md:w-full md:place-items-center md:py-0 md:ring-2"
         >
           <h2 className="text-center text-2xl font-bold uppercase tracking-wide">
@@ -87,7 +87,7 @@ function HomePage() {
           </span>
         </Link>
         <Link
-          to="/"
+          to="/game/letter"
           className="mb-16 h-full w-4/6 py-14 ring-8 ring-black md:row-span-3 md:mb-0 md:grid md:w-full md:place-items-center md:py-0 md:ring-2"
         >
           <h2 className="text-center text-2xl font-bold uppercase tracking-wide">
