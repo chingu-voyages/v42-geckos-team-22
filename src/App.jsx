@@ -1,7 +1,8 @@
 import React from "react";
-import Header from "./components/Header";
+import Header from "./components/headerComponents/Header";
 import Footer from "./components/Footer";
-import Home from "./pages/Home";
+// import Home from "./pages/Home";
+import HomePage from "./pages/HomePage";
 import Game from "./pages/Game";
 import FAQ from "./pages/FAQ";
 import NotFound from "./pages/404";
@@ -10,10 +11,10 @@ import { Color } from "./features/flashcard/Color";
 import { Letter } from "./features/flashcard/Letter";
 import { Number } from "./features/flashcard/Number";
 import { Shape } from "./features/flashcard/Shape";
-import NameModal from "./components/NameModal";
-import PasswordModal from "./components/PasswordModal";
-import SuccessModal from "./components/SuccessModal";
-import EmailModal from "./components/EmailModal";
+import NameModal from "./components/modalComponents/NameModal";
+import PasswordModal from "./components/modalComponents/PasswordModal";
+import SuccessModal from "./components/modalComponents/SuccessModal";
+import EmailModal from "./components/modalComponents/EmailModal";
 import {
   getAuth,
   createUserWithEmailAndPassword,
@@ -96,10 +97,10 @@ function App() {
   // });
 
   return (
-    <div className="">
+    <>
       <Header toggleModal={toggleModal} />
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="game" element={<Game />}>
           <Route path="color" element={<Color />} />
           <Route path="letter" element={<Letter />} />
@@ -140,13 +141,12 @@ function App() {
           registerNewUser={registerNewUser}
           savePassword={savePassword}
           handleKeyDown={handleKeyDown}
-          
         />
       )}
       {page === 3 && (
         <SuccessModal showModal={showModal} toggleModal={toggleModal} />
       )}
-    </div>
+    </>
   );
 }
 

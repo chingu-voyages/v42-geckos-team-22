@@ -6,11 +6,10 @@ import { BsCaretDownFill, BsCaretUpFill } from "react-icons/bs";
 import { RiHome2Fill } from "react-icons/ri";
 import { CgClose, CgMenu } from "react-icons/cg";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleMenu } from "../redux/headerSlice";
+import { toggleMenu } from "../../redux/headerSlice";
 
 function Header(props) {
   const [expandDropDown, setExpandDropDown] = useState(false);
-  // const [showMobileNav, setShowMobileNav] = useState(false);
   const dispatch = useDispatch();
   const { isOpen } = useSelector((store) => store.header);
 
@@ -34,7 +33,7 @@ function Header(props) {
         </li>
       </ul>
 
-      {isOpen && <MobileNav />}
+      {isOpen && <MobileNav toggleModal={toggleModal} />}
 
       <nav className="hidden h-full uppercase md:mx-32 md:flex md:flex-row md:items-center md:justify-between">
         <ul className="text-gray-100 md:flex md:flex-row md:items-center md:gap-24">

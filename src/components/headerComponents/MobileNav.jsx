@@ -3,17 +3,16 @@ import { Link } from "react-router-dom";
 import { DropDown } from "./DropDown";
 import { BsCaretDownFill, BsCaretUpFill } from "react-icons/bs";
 import { useDispatch } from "react-redux";
-import { toggleMenu } from "../redux/headerSlice";
+import { toggleMenu } from "../../redux/headerSlice";
 
-function MobileNav() {
+function MobileNav(props) {
   const [expandDropDown, setExpandDropDown] = useState(false);
   const dispatch = useDispatch();
 
   return (
-    <ul className="absolute z-50 flex h-screen w-screen animate-slideIn flex-col items-center justify-evenly bg-turquoise text-3xl uppercase text-white md:hidden">
+    <ul className="absolute z-50 flex h-screen w-screen animate-slideIn flex-col items-center justify-start gap-y-24 bg-turquoise pt-40 text-3xl uppercase text-white md:hidden">
       <li
         onClick={() => dispatch(toggleMenu())}
-        // onClick={() => dispatch(closeMenu())}
         className="-mt-24 text-gray-100 hover:text-white"
       >
         <Link to="/">home</Link>
@@ -30,14 +29,13 @@ function MobileNav() {
       </li>
       <li
         onClick={() => dispatch(toggleMenu())}
-        // onClick={() => dispatch(closeMenu())}
         className="text-gray-100 hover:text-white"
       >
         <Link to="/faq">faq</Link>
       </li>
       <li>
         <button
-          onClick={() => null}
+          onClick={props.toggleModal}
           className="uppercase text-gray-100 hover:text-white"
         >
           register

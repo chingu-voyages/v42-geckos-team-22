@@ -3,6 +3,8 @@ import {
   MdOutlineArrowBackIosNew,
   MdOutlineArrowForwardIos,
 } from "react-icons/md";
+import email from "../../assets/modal/email.svg";
+import emailProgress from "../../assets/modal/emailProgress.svg";
 
 export default function EmailModal({
   handleForwardClick,
@@ -36,9 +38,9 @@ export default function EmailModal({
                 onClick={handleForwardClick}
                 className="absolute right-6 top-6 z-50 text-2xl text-gray-500 hover:text-black"
               />
-              <img src="src/assets/email.svg" className="" alt="email" />
+              <img src={email} className="" alt="email" />
               <img
-                src="src/assets/emailProgress.svg"
+                src={emailProgress}
                 className="mt-20"
                 alt="email progress bar"
               />
