@@ -7,10 +7,12 @@ import password from "../../assets/modal/password.svg";
 import passwordProgress from "../../assets/modal/passwordProgress.svg";
 
 export default function PasswordModal({
-  handleForwardClick,
   handleBackClick,
   toggleModal,
   showModal,
+  registerNewUser,
+  savePassword,
+  handleKeyDown,
 }) {
   return (
     <>
@@ -32,10 +34,7 @@ export default function PasswordModal({
                 onClick={handleBackClick}
                 className="absolute left-6 top-6 z-50 text-2xl text-gray-500 hover:text-black"
               />
-              <MdOutlineArrowForwardIos
-                onClick={handleForwardClick}
-                className="absolute right-6 top-6 z-50 text-2xl text-gray-500 hover:text-black"
-              />
+
               <img src={password} className="" alt="password" />
               <img
                 src={passwordProgress}
@@ -43,12 +42,22 @@ export default function PasswordModal({
                 alt="password progress bar"
               />
             </div>
-            <input
-              className="mt-10 w-full rounded-xl border-none bg-white py-5 text-center text-black focus:outline-none sm:mt-6"
-              type="password"
-              name="password"
-              placeholder="Password"
-            />
+            <div className="mt-10 flex w-full flex-wrap  place-content-center">
+              <input
+                autoFocus
+                className="rounded-l-xl  border-none bg-white py-5 text-center text-black focus:outline-none"
+                type="password"
+                name="password"
+                placeholder="Password"
+                onChange={savePassword}
+              />
+              <button
+                onClick={registerNewUser}
+                className="w-14 rounded-r-xl border-none bg-off-white text-white hover:bg-dark-grey hover:text-white"
+              >
+                Submit
+              </button>
+            </div>
           </div>
         </div>
       )}
