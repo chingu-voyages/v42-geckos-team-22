@@ -16,7 +16,7 @@ function App() {
   const location = useLocation();
 
   return (
-    <>
+    <div className="mx-auto xl:max-w-[93.75rem]">
       <Header />
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<HomePage />} />
@@ -31,7 +31,7 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
-    </>
+    </div>
   );
 }
 

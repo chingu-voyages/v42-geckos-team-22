@@ -89,9 +89,9 @@ function Header() {
             className="cursor-pointer uppercase"
           >
             <span className="flex flex-row items-center hover:font-extrabold hover:text-white">
-              <Link className="pr-1" to="/game">
+              <button className="cursor-pointer pr-1 uppercase">
                 game type
-              </Link>
+              </button>
               {expandDropDown ? <BsCaretUpFill /> : <BsCaretDownFill />}
             </span>
             {expandDropDown && <DropDown />}

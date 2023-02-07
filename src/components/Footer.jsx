@@ -4,7 +4,7 @@ import { RiInstagramFill } from "react-icons/ri";
 
 function Footer() {
   return (
-    <footer className="w-screen bg-turquoise text-gray-300">
+    <footer className="w-full bg-turquoise text-gray-300">
       <div className="w-full pt-12 md:flex md:flex-row md:justify-around md:pb-12">
         <div className="mb-10 flex flex-col items-center justify-center gap-y-4 md:mb-0 md:items-start md:justify-start">
           <h2 className="text-lg font-bold uppercase text-gray-200">connect</h2>
