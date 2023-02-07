@@ -140,6 +140,7 @@ function App() {
           registerNewUser={registerNewUser}
           savePassword={savePassword}
           handleKeyDown={handleKeyDown}
+          
         />
       )}
       {page === 3 && (
