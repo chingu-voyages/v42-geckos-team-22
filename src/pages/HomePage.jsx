@@ -13,7 +13,7 @@ function HomePage() {
     <div className="h-full md:h-screen">
       <div className="flex h-full w-full flex-col items-center justify-start md:grid md:grid-cols-2 md:grid-rows-[12]">
         <span className="absolute hidden h-1/3 md:top-[20%] md:left-[20%] md:z-10 md:inline-block md:max-w-[72rem]">
-          <h1 className="h-full w-full uppercase text-gray-50 md:text-headingFont md:font-extrabold md:tracking-wide md:text-black xl:max-w-[93.75rem]">
+          <h1 className="h-full w-full uppercase text-gray-50 md:text-6xl md:font-extrabold md:tracking-wide md:text-black lg:text-headingFont xl:max-w-[93.75rem]">
             the only flash card you need{" "}
             <img
               className="hidden w-20 -translate-y-2 md:inline"
