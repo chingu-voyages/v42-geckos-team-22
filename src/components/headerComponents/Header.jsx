@@ -33,7 +33,7 @@ function Header(props) {
         </li>
       </ul>
 
-      {isOpen && <MobileNav toggleModal={toggleModal} />}
+      {isOpen && <MobileNav toggleMenu={toggleMenu} />}
 
       <nav className="hidden h-full uppercase md:mx-32 md:flex md:flex-row md:items-center md:justify-between">
         <ul className="text-gray-100 md:flex md:flex-row md:items-center md:gap-24">
