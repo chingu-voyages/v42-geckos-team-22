@@ -10,7 +10,7 @@ function MobileNav(props) {
   const dispatch = useDispatch();
 
   return (
-    <ul className="absolute z-50 flex h-screen w-screen animate-slideIn flex-col items-center justify-start gap-y-24 bg-turquoise pt-40 text-3xl uppercase text-white md:hidden">
+    <ul className="absolute z-50 flex h-[200vh] w-screen animate-slideIn flex-col items-center justify-start gap-y-24 bg-turquoise pt-40 text-3xl uppercase text-white md:hidden">
       <li
         onClick={() => dispatch(toggleMenu())}
         className="-mt-24 text-gray-100 hover:text-white"
