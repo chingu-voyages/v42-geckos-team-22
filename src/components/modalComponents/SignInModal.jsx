@@ -16,14 +16,14 @@ export default function SignInModal({
     position: "absolute",
     top: "-8rem",
     left: "-7rem",
-    transition: "300ms ease all"
+    transition: "800ms ease all",
   });
   const [rightArmStyle, setRightArmStyle] = React.useState({
     position: "absolute",
     top: "-10rem",
     right: "-7rem",
     transform: "rotate(45deg)",
-    transition: "300ms ease all",
+    transition: "800ms ease all",
   });
 
   return (

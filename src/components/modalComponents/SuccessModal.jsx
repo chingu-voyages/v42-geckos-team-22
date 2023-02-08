@@ -6,12 +6,12 @@ import pawl from "../../assets/modal/pawl.svg";
 
 export default function SuccessModal({
   toggleModal,
-  showModal,
+  showRegisterModal,
   currentUser
 }) {
   return (
     <>
-      {showModal && (
+      {showRegisterModal && (
         <div
           onClick={toggleModal} // User clicks backdrop will close
           className="fixed inset-0 z-50 flex cursor-pointer items-center justify-center bg-zinc-200 bg-opacity-40 backdrop-blur-[1.5px]"
