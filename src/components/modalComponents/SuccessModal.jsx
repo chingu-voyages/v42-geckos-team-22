@@ -1,9 +1,14 @@
+import { updateCurrentUser } from "firebase/auth";
 import React from "react";
 import { Link } from "react-router-dom";
 import mascot from "../../assets/modal/mascot.svg";
 import pawl from "../../assets/modal/pawl.svg";
 
-export default function SuccessModal({ toggleModal, showModal }) {
+export default function SuccessModal({
+  toggleModal,
+  showModal,
+  currentUser
+}) {
   return (
     <>
       {showModal && (
@@ -34,7 +39,9 @@ export default function SuccessModal({ toggleModal, showModal }) {
               <p className="text-2xl font-black">
                 Account Successfully <br /> Registered
               </p>
-              <p className="mt-7 mb-5">Let's start learning</p>
+              <p className="mt-7 mb-5">
+                Let's start learning, {currentUser.displayName}!
+              </p>
               <Link
                 className="rounded-md border-3 border-white bg-orange py-2 px-7 font-semibold text-white"
                 onClick={toggleModal}

@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "./components/headerComponents/Header";
 import Footer from "./components/Footer";
-// import Home from "./pages/Home";
 import HomePage from "./pages/HomePage";
 import Game from "./pages/Game";
 import FAQ from "./pages/FAQ";
@@ -15,21 +14,27 @@ import NameModal from "./components/modalComponents/NameModal";
 import PasswordModal from "./components/modalComponents/PasswordModal";
 import SuccessModal from "./components/modalComponents/SuccessModal";
 import EmailModal from "./components/modalComponents/EmailModal";
+import SignInModal from "./components/modalComponents/SignInModal";
+import auth from "./utils/firebase";
 import {
-  getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   onAuthStateChanged,
   updateProfile,
+  signOut,
 } from "firebase/auth";
-import auth from "./utils/firebase";
 
 function App() {
   const location = useLocation();
 
   // Modals
   const [showModal, setShowModal] = React.useState(false);
+  const [showSignInModal, setShowSignInModal] = React.useState(false);
   const [page, setPage] = React.useState(0);
+
+  const toggleSignInModal = () => {
+    setShowSignInModal((prevModalState) => !prevModalState);
+  };
   const toggleModal = () => {
     setShowModal((prevModalState) => !prevModalState);
   };
@@ -49,6 +54,7 @@ function App() {
   const [registerName, setRegisterName] = React.useState("");
   const [registerEmail, setRegisterEmail] = React.useState("");
   const [registerPassword, setRegisterPassword] = React.useState("");
+  const [currentUser, setCurrentUser] = React.useState({});
 
   const saveName = (e) => {
     setRegisterName(e.target.value);
@@ -63,42 +69,56 @@ function App() {
   };
 
   const registerNewUser = async () => {
-    const user = await createUserWithEmailAndPassword(
-      auth,
-      registerEmail,
-      registerPassword
-    );
-    // Update display name
-    await updateProfile(auth.currentUser, {
-      displayName: registerName,
-      email: user.email,
-      uid: user.uid,
-      accessToken: user.accessToken,
-    });
-    await handleForwardClick();
-    console.log(user);
+    try {
+      const user = await createUserWithEmailAndPassword(
+        auth,
+        registerEmail,
+        registerPassword
+      );
+      // Update display name
+      await updateProfile(auth.currentUser, {
+        displayName: registerName,
+        email: user.email,
+        uid: user.uid,
+        accessToken: user.accessToken,
+      });
+      await handleForwardClick();
+    } catch (error) {
+      console.log(error.message);
+    }
   };
 
-  // //Sign in existing users
-  // signInWithEmailAndPassword(auth, email, password)
-  //   .then((userCredential) => {
-  //     const user = userCredential.user;
-  //   })
-  //   .catch((error) => {
-  //     const errorCode = error.code;
-  //     const errorMessage = error.message;
-  //   });
+  // Firebase: subscribe to the users current authentication state
+  React.useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      setCurrentUser(user);
+    });
+  }, [currentUser]);
 
-  // onAuthStateChanged(auth, (user) => {
-  //   if (user) {
-  //     const uid = user.uid;
-  //   } else {
-  //   }
-  // });
+  // Sign in
+  const signIn = async () => {
+    try {
+      await signInWithEmailAndPassword(auth, registerEmail, registerPassword);
+    } catch (error) {
+      console.log(error.message);
+    }
+    toggleSignInModal();
+  };
+
+  // Sign out
+  const logOut = async () => {
+    await signOut(auth);
+  };
 
   return (
     <>
-      <Header toggleModal={toggleModal} />
+      <Header
+        toggleModal={toggleModal}
+        toggleSignInModal={toggleSignInModal}
+        logOut={logOut}
+        signIn={signIn}
+        currentUser={currentUser}
+      />
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<HomePage />} />
         <Route path="game" element={<Game />}>
@@ -112,6 +132,14 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
+
+      <SignInModal
+        showSignInModal={showSignInModal}
+        toggleSignInModal={toggleSignInModal}
+        signIn={signIn}
+        saveEmail={saveEmail}
+        savePassword={savePassword}
+      />
 
       {page === 0 && (
         <NameModal
@@ -144,7 +172,11 @@ function App() {
         />
       )}
       {page === 3 && (
-        <SuccessModal showModal={showModal} toggleModal={toggleModal} />
+        <SuccessModal
+          showModal={showModal}
+          toggleModal={toggleModal}
+          currentUser={currentUser}
+        />
       )}
     </>
   );
