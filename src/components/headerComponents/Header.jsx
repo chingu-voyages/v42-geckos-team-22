@@ -10,7 +10,7 @@ import NameModal from "../modalComponents/NameModal";
 import PasswordModal from "../modalComponents/PasswordModal";
 import SuccessModal from "../modalComponents/SuccessModal";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleMenu } from "../../redux/headerSlice";
+import { toggleMenu } from "../../redux/slices/headerSlice";
 
 function Header() {
   const [expandDropDown, setExpandDropDown] = useState(false);

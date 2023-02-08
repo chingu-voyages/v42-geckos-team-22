@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { DropDown } from "./DropDown";
 import { BsCaretDownFill, BsCaretUpFill } from "react-icons/bs";
 import { useDispatch } from "react-redux";
-import { toggleMenu } from "../../redux/headerSlice";
+import { toggleMenu } from "../../redux/slices/headerSlice";
 
 function MobileNav(props) {
   const [expandDropDown, setExpandDropDown] = useState(false);
