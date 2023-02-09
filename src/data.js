@@ -1,19 +1,66 @@
 const dataJson = [
   {
     id: 1,
-    gameType: "number", //use on homepage and nav for game type selection
-    games: [
+    gameType: "number", //use on homepage and nav for game type selection  "one" "two" "three" "four" "five" "six" "seven" "eight" "nine" "zero"
+    games: [ 
       {
-        img: "https://www.freepnglogos.com/uploads/1-number-png/cartoon-1-number-five-for-friday-time-beach-sand-3.png",
+        img: "https://pixabay.com/images/id-149956/",
+        name: "Number 6",
+        options: ["eight", "two", "six"],
+        correctAnswer: "six", //if this found in "options", user win
+      },
+      {
+        img: "https://pixabay.com/images/id-6118485/",
+        name: "Number 0",
+        options: ["zero", "six", "seven"],
+        correctAnswer: "zero",
+      },
+      {
+        img: "https://pixabay.com/images/id-149952/",
+        name: "Number 2",
+        options: ["four", "two", "three"],
+        correctAnswer: "two", //if this found in "options", user win
+      },
+      {
+        img: "https://pixabay.com/images/id-149959/",
+        name: "Number 9",
+        options: ["four", "nine", "zero"],
+        correctAnswer: "nine",
+      },
+      {
+        img: "https://pixabay.com/images/id-149955/",
+        name: "Number 5",
+        options: ["five", "two", "eight"],
+        correctAnswer: "five", //if this found in "options", user win
+      },
+      {
+        img: "https://pixabay.com/images/id-149953/",
+        name: "Number 3",
+        options: ["four", "six", "three"],
+        correctAnswer: "three",
+      },
+      {
+        img: "https://pixabay.com/images/id-149951/",
         name: "Number 1",
-        options: ["one", "two", "three"],
+        options: ["one", "zero", "nine"],
         correctAnswer: "one", //if this found in "options", user win
       },
       {
-        img: "https://e7.pngegg.com/pngimages/277/128/png-clipart-number-numerical-digit-mathematics-counting-multiplication-number-2-child-numerical-digit-thumbnail.png",
-        name: "Number 2",
-        options: ["one", "two", "three"],
-        correctAnswer: "two",
+        img: "https://pixabay.com/images/id-149957/",
+        name: "Number 7",
+        options: ["nine", "zero", "seven"],
+        correctAnswer: "seven",
+      },{
+        img: "https://pixabay.com/images/id-149954/",
+        name: "Number 4",
+        options: ["seven", "four", "nine"],
+        correctAnswer: "four", //if this found in "options", user win
+      },
+      {
+        img: "https://pixabay.com/images/id-149958/",
+        name: "Number 8",
+        options: ["five", "eight", "four"],
+        correctAnswer: "eight",
       },
     ],
   },
