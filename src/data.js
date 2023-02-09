@@ -1,4 +1,3 @@
-
 const dataJson = [
   {
     id: 1,
@@ -74,4 +73,4 @@ const dataJson = [
   },
 ];
 
-export default dataJson
+export default dataJson;

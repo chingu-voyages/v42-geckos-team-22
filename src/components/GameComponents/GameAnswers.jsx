@@ -1,6 +1,5 @@
 import React, { useEffect} from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { recordFailures } from '../../redux/slices/gameFunctionSlice';
+import { useSelector } from 'react-redux';
 import GameAnswerButton from './GameAnswerButton';
 
 function GameAnswers (props) {
@@ -25,4 +24,4 @@ function GameAnswers (props) {
     )
 }
 
-export default GameAnswers
+export default GameAnswers;
