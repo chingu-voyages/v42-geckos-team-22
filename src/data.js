@@ -165,7 +165,7 @@ const dataJson = [
     gameType: "letter", //use on homepage and nav for game type selection
     games: [
       {
-        img: "id-6812515",
+        img: "6812515",
         name: "G",
         options: ["a", "h", "g"],
         correctAnswer: "g", 

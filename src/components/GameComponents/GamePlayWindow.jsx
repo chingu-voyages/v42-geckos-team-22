@@ -67,7 +67,7 @@ function GamePlayWindow(props) {
           src={currentQuestionImage}
           alt={correctAnswer}
         /> */}
-        <GetApiPics imgId={currentQuestionImage}/>
+        <GetApiPics currentQuestionImage={currentQuestionImage}/>
       </div>
       <MoreOptions cname="hidden max-h-14 max-w-14 md:flex md:mr-1 md:mt-2" />
     </div>
