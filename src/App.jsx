@@ -7,7 +7,7 @@ import Game from "./pages/Game";
 import FAQ from "./pages/FAQ";
 import NotFound from "./pages/404";
 import { Route, Routes, useLocation } from "react-router-dom";
-import { Color } from "./features/flashcard/Color";
+import { Animal } from "./features/flashcard/Animal";
 import { Letter } from "./features/flashcard/Letter";
 import { Number } from "./features/flashcard/Number";
 import { Shape } from "./features/flashcard/Shape";
@@ -102,7 +102,7 @@ function App() {
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<HomePage />} />
         <Route path="game" element={<Game />}>
-          <Route path="color" element={<Color />} />
+          <Route path="animal" element={<Animal />} />
           <Route path="letter" element={<Letter />} />
           <Route path="number" element={<Number />} />
           <Route path="shape" element={<Shape />} />
