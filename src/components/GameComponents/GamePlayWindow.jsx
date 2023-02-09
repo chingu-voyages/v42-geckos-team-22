@@ -3,15 +3,9 @@ import React, { useState, useEffect } from "react";
 import { MoreOptions } from "./GameUtilities";
 import { useSelector, useDispatch } from "react-redux";
 import gameData from "../../data";
-import {
-  startGame,
-  assignAnswers,
-  assignQuestionImage,
-  assignCorrectAnswer,
-  assignGameState,
-  toggleConfetti,
-} from "../../redux/slices/gameFunctionSlice";
+import { startGame, assignAnswers, assignQuestionImage, assignCorrectAnswer, assignGameState, toggleConfetti} from "../../redux/slices/gameFunctionSlice";
 import Confetti from "react-confetti";
+import GetApiPics from "../../features/api/api";
 
 //pixelbay API Key 33121417-d326c5dfd781e6d9400ae77ef
 
@@ -36,7 +30,7 @@ function GamePlayWindow(props) {
       if (gameData[property].gameType == gameName) {
         currentGame = gameData[property].games;
       }
-      console.log("in FindCurrentGame", gameData[property].gameType)
+      //console.log("in FindCurrentGame", gameData[property].gameType)
     }
   };
 
@@ -46,7 +40,7 @@ function GamePlayWindow(props) {
       dispatch(assignAnswers(currentGame[currentQuestion].options));
       dispatch(assignQuestionImage(currentGame[currentQuestion].img));
       dispatch(assignCorrectAnswer(currentGame[currentQuestion].name));
-      // console.log("in playCurrentGame correct Answer", currentGame[currentQuestion].name)
+      console.log("in playCurrentGame correct Answer", currentQuestionImage)
     } else {
       dispatch(assignGameState("end"));
     }
@@ -57,25 +51,23 @@ function GamePlayWindow(props) {
     dispatch(startGame(gameName));
     findCurrentGame();
     playCurrentGame();
+    
 
-    console.log(
-      "in GamePlayWindow useEffect correct Answer success",
-      correctAnswer,
-      success
-    );
+    // console.log("in GamePlayWindow useEffect correct Answer success", correctAnswer, success);
   });
 
   return (
     <div className={props.cname}>
       <div className="mt-14 md:ml-14 md:mt-0 md:flex md:flex-1 md:justify-center">
         <div style={{ visibility: success }}>{<Confetti />}</div>
-        <img
+        {/* <img
           className=""
           method="post"
           encType="multipart/form-data"
           src={currentQuestionImage}
           alt={correctAnswer}
-        />
+        /> */}
+        <GetApiPics imgId={currentQuestionImage}/>
       </div>
       <MoreOptions cname="hidden max-h-14 max-w-14 md:flex md:mr-1 md:mt-2" />
     </div>
