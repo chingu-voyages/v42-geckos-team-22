@@ -36,7 +36,7 @@ function GamePlayWindow(props) {
       if (gameData[property].gameType == gameName) {
         currentGame = gameData[property].games;
       }
-      // console.log("in FindCurrentGame", currentGame)
+      console.log("in FindCurrentGame", gameData[property].gameType)
     }
   };
 
