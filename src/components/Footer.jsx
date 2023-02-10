@@ -1,7 +1,7 @@
 import React from "react";
 import { FaFacebookF, FaTwitter, FaTiktok, FaYoutube } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
-import logo from "../../public/logo.png";
+import logo from "../assets/logo.png";
 
 function Footer() {
   return (
