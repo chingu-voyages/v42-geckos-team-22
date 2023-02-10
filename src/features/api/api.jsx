@@ -7,6 +7,9 @@ const imgID = 6812515;
 
 function GetApiPics({currentQuestionImage}) {
 
+  let correctAnswer = useSelector(
+    (state) => state.gameFunction.correctAnswer
+  );
 
 //https://stackoverflow.com/questions/58850699/useselector-not-updating-when-store-has-changed-in-reducer-reactjs-redux
     console.log("in API.jsx", currentQuestionImage)
@@ -28,8 +31,8 @@ function GetApiPics({currentQuestionImage}) {
   }, [image, currentQuestionImage]);
 
   return (
-    <div className="">
-      <img className="w-80" src={image} alt="panda" />
+    <div className="max-w-xs max-h-80">
+      <img className="w-fit h-full p-8" src={image} alt={correctAnswer} />
     </div>
   );
 }
