@@ -1,77 +1,27 @@
-import React from "react";
-import { useSelector, useDispatch } from "react-redux";
-import {
-  advanceCurrentQuestion,
-  calculateScore,
-  toggleConfetti,
-} from "../../redux/slices/gameFunctionSlice";
+import React, { useEffect} from 'react';
+import { useSelector } from 'react-redux';
+import GameAnswerButton from './GameAnswerButton';
 
-function GameAnswers(props) {
-  const answerArr = useSelector((state) => state.gameFunction.answers);
-  const correctAnswer = useSelector(
-    (state) => state.gameFunction.correctAnswer
-  );
-  const failure = useSelector((state) => state.gameFunction.failure);
-  let score = useSelector((state) => state.gameFunction.score);
+function GameAnswers (props) {
 
-  const dispatch = useDispatch();
+    const failure = useSelector(state=>state.gameFunction.failure)
+    
+  
+    useEffect(() => {
+        console.log("in GameAnsewr useEffect", failure, props)
+        
+        if (failure.includes(0 || 1 || 2)) {
 
-  //console.log("In Game Answers", answerArr)
-  let tryNum = 0;
+        }
+    })
 
-  const handleAnswer = (e) => {
-    // props.setGameState('end')
-    const id = e.target.id;
-
-    console.log("outside IF handleAnswer tryNum", tryNum);
-
-    //  console.log("in handleAnswer correctAnswer", typeof(correctAnswer), typeof(id))
-    if (correctAnswer === id && tryNum === 0) {
-      score++;
-      console.log("yes! if, id, cA, tryNum", id, correctAnswer, tryNum);
-      dispatch(toggleConfetti("visible"));
-      setTimeout(() => {
-        dispatch(advanceCurrentQuestion());
-        dispatch(calculateScore(score));
-        dispatch(toggleConfetti("hidden"));
-      }, 3000);
-    } else if (correctAnswer === id && tryNum === 1) {
-      dispatch(advanceCurrentQuestion());
-      console.log("yes else if, tryNum", id, correctAnswer, tryNum);
-    } else {
-      tryNum = 1;
-      console.log("no! id cA, tryNum", id, correctAnswer, tryNum);
-    }
-  };
-
-  return (
-    <div className={props.cname}>
-      <button
-        onClick={handleAnswer}
-        type="button"
-        className={`${failure ? `btn-answer` : `btn-answer-fail`} flex-1`}
-        id={answerArr[0]}
-      >
-        <span className="btn-answer-text">{answerArr[0]}</span>
-      </button>
-      <button
-        onClick={handleAnswer}
-        type="button"
-        className={`${failure ? `btn-answer` : `btn-answer-fail`} flex-1`}
-        id={answerArr[1]}
-      >
-        <span className="btn-answer-text">{answerArr[1]}</span>
-      </button>
-      <button
-        onClick={handleAnswer}
-        type="button"
-        className={`${failure ? `btn-answer` : `btn-answer-fail`} flex-1`}
-        id={answerArr[2]}
-      >
-        <span className="btn-answer-text">{answerArr[2]}</span>
-      </button>
-    </div>
-  );
+    return (
+        <div className={props.cname}>
+            <GameAnswerButton btnid={0} />
+            <GameAnswerButton btnid={1} />
+            <GameAnswerButton btnid={2} />
+        </div>
+    )
 }
 
 export default GameAnswers;
