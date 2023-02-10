@@ -50,8 +50,6 @@ function GamePlayWindow(props) {
     dispatch(startGame(gameName));
     findCurrentGame();
     playCurrentGame();
-    
-
     // console.log("in GamePlayWindow useEffect correct Answer success", correctAnswer, success);
   });
 

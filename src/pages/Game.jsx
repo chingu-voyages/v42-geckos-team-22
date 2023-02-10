@@ -10,7 +10,6 @@ import GameLoadingWindow from '../components/GameComponents/GameLoadingWindow';
 import GameEndWindow from "../components/GameComponents/GameEndWindow";
 import { assignGameState } from "../redux/slices/gameFunctionSlice";
 function Game() {
-  // handlePlayGame(), gameState == "loading", gameState == "landing" are commented out to remove from development. May be added back in later once game is funcitonal.
   const dispatch = useDispatch();
   const gameState = useSelector((state) => state.gameFunction.gameState);
 
@@ -39,7 +38,6 @@ function Game() {
           ) : gameState == "loading" ? (
               <div className='md:game-window__border h-96'>
                   <GameLoadingWindow
-                  setGameState={setGameState}
                   cname='grid grid-rows-4 h-full'
                   />
               </div>
