@@ -32,7 +32,7 @@ export const gameFunctionSlice = createSlice({
     },
     advanceCurrentQuestion: (state) => {
       state.currentQuestion++;
-      //  console.log("inSlice advanceCurrentQuestions", state.currentQuestion)
+      console.log("inSlice advanceCurrentQuestions", state.currentQuestion)
     },
     resetCurrentQuestion: (state, action) => {
       state.currentQuestion = action.payload;

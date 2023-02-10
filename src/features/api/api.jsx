@@ -25,7 +25,7 @@ function GetApiPics({currentQuestionImage}) {
     } catch (err) {
       console.error(err);
     }
-  }, []);
+  }, [image, currentQuestionImage]);
 
   return (
     <div className="">

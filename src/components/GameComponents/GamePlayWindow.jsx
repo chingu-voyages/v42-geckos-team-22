@@ -39,7 +39,7 @@ function GamePlayWindow(props) {
     if (currentQuestion < currentGame.length) {
       dispatch(assignAnswers(currentGame[currentQuestion].options));
       dispatch(assignQuestionImage(currentGame[currentQuestion].img));
-      dispatch(assignCorrectAnswer(currentGame[currentQuestion].name));
+      dispatch(assignCorrectAnswer(currentGame[currentQuestion].correctAnswer));
       console.log("in playCurrentGame correct Answer", currentQuestionImage)
     } else {
       dispatch(assignGameState("end"));

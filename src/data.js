@@ -162,7 +162,7 @@ const dataJson = [
   },
   {
     id: 4,
-    gameType: "letter", //use on homepage and nav for game type selection
+    gameType: "letter",
     games: [
       {
         img: "6812515",
@@ -171,49 +171,49 @@ const dataJson = [
         correctAnswer: "g", 
       },
       {
-        img: "https://pixabay.com/images/id-6812531/",
+        img: "6812531",
         name: "B",
         options: ["w", "b", "q"],
         correctAnswer: "b", 
       },
       {
-        img: "https://pixabay.com/images/id-6819333/",
+        img: "6819333",
         name: "H",
         options: ["m", "e", "h"],
         correctAnswer: "h", 
       },
       {
-        img: "https://pixabay.com/images/id-6812564/",
+        img: "6812564",
         name: "F",
         options: ["e", "f", "u"],
         correctAnswer: "f", 
       },
       {
-        img: "https://pixabay.com/images/id-6806219/",
+        img: "6806219",
         name: "D",
         options: ["r", "d", "b"],
         correctAnswer: "d", 
       },
       {
-        img: "https://pixabay.com/images/id-6806213/",
+        img: "6806213",
         name: "A",
         options: ["o", "p", "a"],
         correctAnswer: "a", 
       },
       {
-        img: "https://pixabay.com/images/id-6806232/",
+        img: "6806232",
         name: "R",
         options: ["r", "m", "n"],
         correctAnswer: "r", 
       },
       {
-        img: "https://pixabay.com/images/id-6812511/",
+        img: "6812511",
         name: "E",
         options: ["u", "e", "c"],
         correctAnswer: "e", 
       },
       {
-        img: "https://pixabay.com/images/id-6812569/",
+        img: "6812569",
         name: "N",
         options: ["n", "m", "w"],
         correctAnswer: "n", 
