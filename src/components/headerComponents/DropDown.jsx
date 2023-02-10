@@ -14,8 +14,7 @@ export const DropDown = () => {
   let currentQuestion = useSelector(
     (state) => state.gameFunction.currentQuestion
   );
-  const score = useSelector((state) => state.gameFunction.score);
-
+  
   const handleToggleGame = () => {
     dispatch(toggleMenu())
     gameState = "landing";

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { MoreOptions } from "./GameUtilities";
 import { useSelector, useDispatch } from "react-redux";
 import gameData from "../../data";
-import { startGame, assignAnswers, assignQuestionImage, assignCorrectAnswer, assignGameState, toggleConfetti} from "../../redux/slices/gameFunctionSlice";
+import { startGame, assignAnswers, assignQuestionImage, assignCorrectAnswer, assignGameState } from "../../redux/slices/gameFunctionSlice";
 import Confetti from "react-confetti";
 import GetApiPics from "../../features/api/api";
 

@@ -1,6 +1,10 @@
 import React from 'react';
+import { useSelector } from "react-redux";
+
 
 function GameLandingWindow (props) {
+
+    let gameName = useSelector((state) => state.gameFunction.gameType);
 
     return (
         <div className={props.cname}>
@@ -10,7 +14,7 @@ function GameLandingWindow (props) {
                     className='btn-answer mx-10 w-72 h-24'
                     type='button'
                     onClick={props.handlePlayGame}>
-                    <span className='btn-answer-text'>Play</span>
+                    <span className='btn-answer-text'>Play {gameName.toUpperCase()}</span>
                 </button>
             </div>
             
