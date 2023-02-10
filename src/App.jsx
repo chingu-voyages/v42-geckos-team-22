@@ -101,14 +101,14 @@ function App() {
       <Header toggleModal={toggleModal} />
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<HomePage />} />
-        <Route path="game" element={<Game />}>
-          <Route path="animal" element={<Animal />} />
-          <Route path="letter" element={<Letter />} />
-          <Route path="number" element={<Number />} />
-          <Route path="shape" element={<Shape />} />
+        <Route path="/game" element={<Game />}>
+          <Route path="animal" element={<Game />} />
+          <Route path="letter" element={<Game />} />
+          <Route path="number" element={<Game />} />
+          <Route path="shape" element={<Game />} />
         </Route>
         <Route path="/faq" element={<FAQ />} />
-        <Route path="/game" element={<Game />} />
+        {/* <Route path="/game" element={<Game />} /> */}
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
