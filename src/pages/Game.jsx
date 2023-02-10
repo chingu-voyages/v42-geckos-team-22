@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import { SkipLeft, SkipRight } from "../components/GameComponents/GameUtilities";
 import { useSelector, useDispatch } from "react-redux";
 import GameHeading from "../components/GameComponents/GameHeading";
@@ -12,8 +12,8 @@ import { assignGameState } from "../redux/slices/gameFunctionSlice";
 function Game() {
   const dispatch = useDispatch();
   const gameState = useSelector((state) => state.gameFunction.gameState);
-
-
+  let gameName = useSelector((state) => state.gameFunction.gameType);
+ 
   const handlePlayGame = () => {
       dispatch(assignGameState("loading"))
       console.log("game mode", gameState)
@@ -45,6 +45,7 @@ function Game() {
               <div className='md:game-window__border h-96'>
                   <GameLandingWindow
                   handlePlayGame={handlePlayGame}
+                  gameName={gameName}
                   cname='grid grid-rows-4 h-full'
                   />
               </div>
