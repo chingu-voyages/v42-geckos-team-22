@@ -9,14 +9,14 @@ import passwordProgress from "../../assets/modal/passwordProgress.svg";
 export default function PasswordModal({
   handleBackClick,
   toggleModal,
-  showModal,
+  showRegisterModal,
   registerNewUser,
   savePassword,
   handleKeyDown,
 }) {
   return (
     <>
-      {showModal && (
+      {showRegisterModal && (
         <div
           onClick={toggleModal} // User clicks backdrop will close
           className="fixed inset-0 z-50 flex cursor-pointer items-center justify-center bg-zinc-200 bg-opacity-40 backdrop-blur-[1.5px]"

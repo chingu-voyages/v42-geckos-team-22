@@ -1,12 +1,17 @@
+import { updateCurrentUser } from "firebase/auth";
 import React from "react";
 import { Link } from "react-router-dom";
 import mascot from "../../assets/modal/mascot.svg";
 import pawl from "../../assets/modal/pawl.svg";
 
-export default function SuccessModal({ toggleModal, showModal }) {
+export default function SuccessModal({
+  toggleModal,
+  showRegisterModal,
+  currentUser
+}) {
   return (
     <>
-      {showModal && (
+      {showRegisterModal && (
         <div
           onClick={toggleModal} // User clicks backdrop will close
           className="fixed inset-0 z-50 flex cursor-pointer items-center justify-center bg-zinc-200 bg-opacity-40 backdrop-blur-[1.5px]"
@@ -34,7 +39,9 @@ export default function SuccessModal({ toggleModal, showModal }) {
               <p className="text-2xl font-black">
                 Account Successfully <br /> Registered
               </p>
-              <p className="mt-7 mb-5">Let's start learning</p>
+              <p className="mt-7 mb-5">
+                Let's start learning, {currentUser.displayName}!
+              </p>
               <Link
                 className="rounded-md border-3 border-white bg-orange py-2 px-7 font-semibold text-white"
                 onClick={toggleModal}
