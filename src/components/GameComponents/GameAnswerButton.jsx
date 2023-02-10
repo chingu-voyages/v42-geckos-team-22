@@ -33,7 +33,7 @@ function GameAnswerButton ({btnid}) {
         } else if (correctAnswer === answerArr[btnid] && failure.length > 0 ) {
             dispatch(clearFailures())
             dispatch(advanceCurrentQuestion())
-           console.log("yes else if, failure.length", answerArr[btnid], correctAnswer, failure.length)
+        //    console.log("yes else if, failure.length", answerArr[btnid], correctAnswer, failure.length)
         } else {
             dispatch(recordFailures(btnid))
           

@@ -7,13 +7,13 @@ function GameAnswers (props) {
     const failure = useSelector(state=>state.gameFunction.failure)
     
   
-    useEffect(() => {
-        console.log("in GameAnsewr useEffect", failure, props)
+    // useEffect(() => {
+    //     console.log("in GameAnsewr useEffect", failure, props)
         
-        if (failure.includes(0 || 1 || 2)) {
+    //     if (failure.includes(0 || 1 || 2)) {
 
-        }
-    })
+    //     }
+    // })
 
     return (
         <div className={props.cname}>

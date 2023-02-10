@@ -17,7 +17,7 @@ function GameHeading(props) {
           <p className="text-center text-2xl font-semibold">{PERSONNAME}</p>
         </div>
       </div>
-      <div className="header-stripes z-20 flex flex-auto justify-around border-2 border-black bg-red-orange md:w-4/5">
+      <div className="header-stripes flex flex-auto justify-around border-2 border-black bg-red-orange md:w-4/5">
         <div className="self-center font-bold text-white md:ml-6 lg:m-0">
           <p className="lg:text-9x1 text-6xl lg:text-8xl">FLASHY</p>
           <p className="text-3xl lg:text-4xl">FLASH CARD</p>
