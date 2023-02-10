@@ -10,7 +10,7 @@ const initialState = {
   score: 0,
   success: "hidden",
   failure: [],
-  gameState: "play"
+  gameState: "landing"
 }
 
 export const gameFunctionSlice = createSlice({

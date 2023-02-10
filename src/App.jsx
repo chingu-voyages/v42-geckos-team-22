@@ -7,6 +7,13 @@ import {
 } from "firebase/auth";
 import React from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
+import Footer from "./components/Footer";
+import Header from "./components/headerComponents/Header";
+import EmailModal from "./components/modalComponents/EmailModal";
+import NameModal from "./components/modalComponents/NameModal";
+import PasswordModal from "./components/modalComponents/PasswordModal";
+import SignInModal from "./components/modalComponents/SignInModal";
+import SuccessModal from "./components/modalComponents/SuccessModal";
 import { Animal } from "./features/flashcard/Animal";
 import { Letter } from "./features/flashcard/Letter";
 import { Number } from "./features/flashcard/Number";
