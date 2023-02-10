@@ -57,12 +57,33 @@ function Header(props) {
             <NavLink to="/faq">faq</NavLink>
           </li>
         </ul>
-        <button
-          onClick={props.toggleModal}
-          className="hidden uppercase text-gray-100 hover:font-extrabold hover:text-white md:inline-block"
-        >
-          register
-        </button>
+
+        <div className="space-x-6">
+          {props.currentUser?.displayName ? (
+            <button
+              onClick={props.logOut}
+              className=" uppercase text-gray-100 hover:font-extrabold hover:text-white md:inline-block"
+            >
+              {props.currentUser.displayName} (Sign Out)
+            </button>
+          ) : (
+            <>
+              <button
+                onClick={props.toggleSignInModal}
+                className=" uppercase text-gray-100 hover:font-extrabold hover:text-white md:inline-block"
+              >
+                Sign In
+              </button>
+
+              <button
+                onClick={props.toggleModal}
+                className="hidden uppercase text-gray-100 hover:font-extrabold hover:text-white md:inline-block"
+              >
+                Register
+              </button>
+            </>
+          )}
+        </div>
       </nav>
     </header>
   );
