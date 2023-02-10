@@ -33,7 +33,7 @@ export const DropDown = () => {
         onClick={() => dispatch(toggleMenu())}
         className="w-full py-4 hover:bg-[#217382]"
       >
-        <Link to="/game/color" className="dropDown">
+        <Link to="/game/animal" className="dropDown">
           <GiPanda className="dropDownIcons" />
           <p>animal</p>
         </Link>

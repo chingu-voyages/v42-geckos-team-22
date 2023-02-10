@@ -7,14 +7,7 @@ import {
 } from "firebase/auth";
 import React from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
-import Footer from "./components/Footer";
-import Header from "./components/headerComponents/Header";
-import EmailModal from "./components/modalComponents/EmailModal";
-import NameModal from "./components/modalComponents/NameModal";
-import PasswordModal from "./components/modalComponents/PasswordModal";
-import SignInModal from "./components/modalComponents/SignInModal";
-import SuccessModal from "./components/modalComponents/SuccessModal";
-import { Color } from "./features/flashcard/Color";
+import { Animal } from "./features/flashcard/Animal";
 import { Letter } from "./features/flashcard/Letter";
 import { Number } from "./features/flashcard/Number";
 import { Shape } from "./features/flashcard/Shape";
@@ -140,14 +133,14 @@ function App() {
       />
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<HomePage />} />
-        <Route path="game" element={<Game />}>
-          <Route path="color" element={<Color />} />
-          <Route path="letter" element={<Letter />} />
-          <Route path="number" element={<Number />} />
-          <Route path="shape" element={<Shape />} />
+        <Route path="/game" element={<Game />}>
+          <Route path="animal" element={<Game />} />
+          <Route path="letter" element={<Game />} />
+          <Route path="number" element={<Game />} />
+          <Route path="shape" element={<Game />} />
         </Route>
         <Route path="/faq" element={<FAQ />} />
-        <Route path="/game" element={<Game />} />
+        {/* <Route path="/game" element={<Game />} /> */}
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
