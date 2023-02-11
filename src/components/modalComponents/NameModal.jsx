@@ -6,11 +6,13 @@ import nameProgress from "../../assets/modal/nameProgress.svg";
 export default function NameModal({
   handleForwardClick,
   toggleModal,
-  showModal,
+  showRegisterModal,
+  saveName,
+  handleKeyDown,
 }) {
   return (
     <>
-      {showModal && (
+      {showRegisterModal && (
         <div
           onClick={toggleModal} // User clicks backdrop will close
           className="fixed inset-0 z-50 flex cursor-pointer items-center justify-center bg-zinc-200 bg-opacity-40 backdrop-blur-[1.5px]"
@@ -35,12 +37,23 @@ export default function NameModal({
                 alt="name progress bar"
               />
             </div>
-            <input
-              className="mt-10 w-full rounded-xl border-none bg-white py-5 text-center text-black focus:outline-none sm:mt-6"
-              type="text"
-              name="name"
-              placeholder="Name"
-            />
+            <div className="mt-10 flex w-full flex-wrap  place-content-center">
+              <input
+                autoFocus
+                className="rounded-l-xl  border-none bg-white py-5 text-center text-black focus:outline-none"
+                type="text"
+                name="name"
+                placeholder="Display Name"
+                onChange={saveName}
+                onKeyDown={handleKeyDown}
+              />
+              <button
+                onClick={handleForwardClick}
+                className="w-14 rounded-r-xl border-none bg-off-white text-white hover:bg-dark-grey hover:text-white"
+              >
+                Next
+              </button>
+            </div>
           </div>
         </div>
       )}

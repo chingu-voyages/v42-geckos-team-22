@@ -28,6 +28,7 @@ module.exports = {
       colors: {
         turquoise: "#16ABAC",
         "light-orange": "#FCA02D",
+        "bright-orange": "#FCB900",
         "red-orange": "#EF3E38",
         yellow: "#F6E614",
         blue: "#5974FF",
