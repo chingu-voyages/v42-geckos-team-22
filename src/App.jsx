@@ -14,10 +14,6 @@ import NameModal from "./components/modalComponents/NameModal";
 import PasswordModal from "./components/modalComponents/PasswordModal";
 import SignInModal from "./components/modalComponents/SignInModal";
 import SuccessModal from "./components/modalComponents/SuccessModal";
-import { Animal } from "./features/flashcard/Animal";
-import { Letter } from "./features/flashcard/Letter";
-import { Number } from "./features/flashcard/Number";
-import { Shape } from "./features/flashcard/Shape";
 import NotFound from "./pages/404";
 import FAQ from "./pages/FAQ";
 import Game from "./pages/Game";
@@ -122,7 +118,7 @@ function App() {
   ];
 
   return (
-    <>
+    <div className="mx-auto max-w-screen-xl md:ring-2 md:ring-black">
       <Header
         toggleModal={toggleModal}
         toggleSignInModal={toggleSignInModal}
@@ -151,7 +147,7 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
-    </>
+    </div>
   );
 }
 

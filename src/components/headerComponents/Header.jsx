@@ -6,7 +6,7 @@ import { BsCaretDownFill, BsCaretUpFill } from "react-icons/bs";
 import { RiHome2Fill } from "react-icons/ri";
 import { CgClose, CgMenu } from "react-icons/cg";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleMenu } from "../../redux/headerSlice";
+import { toggleMenu } from "../../redux/slices/headerSlice";
 
 function Header(props) {
   const [expandDropDown, setExpandDropDown] = useState(false);
@@ -14,7 +14,7 @@ function Header(props) {
   const { isOpen } = useSelector((store) => store.header);
 
   return (
-    <header className="body-font z-50 h-24  bg-turquoise text-xl font-bold text-white md:border-t-2 md:border-b-4 md:border-t-black md:border-b-black md:bg-bg_nav">
+    <header className="body-font z-50 h-24 bg-turquoise text-xl  font-bold text-white md:border-t-2 md:border-b-4 md:border-t-black md:border-b-black md:bg-bg_nav">
       <ul className="mx-8 flex h-full flex-row items-center justify-between md:hidden">
         <li>
           <Link to="/">
@@ -46,9 +46,9 @@ function Header(props) {
             className="cursor-pointer uppercase"
           >
             <span className="flex flex-row items-center hover:font-extrabold hover:text-white">
-              <Link className="pr-1" to="/game">
+              <button className="cursor-pointer pr-1 uppercase">
                 game type
-              </Link>
+              </button>
               {expandDropDown ? <BsCaretUpFill /> : <BsCaretDownFill />}
             </span>
             {expandDropDown && <DropDown />}

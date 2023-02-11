@@ -8,10 +8,10 @@ function GameHeading(props) {
 
   return (
     <div className={props.cname}>
-      <div className="flex aspect-square  flex-col justify-around border-2 border-black bg-light-orange md:w-2/5 lg:w-1/5">
+      <div className="flex aspect-square flex-col justify-around border-2 border-black bg-light-orange md:w-2/5 lg:w-1/5">
         <div className="flex flex-col items-center justify-center">
           <img src={ProfileBorder} className="h-max" />
-          <img src={ProfileDots} className="absolute z-10" />
+          <img src={ProfileDots} className="absolute z-10 w-56" />
         </div>
         <div className="flex flex-col justify-center">
           <p className="text-center text-2xl font-semibold">{PERSONNAME}</p>
