@@ -23,10 +23,12 @@ function GetApiPics({currentQuestionImage}) {
     
   const getPics = async () => {
     setLoading(true)
+    console.log("in Get pics loading 1", loading)
     const res = await fetch(`https://pixabay.com/api/?key=${key}&id=${currentQuestionImage}`);
     const data = await res.json();
     setImage(data.hits[0].largeImageURL);
     setLoading(false)
+    console.log("in Get pics loading 2", loading)
   };
 
   useEffect(() => {
