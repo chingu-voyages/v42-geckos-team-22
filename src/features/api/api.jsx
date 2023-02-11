@@ -11,7 +11,9 @@ function GetApiPics({currentQuestionImage}) {
     (state) => state.gameFunction.correctAnswer
   );
 
-//https://stackoverflow.com/questions/58850699/useselector-not-updating-when-store-has-changed-in-reducer-reactjs-redux
+//https://www.freecodecamp.org/news/fetch-data-react/
+//https://redux-toolkit.js.org/rtk-query/overview
+
     console.log("in API.jsx", currentQuestionImage)
     
     const [image, setImage] = useState(null);
