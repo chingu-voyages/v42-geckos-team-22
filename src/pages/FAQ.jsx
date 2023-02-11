@@ -39,7 +39,7 @@ function FAQ() {
   });
 
   return (
-    <div className="relative h-screen p-5 md:p-0">
+    <div className="relative h-screen p-5 md:p-0 md:ring-2 md:ring-black">
       <div className="lg:translate-y-30 absolute hidden h-40 w-5 translate-y-20 bg-purple md:block lg:h-60 lg:w-8"></div>
       <div className="absolute right-0 -z-20 hidden h-40 w-4/6 bg-light-orange md:block lg:h-60">
         <img

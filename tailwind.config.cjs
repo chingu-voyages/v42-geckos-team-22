@@ -23,6 +23,7 @@ module.exports = {
       },
       backgroundImage: {
         bg_nav: "url('/src/assets/header/bg_nav.svg')",
+        mascot: "url('/src/assets/modal/mascot.svg')",
       },
       colors: {
         turquoise: "#16ABAC",

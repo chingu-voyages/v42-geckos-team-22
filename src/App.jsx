@@ -118,7 +118,7 @@ function App() {
   ];
 
   return (
-    <>
+    <div className="mx-auto max-w-screen-xl md:ring-2 md:ring-black">
       <Header
         toggleModal={toggleModal}
         toggleSignInModal={toggleSignInModal}
@@ -147,7 +147,7 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
-    </>
+    </div>
   );
 }
 
