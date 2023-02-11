@@ -2,6 +2,7 @@ import React, { useEffect} from 'react';
 import { useSelector } from 'react-redux';
 import GameAnswerButton from './GameAnswerButton';
 
+
 function GameAnswers (props) {
 
     const failure = useSelector(state=>state.gameFunction.failure)

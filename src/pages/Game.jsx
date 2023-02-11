@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { Suspense } from "react";
 import { SkipLeft, SkipRight } from "../components/GameComponents/GameUtilities";
 import { useSelector, useDispatch } from "react-redux";
 import GameHeading from "../components/GameComponents/GameHeading";
@@ -28,7 +28,9 @@ function Game(props) {
             <div className="game-window-play__border">
               <div className="row-span-3 md:flex">
                 <SkipLeft cname="hidden md:block md:mr-1" />
-                <GamePlayWindow cname="game-window-play" />
+                <Suspense fallback={<GameLoadingWindow cname="grid grid-rows-4 h-full" />}>
+                  <GamePlayWindow cname="game-window-play" />
+                </Suspense>
                 <SkipRight cname="hidden md:block md:ml-1" />
               </div>
               <GameAnswers cname="flex flex-col md:flex-row px-12 md:-my-10 md:h-44 md:mx-6 row-span-1" />

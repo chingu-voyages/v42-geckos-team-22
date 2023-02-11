@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { MoreOptions } from "./GameUtilities";
 import { useSelector, useDispatch } from "react-redux";
 import gameData from "../../data";
-import { startGame, assignAnswers, assignQuestionImage, assignCorrectAnswer, assignGameState } from "../../redux/slices/gameFunctionSlice";
+import { startGame, assignAnswers, assignQuestionImage, assignCorrectAnswer, assignGameState, assignTotalQuestions } from "../../redux/slices/gameFunctionSlice";
 import Confetti from "react-confetti";
 import GetApiPics from "../../features/api/api";
 
@@ -39,6 +39,7 @@ function GamePlayWindow(props) {
       dispatch(assignAnswers(currentGame[currentQuestion].options));
       dispatch(assignQuestionImage(currentGame[currentQuestion].img));
       dispatch(assignCorrectAnswer(currentGame[currentQuestion].correctAnswer));
+      dispatch(assignTotalQuestions(currentGame.length))
       console.log("in playCurrentGame correct Answer", currentQuestionImage)
     } else {
       dispatch(assignGameState("end"));
