@@ -4,7 +4,7 @@ import { GiPanda } from "react-icons/gi";
 import { TbLetterCase, TbNumbers } from "react-icons/tb";
 import { FaShapes } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleMenu } from "../../redux/headerSlice";
+import { toggleMenu } from "../../redux/slices/headerSlice";
 import { assignGameState, resetCurrentQuestion, calculateScore } from "../../redux/slices/gameFunctionSlice";
 
 

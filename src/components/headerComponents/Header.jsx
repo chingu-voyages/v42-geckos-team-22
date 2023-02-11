@@ -33,7 +33,16 @@ function Header(props) {
         </li>
       </ul>
 
-      {isOpen && <MobileNav toggleMenu={toggleMenu} />}
+      {isOpen && (
+        <MobileNav
+          toggleModal={props.toggleModal}
+          toggleSignInModal={props.toggleSignInModal}
+          logOut={props.logOut}
+          signIn={props.signIn}
+          toggleMenu={props.toggleMenu}
+          currentUser={props.currentUser}
+        />
+      )}
 
       <nav className="hidden h-full uppercase md:mx-32 md:flex md:flex-row md:items-center md:justify-between">
         <ul className="text-gray-100 md:flex md:flex-row md:items-center md:gap-24">
@@ -58,7 +67,7 @@ function Header(props) {
           </li>
         </ul>
 
-        <div className="space-x-6">
+        <div className="flex space-x-6">
           {props.currentUser?.displayName ? (
             <button
               onClick={props.logOut}
