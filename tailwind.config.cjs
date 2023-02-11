@@ -38,6 +38,7 @@ module.exports = {
         "light-blue": "#12D5F0",
         purple: "#7E38F9",
         "off-white": "#D9D9D9",
+        "bg-white": "#F7F7F7",
         "dark-grey": "#2D2D2D",
       },
       flexGrow: {

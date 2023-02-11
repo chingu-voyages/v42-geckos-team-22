@@ -117,8 +117,9 @@ function App() {
     />,
   ];
 
+
   return (
-    <div className="mx-auto max-w-screen-xl md:ring-2 md:ring-black">
+    <div className="mx-auto max-w-screen-xl bg-bg-white md:ring-2 md:ring-white">
       <Header
         toggleModal={toggleModal}
         toggleSignInModal={toggleSignInModal}
@@ -136,7 +137,7 @@ function App() {
       />
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<HomePage />} />
-        <Route path="/game" element={<Game />}>
+        <Route path="/game" element={<Game currentUser ={currentUser}/>}>
           <Route path="animal" element={<Game />} />
           <Route path="letter" element={<Game />} />
           <Route path="number" element={<Game />} />
