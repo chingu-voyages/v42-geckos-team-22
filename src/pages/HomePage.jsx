@@ -17,13 +17,13 @@ function HomePage() {
           <span className="inline-block rotate-90 md:ml-4 md:mt-4 md:rotate-0">
             <img className="h-full w-20 md:w-24" src={homedots} alt="dots" />
           </span>
-          <h1 className="absolute right-1 top-1/2 hidden -translate-y-1/2 text-[5rem] font-extrabold uppercase leading-snug md:z-10 md:inline-block">
+          <h1 className="absolute right-1 top-1/2 hidden -translate-y-1/2 whitespace-nowrap font-extrabold uppercase leading-snug md:z-10 md:inline-block md:text-[4.2rem] xl:text-[5rem]">
             the only <br /> you need
           </h1>
         </div>
         <div className="relative mb-12 flex h-[12rem] w-full flex-col rounded-sm md:row-span-5 md:mb-0 md:h-full md:rounded-none md:ring-2 md:ring-black">
           <div className="absolute top-1/2 left-1 hidden -translate-y-1/2 md:z-10 md:flex md:flex-col md:gap-y-0">
-            <h1 className="hidden text-[5rem] font-extrabold uppercase leading-snug md:z-10 md:inline-block">
+            <h1 className="hidden whitespace-nowrap font-extrabold uppercase leading-snug md:z-10 md:inline-block md:text-[4.2rem] xl:text-[5rem]">
               flash card <br /> \\\\\\
             </h1>
           </div>
