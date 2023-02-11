@@ -7,21 +7,27 @@ function FAQ() {
   const faqData = [
     {
       id: 1,
-      question: "At vero eos et accusamus et iusto odio dignissimos?",
+      question: "Who are the team behind Flashy?",
       answer:
-        "Ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti occaecati cupiditate nonquos dolores et quas molestias excepturi sint.",
+        "There are 4 team members who built Flashy: Elliot, Eric, Danney, and Angela. Brought together by Chingu, we were officially known as Geckos Team 22.",
     },
     {
       id: 2,
-      question: "Consequatur aut perferendis doloribus asperiores repellat?",
+      question: "What was the purpose of this project?",
       answer:
-        "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint ut aut reiciendis voluptatibus maiores alias.",
+        "This project was part of Chingu Voyage 42. After brainstorming some ideas, we decided together to create a fun app for children to help improve literacy. This was a project that was both meaningful and achievable in the given 6-week timeframe. ",
     },
     {
       id: 3,
-      question: "Sed ut perspiciatis unde omnis iste natus error?",
+      question: "What tech stack was used?",
       answer:
-        "Toluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.",
+        "In this project, we used a combination of: React, Redux Toolkit, React Router, Tailwind, Firebase, and Vite.",
+    },
+    {
+      id: 4,
+      question: "What was the inspiration for the website design?",
+      answer:
+        "The target audience for Flashy is children, so we needed strong, bright, fun colors. To keep the style modern, we implemented a brutalism design.",
     },
   ];
 
