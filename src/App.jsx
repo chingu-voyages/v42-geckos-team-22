@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "./components/headerComponents/Header";
 import Footer from "./components/Footer";
-// import Home from "./pages/Home";
 import HomePage from "./pages/HomePage";
 import Game from "./pages/Game";
 import FAQ from "./pages/FAQ";
@@ -16,7 +15,7 @@ function App() {
   const location = useLocation();
 
   return (
-    <div className="mx-auto xl:max-w-[93.75rem]">
+    <div className="mx-auto max-w-screen-xl md:ring-2 md:ring-black">
       <Header />
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<HomePage />} />

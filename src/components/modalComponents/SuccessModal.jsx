@@ -16,7 +16,7 @@ export default function SuccessModal({ toggleModal, showModal }) {
               // User clicks outside modal will close
               e.stopPropagation();
             }}
-            className="relative flex h-full w-full flex-col items-center justify-center gap-y-24 rounded-xl border-6 border-white bg-light-orange text-white sm:h-4/6 sm:max-w-sm sm:justify-between sm:gap-0"
+            className="relative flex h-full w-full flex-col items-center justify-center gap-y-24 rounded-xl border-6 border-white bg-light-orange text-white sm:h-[40rem] sm:max-w-sm sm:justify-between sm:gap-0"
           >
             <img
               src={pawl}

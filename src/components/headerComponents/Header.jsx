@@ -30,7 +30,7 @@ function Header() {
   }
 
   return (
-    <header className="body-font z-50 h-24  bg-turquoise text-xl font-bold text-white md:border-t-2 md:border-b-4 md:border-t-black md:border-b-black md:bg-bg_nav">
+    <header className="body-font z-50 h-24 bg-turquoise text-xl  font-bold text-white md:border-t-2 md:border-b-4 md:border-t-black md:border-b-black md:bg-bg_nav">
       <ul className="mx-8 flex h-full flex-row items-center justify-between md:hidden">
         <li>
           <Link to="/">
