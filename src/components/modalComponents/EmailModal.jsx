@@ -10,21 +10,19 @@ export default function EmailModal({
   handleForwardClick,
   handleBackClick,
   toggleModal,
-  showModal,
+  showRegisterModal,
   saveEmail,
   handleKeyDown,
 }) {
   return (
     <>
-      {showModal && (
+      {showRegisterModal && (
         <div
-          onClick={toggleModal} // User clicks backdrop will close
+          onClick={toggleModal}
           className="fixed inset-0 z-50 flex cursor-pointer items-center justify-center bg-zinc-200 bg-opacity-40 backdrop-blur-[1.5px]"
         >
           <div
             onClick={(e) => {
-              // User clicks inside modal will remain open
-              // User clicks outside modal will close
               e.stopPropagation();
             }}
             className="relative flex h-full w-full flex-col items-center justify-center bg-purple p-10 text-white sm:h-4/6  sm:w-7/12 sm:max-w-sm sm:rounded-2xl"

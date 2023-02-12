@@ -23,10 +23,12 @@ module.exports = {
       },
       backgroundImage: {
         bg_nav: "url('/src/assets/header/bg_nav.svg')",
+        mascot: "url('/src/assets/modal/mascot.svg')",
       },
       colors: {
         turquoise: "#16ABAC",
         "light-orange": "#FCA02D",
+        "bright-orange": "#FCB900",
         "red-orange": "#EF3E38",
         yellow: "#F6E614",
         blue: "#5974FF",
@@ -36,6 +38,7 @@ module.exports = {
         "light-blue": "#12D5F0",
         purple: "#7E38F9",
         "off-white": "#D9D9D9",
+        "bg-white": "#F7F7F7",
         "dark-grey": "#2D2D2D",
       },
       flexGrow: {

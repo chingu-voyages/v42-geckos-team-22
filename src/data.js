@@ -1,73 +1,252 @@
 const dataJson = [
   {
     id: 1,
-    gameType: "number", //use on homepage and nav for game type selection
-    games: [
+    gameType: "number", 
+    games: [ 
       {
-        img: "https://www.freepnglogos.com/uploads/1-number-png/cartoon-1-number-five-for-friday-time-beach-sand-3.png",
-        name: "Number 1",
-        options: ["one", "two", "three"],
-        correctAnswer: "one", //if this found in "options", user win
+        img: "149956",
+        name: "Number 6",
+        options: ["eight", "two", "six"],
+        correctAnswer: "six", 
       },
       {
-        img: "https://e7.pngegg.com/pngimages/277/128/png-clipart-number-numerical-digit-mathematics-counting-multiplication-number-2-child-numerical-digit-thumbnail.png",
+        img: "6118485",
+        name: "Number 0",
+        options: ["zero", "six", "seven"],
+        correctAnswer: "zero",
+      },
+      {
+        img: "149952",
         name: "Number 2",
-        options: ["one", "two", "three"],
-        correctAnswer: "two",
+        options: ["four", "two", "three"],
+        correctAnswer: "two", 
+      },
+      {
+        img: "149959",
+        name: "Number 9",
+        options: ["four", "nine", "zero"],
+        correctAnswer: "nine",
+      },
+      {
+        img: "149955",
+        name: "Number 5",
+        options: ["five", "two", "eight"],
+        correctAnswer: "five", 
+      },
+      {
+        img: "149953",
+        name: "Number 3",
+        options: ["four", "six", "three"],
+        correctAnswer: "three",
+      },
+      {
+        img: "149951",
+        name: "Number 1",
+        options: ["one", "zero", "nine"],
+        correctAnswer: "one", 
+      },
+      {
+        img: "149957",
+        name: "Number 7",
+        options: ["nine", "zero", "seven"],
+        correctAnswer: "seven",
+      },{
+        img: "149954",
+        name: "Number 4",
+        options: ["seven", "four", "nine"],
+        correctAnswer: "four", 
+      },
+      {
+        img: "149958",
+        name: "Number 8",
+        options: ["five", "eight", "four"],
+        correctAnswer: "eight",
       },
     ],
   },
   {
     id: 2,
-    gameType: "shape", //use on homepage and nav for game type selection
+    gameType: "shape", 
     games: [
       {
-        img: "..\\..\\src\\assets\\Shapes\\Circle.png",
-        name: "Circle",
-        options: ["Circle", "Square", "Triangle"],
-        correctAnswer: "Circle", //if this found in "options", user win
-      },
-      {
-        img: "..\\..\\src\\assets\\Shapes\\Oval.png",
-        name: "Oval",
-        options: ["Circle", "Oval", "Triangle"],
-        correctAnswer: "Oval", //if this found in "options", user win
-      },
-      {
-        img: "..\\..\\src\\assets\\Shapes\\Square.png",
-        name: "Square",
-        options: ["Circle", "Square", "Triangle"],
-        correctAnswer: "Square", //if this found in "options", user win
-      },
-      {
-        img: "..\\..\\src\\assets\\Shapes\\Triangle.png",
+        img: "7767636",
         name: "Triangle",
-        options: ["Oval", "Square", "Triangle"],
-        correctAnswer: "Triangle", //if this found in "options", user win
+        options: ["Arrow", "Oval", "Triangle"],
+        correctAnswer: "Triangle", 
+      },
+      {
+        img: "7767635",
+        name: "Circle",
+        options: ["Circle", "Diamond", "Star"],
+        correctAnswer: "Circle", 
+      },
+      {
+        img: "7767634",
+        name: "Square",
+        options: ["Triangle", "Square", "Oval"],
+        correctAnswer: "Square", 
+      },
+      {
+        img: "7765866",
+        name: "Heart",
+        options: ["Heart", "Star", "Tear Drop"],
+        correctAnswer: "Heart", 
+      },
+      {
+        img: "7765876",
+        name: "Oval",
+        options: ["Diamond", "Oval", "Triangle"],
+        correctAnswer: "Oval", 
+      },
+      {
+        img: "7765874",
+        name: "Star",
+        options: ["Circle", "Star", "Rectangle"],
+        correctAnswer: "Star", 
+      },
+      {
+        img: "7765863",
+        name: "Tear Drop",
+        options: ["Oval", "Arrow", "Tear Drop"],
+        correctAnswer: "Tear Drop", 
+      },
+      {
+        img: "7765860",
+        name: "Diamond",
+        options: ["Diamond", "Square", "Circle"],
+        correctAnswer: "Diamond", 
+      },
+      {
+        img: "7765865",
+        name: "Arrow",
+        options: ["Heart", "Arrow", "Triangle"],
+        correctAnswer: "Arrow", 
       },
     ],
   },
   {
     id: 3,
-    gameType: "color", //use on homepage and nav for game type selection
+    gameType: "animal", 
     games: [
       {
-        img: "colors coming soon",
-        name: "green",
-        options: ["red", "blue", "green"],
-        correctAnswer: "green", //if this found in "options", user win
+        img: "159731",
+        name: "Cow",
+        options: ["giraffe", "cow", "cat"],
+        correctAnswer: "cow", 
+      },
+      {
+        img: "2043685",
+        name: "Cat",
+        options: ["cat", "dog", "elephant"],
+        correctAnswer: "cat", 
+      },
+      {
+        img: "5158955",
+        name: "Dog",
+        options: ["rabbit", "chicken", "dog"],
+        correctAnswer: "dog", 
+      },
+      {
+        img: "3526681",
+        name: "Elephant",
+        options: ["elephant", "pig", "cat"],
+        correctAnswer: "elephant", 
+      },
+      {
+        img: "308963",
+        name: "Giraffe",
+        options: ["giraffe", "sheep", "dolphin"],
+        correctAnswer: "giraffe", 
+      },
+      {
+        img: "159496",
+        name: "Chickens",
+        options: ["dog", "giraffe", "chicken"],
+        correctAnswer: "chicken", 
+      },
+      {
+        img: "4888445",
+        name: "Rabbit",
+        options: ["rabbit", "elephant", "cow"],
+        correctAnswer: "rabbit", 
+      },
+      {
+        img: "7036679",
+        name: "Dolphin",
+        options: ["sheep", "dolphin", "chicken"],
+        correctAnswer: "dolphin", 
+      },
+      {
+        img: "4605992",
+        name: "Sheep",
+        options: ["dog", "giraffe", "sheep"],
+        correctAnswer: "sheep", 
+      },
+      {
+        img: "3498048",
+        name: "Pig",
+        options: ["pig", "cat", "cow"],
+        correctAnswer: "pig", 
       },
     ],
   },
   {
     id: 4,
-    gameType: "letter", //use on homepage and nav for game type selection
+    gameType: "letter",
     games: [
       {
-        img: "letters coming soon",
-        name: "a",
-        options: ["A", "B", "C"],
-        correctAnswer: "A", //if this found in "options", user win
+        img: "6812515",
+        name: "G",
+        options: ["a", "h", "g"],
+        correctAnswer: "g", 
+      },
+      {
+        img: "6812531",
+        name: "B",
+        options: ["w", "b", "q"],
+        correctAnswer: "b", 
+      },
+      {
+        img: "6819333",
+        name: "H",
+        options: ["m", "e", "h"],
+        correctAnswer: "h", 
+      },
+      {
+        img: "6812564",
+        name: "F",
+        options: ["e", "f", "u"],
+        correctAnswer: "f", 
+      },
+      {
+        img: "6806219",
+        name: "D",
+        options: ["r", "d", "b"],
+        correctAnswer: "d", 
+      },
+      {
+        img: "6806213",
+        name: "A",
+        options: ["o", "p", "a"],
+        correctAnswer: "a", 
+      },
+      {
+        img: "6806232",
+        name: "R",
+        options: ["r", "m", "n"],
+        correctAnswer: "r", 
+      },
+      {
+        img: "6812511",
+        name: "E",
+        options: ["u", "e", "c"],
+        correctAnswer: "e", 
+      },
+      {
+        img: "6812569",
+        name: "N",
+        options: ["n", "m", "w"],
+        correctAnswer: "n", 
       },
     ],
   },
