@@ -69,9 +69,27 @@ const dataJson = [
     gameType: "shape", 
     games: [
       {
+        img: "7767636",
+        name: "Triangle",
+        options: ["Arrow", "Oval", "Triangle"],
+        correctAnswer: "Triangle", 
+      },
+      {
+        img: "7767635",
+        name: "Circle",
+        options: ["Circle", "Diamond", "Star"],
+        correctAnswer: "Circle", 
+      },
+      {
+        img: "7767634",
+        name: "Square",
+        options: ["Triangle", "Square", "Oval"],
+        correctAnswer: "Square", 
+      },
+      {
         img: "7765866",
         name: "Heart",
-        options: ["Heart", "Square", "Tear Drop"],
+        options: ["Heart", "Star", "Tear Drop"],
         correctAnswer: "Heart", 
       },
       {
@@ -81,7 +99,7 @@ const dataJson = [
         correctAnswer: "Oval", 
       },
       {
-        img: "7765876",
+        img: "7765874",
         name: "Star",
         options: ["Circle", "Star", "Rectangle"],
         correctAnswer: "Star", 
@@ -103,12 +121,6 @@ const dataJson = [
         name: "Arrow",
         options: ["Heart", "Arrow", "Triangle"],
         correctAnswer: "Arrow", 
-      },
-      {
-        img: "7765875",
-        name: "Rectangle",
-        options: ["Rectangle", "Star", "Oval"],
-        correctAnswer: "Rectangle", 
       },
     ],
   },

@@ -13,7 +13,7 @@ function GameLoadingWindow (props) {
         setInterval(() => {
             setProgress(prev => prev + 5)
         }, 100);
-    }, [])
+    })
 
     if(progress >= 100) {
         dispatch(assignGameState("play"))

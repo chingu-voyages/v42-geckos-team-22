@@ -9,7 +9,8 @@ const initialState = {
   score: 0,
   success: "hidden",
   failure: [],
-  gameState: "landing"
+  gameState: "landing",
+  totalQuestions:0
 }
 
 export const gameFunctionSlice = createSlice({
@@ -50,9 +51,12 @@ export const gameFunctionSlice = createSlice({
       state.success = action.payload;
       console.log(state.success);
     },
+    assignTotalQuestions: (state, action) => {
+      state.totalQuestions = action.payload;
+    },
   },
 });
 
-export const { startGame, assignAnswers, assignQuestionImage, assignCorrectAnswer, advanceCurrentQuestion, assignGameState, resetCurrentQuestion, calculateScore, toggleConfetti, recordFailures, clearFailures } = gameFunctionSlice.actions;
+export const { startGame, assignAnswers, assignQuestionImage, assignCorrectAnswer, advanceCurrentQuestion, assignGameState, resetCurrentQuestion, calculateScore, toggleConfetti, recordFailures, clearFailures, assignTotalQuestions } = gameFunctionSlice.actions;
 
 export default gameFunctionSlice.reducer;
