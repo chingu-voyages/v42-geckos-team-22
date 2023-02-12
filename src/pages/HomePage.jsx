@@ -7,7 +7,6 @@ import animal from "../assets/homePage/animal.svg";
 import shape from "../assets/homePage/shape.svg";
 import number from "../assets/homePage/number.svg";
 import lettercase from "../assets/homePage/lettercase.svg";
-import { toggleMenu } from "../redux/slices/headerSlice";
 import { assignGameState, resetCurrentQuestion, calculateScore } from "../redux/slices/gameFunctionSlice";
 
 function HomePage() {
@@ -20,7 +19,6 @@ function HomePage() {
   );
 
   const handleToggleGame = () => {
-    dispatch(toggleMenu());
     gameState = "landing";
     currentQuestion = 0;
     dispatch(assignGameState(gameState));
