@@ -104,7 +104,7 @@ function HomePage() {
           <>
             <Link
               to="/"
-              className="mb-16 h-full w-4/6 py-14 md:row-span-3 md:mb-0 md:grid md:w-full md:place-items-center md:border-r-4 md:border-black md:py-0 "
+              className="mb-16 h-full w-4/6 py-14 ring-4 ring-black md:row-span-3 md:mb-0 md:grid md:w-full md:place-items-center md:border-r-4 md:border-black md:py-0 "
             >
               <h2 className="text-center text-2xl font-bold uppercase tracking-wide">
                 COMING SOON
@@ -115,7 +115,7 @@ function HomePage() {
             </Link>
             <Link
               to="/"
-              className="mb-16 h-full w-4/6 py-14 md:row-span-3 md:mb-0 md:grid md:w-full md:place-items-center  md:border-black md:py-0 "
+              className="mb-16 h-full w-4/6 py-14 ring-4 ring-black md:row-span-3 md:mb-0 md:grid md:w-full md:place-items-center  md:border-black md:py-0 "
             >
               <h2 className="text-center text-2xl font-bold uppercase tracking-wide">
                 COMING SOON

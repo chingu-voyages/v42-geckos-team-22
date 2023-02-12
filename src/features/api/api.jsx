@@ -4,11 +4,8 @@ import GameSpinnerWindow from "../../components/GameComponents/GameSpinnerWindow
 
 const key = "33121417-d326c5dfd781e6d9400ae77ef";
 
-function GetApiPics({currentQuestionImage}) {
-
-  let correctAnswer = useSelector(
-    (state) => state.gameFunction.correctAnswer
-  );
+function GetApiPics({ currentQuestionImage }) {
+  let correctAnswer = useSelector((state) => state.gameFunction.correctAnswer);
     
     const [image, setImage] = useState(null);
     const [loading, setLoading] = useState(false);
@@ -24,9 +21,10 @@ function GetApiPics({currentQuestionImage}) {
   useEffect(() => {
     try {
       getPics();
+     
     } catch (err) {
       console.error(err);
-    }
+    } 
   }, [image, currentQuestionImage]);
 
   return (
