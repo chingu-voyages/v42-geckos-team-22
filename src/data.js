@@ -1,7 +1,7 @@
 const dataJson = [
   {
     id: 1,
-    gameType: "number", //use on homepage and nav for game type selection  "one" "two" "three" "four" "five" "six" "seven" "eight" "nine" "zero"
+    gameType: "number", 
     games: [ 
       {
         img: "149956",
@@ -66,7 +66,7 @@ const dataJson = [
   },
   {
     id: 2,
-    gameType: "shape", //use on homepage and nav for game type selection
+    gameType: "shape", 
     games: [
       {
         img: "7767636",
@@ -126,7 +126,7 @@ const dataJson = [
   },
   {
     id: 3,
-    gameType: "animal", //use on homepage and nav for game type selection
+    gameType: "animal", 
     games: [
       {
         img: "159731",

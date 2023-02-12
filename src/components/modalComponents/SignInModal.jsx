@@ -30,13 +30,11 @@ export default function SignInModal({
     <>
       {showSignInModal && (
         <div
-          onClick={toggleSignInModal} // User clicks backdrop will close
+          onClick={toggleSignInModal} 
           className=" fixed inset-0 z-50 flex cursor-pointer items-center justify-center bg-bright-orange "
         >
           <div
             onClick={(e) => {
-              // User clicks inside modal will remain open
-              // User clicks outside modal will close
               e.stopPropagation();
             }}
             className="border-8 relative flex flex-col items-center justify-center rounded-xl bg-white  py-14 px-20 text-dark-grey"

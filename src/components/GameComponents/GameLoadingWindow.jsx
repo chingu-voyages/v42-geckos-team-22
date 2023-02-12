@@ -19,7 +19,6 @@ function GameLoadingWindow (props) {
         dispatch(assignGameState("play"))
     }
 
-      console.log("progress", progress)
     return (
         <div className={props.cname}>
             <div className='row-start-1 row-end-2 w-full bg-red-orange' />

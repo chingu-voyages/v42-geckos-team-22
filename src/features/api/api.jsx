@@ -6,10 +6,10 @@ const key = "33121417-d326c5dfd781e6d9400ae77ef";
 
 function GetApiPics({ currentQuestionImage }) {
   let correctAnswer = useSelector((state) => state.gameFunction.correctAnswer);
-    
-    const [image, setImage] = useState(null);
-    const [loading, setLoading] = useState(false);
-    
+
+  const [image, setImage] = useState(null);
+  const [loading, setLoading] = useState(false);
+
   const getPics = async () => {
     setLoading(true)
     const res = await fetch(`https://pixabay.com/api/?key=${key}&id=${currentQuestionImage}`);

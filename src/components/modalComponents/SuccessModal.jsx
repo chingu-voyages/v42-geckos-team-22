@@ -12,13 +12,11 @@ export default function SuccessModal({
     <>
       {showRegisterModal && (
         <div
-          onClick={toggleModal} // User clicks backdrop will close
+          onClick={toggleModal}
           className="fixed inset-0 z-50 flex items-center justify-center bg-zinc-200 bg-opacity-40 backdrop-blur-[1.5px]"
         >
           <div
             onClick={(e) => {
-              // User clicks inside modal will remain open
-              // User clicks outside modal will close
               e.stopPropagation();
             }}
             className="relative flex h-full w-full flex-col items-center justify-center gap-y-24 rounded-xl border-6 border-white bg-light-orange text-white sm:h-[40rem] sm:max-w-sm sm:justify-between sm:gap-0"
@@ -39,7 +37,6 @@ export default function SuccessModal({
               <Link
                 className="rounded-md border-3 border-white bg-orange py-2 px-7 font-semibold text-white"
                 onClick={toggleModal}
-                // User click button to return home
                 to="/"
               >
                 Home
