@@ -1,7 +1,11 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { assignGameState, resetCurrentQuestion, calculateScore } from "../../redux/slices/gameFunctionSlice";
+import {
+  assignGameState,
+  resetCurrentQuestion,
+  calculateScore,
+} from "../../redux/slices/gameFunctionSlice";
 
 function GameEndWindow(props) {
   let gameState = useSelector((state) => state.gameFunction.gameState);
@@ -38,10 +42,10 @@ function GameEndWindow(props) {
       </div>
       <div className="row-start-3 row-end-5 flex flex-col justify-self-center md:block">
         <button className="btn-end" type="button" onClick={handlePlayAgain}>
-          <span className="btn-answer-text">Play Again</span>
+          Play Again
         </button>
         <button className="btn-end" type="button" onClick={handleEnd}>
-          <span className="btn-answer-text">End Game</span>
+          End Game
         </button>
       </div>
     </div>

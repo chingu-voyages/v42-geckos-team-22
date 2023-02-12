@@ -33,14 +33,35 @@ function MobileNav(props) {
       >
         <Link to="/faq">faq</Link>
       </li>
-      <li>
-        <button
-          onClick={props.toggleModal}
-          className="uppercase text-gray-100 hover:text-white"
-        >
-          register
-        </button>
-      </li>
+      {props.currentUser ? (
+        <li>
+          <button
+            onClick={props.logOut}
+            className="uppercase text-gray-100 hover:text-white"
+          >
+            sign out
+          </button>
+        </li>
+      ) : (
+        <>
+          <li>
+            <button
+              onClick={props.toggleModal}
+              className="uppercase text-gray-100 hover:text-white"
+            >
+              register
+            </button>
+          </li>{" "}
+          <li>
+            <button
+              onClick={props.toggleSignInModal}
+              className="uppercase text-gray-100 hover:text-white"
+            >
+              sign in
+            </button>
+          </li>
+        </>
+      )}
     </ul>
   );
 }
