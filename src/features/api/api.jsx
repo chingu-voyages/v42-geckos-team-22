@@ -3,13 +3,9 @@ import { useSelector } from "react-redux";
 import spinner from "../../assets/spinner.gif";
 
 const key = "33121417-d326c5dfd781e6d9400ae77ef";
-const imgID = 6812515;
 
 function GetApiPics({ currentQuestionImage }) {
   let correctAnswer = useSelector((state) => state.gameFunction.correctAnswer);
-
-  //https://stackoverflow.com/questions/58850699/useselector-not-updating-when-store-has-changed-in-reducer-reactjs-redux
-  console.log("in API.jsx", currentQuestionImage);
 
   const [image, setImage] = useState(null);
   const [loading, setLoading] = useState(false);

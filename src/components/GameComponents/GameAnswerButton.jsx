@@ -13,15 +13,8 @@ function GameAnswerButton ({btnid}) {
 
     const handleAnswer = () => {
       
-        // props.setGameState('end')
-        
-        
-        //console.log("outside IF handleAnswer tryNum", tryNum)
-        //console.log("in handleAnswer correctAnswer", typeof(correctAnswer), typeof(id))
-       // console.log("in handle answer answerArr[btnid], try Num", answerArr[btnid], tryNum)
         if(correctAnswer === answerArr[btnid] && failure.length === 0) {
            
-            console.log("yes! if, id, cA, failure.length", answerArr[btnid], correctAnswer, failure.length)
             dispatch(toggleConfetti("visible"))
             
             setTimeout(() => {
@@ -33,11 +26,8 @@ function GameAnswerButton ({btnid}) {
         } else if (correctAnswer === answerArr[btnid] && failure.length > 0 ) {
             dispatch(clearFailures())
             dispatch(advanceCurrentQuestion())
-        //    console.log("yes else if, failure.length", answerArr[btnid], correctAnswer, failure.length)
         } else {
             dispatch(recordFailures(btnid))
-          
-            console.log("no! id cA, failure.length", answerArr[btnid], correctAnswer, failure.length)
         }
 
     }

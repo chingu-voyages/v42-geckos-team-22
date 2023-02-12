@@ -5,7 +5,6 @@ import imgage1 from "../assets/faqPage/faqVector.svg";
 
 function FAQ() {
   
-  //Update questions and answers here:
   const faqData = [
     {
       id: 1,

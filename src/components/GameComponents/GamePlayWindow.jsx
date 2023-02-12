@@ -1,31 +1,16 @@
-import React, { useState, useEffect } from "react";
-// import Axios from 'axios';
+import React, { useEffect } from "react";
 import { MoreOptions } from "./GameUtilities";
 import { useSelector, useDispatch } from "react-redux";
 import gameData from "../../data";
-import {
-  startGame,
-  assignAnswers,
-  assignQuestionImage,
-  assignCorrectAnswer,
-  assignGameState,
-} from "../../redux/slices/gameFunctionSlice";
+import { startGame, assignAnswers, assignQuestionImage, assignCorrectAnswer, assignGameState } from "../../redux/slices/gameFunctionSlice";
 import Confetti from "react-confetti";
 import GetApiPics from "../../features/api/api";
-
-//pixelbay API Key 33121417-d326c5dfd781e6d9400ae77ef
-
-// api format https://pixabay.com/api/?key=33121417-d326c5dfd781e6d9400ae77ef&id=159731
 
 function GamePlayWindow(props) {
   let gameName = useSelector((state) => state.gameFunction.gameType);
   let currentGame = null;
-  let currentQuestionImage = useSelector(
-    (state) => state.gameFunction.currentQuestionImage
-  );
-  let currentQuestion = useSelector(
-    (state) => state.gameFunction.currentQuestion
-  );
+  let currentQuestionImage = useSelector( (state) => state.gameFunction.currentQuestionImage);
+  let currentQuestion = useSelector((state) => state.gameFunction.currentQuestion);
   let success = useSelector((state) => state.gameFunction.success);
 
   const dispatch = useDispatch();
@@ -35,17 +20,15 @@ function GamePlayWindow(props) {
       if (gameData[property].gameType == gameName) {
         currentGame = gameData[property].games;
       }
-      //console.log("in FindCurrentGame", gameData[property].gameType)
+
     }
   };
 
   const playCurrentGame = () => {
-    //  console.log("inPlayCurrentGame currentQuestion", currentQuestion, currentGame.length)
     if (currentQuestion < currentGame.length) {
       dispatch(assignAnswers(currentGame[currentQuestion].options));
       dispatch(assignQuestionImage(currentGame[currentQuestion].img));
       dispatch(assignCorrectAnswer(currentGame[currentQuestion].correctAnswer));
-      console.log("in playCurrentGame correct Answer", currentQuestionImage);
     } else {
       dispatch(assignGameState("end"));
     }
@@ -56,7 +39,6 @@ function GamePlayWindow(props) {
     dispatch(startGame(gameName));
     findCurrentGame();
     playCurrentGame();
-    // console.log("in GamePlayWindow useEffect correct Answer success", correctAnswer, success);
   });
 
   return (

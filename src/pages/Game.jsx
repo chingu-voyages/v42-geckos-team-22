@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { SkipLeft, SkipRight } from "../components/GameComponents/GameUtilities";
 import { useSelector, useDispatch } from "react-redux";
 import GameHeading from "../components/GameComponents/GameHeading";
