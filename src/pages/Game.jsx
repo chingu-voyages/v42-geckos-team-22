@@ -1,28 +1,28 @@
-import React, { useState } from "react";
-import {
-  SkipLeft,
-  SkipRight,
-} from "../components/GameComponents/GameUtilities";
-import { useSelector } from "react-redux";
+import React, { useEffect } from "react";
+import { SkipLeft, SkipRight } from "../components/GameComponents/GameUtilities";
+import { useSelector, useDispatch } from "react-redux";
 import GameHeading from "../components/GameComponents/GameHeading";
 import GameControls from "../components/GameComponents/GameControls";
 import GameAnswers from "../components/GameComponents/GameAnswers";
 import GamePlayWindow from "../components/GameComponents/GamePlayWindow";
-// import GameLandingWindow from '../components/GameComponents/GameLandingWindow';
-// import GameLoadingWindow from '../components/GameComponents/GameLoadingWindow';
+import GameLandingWindow from '../components/GameComponents/GameLandingWindow';
+import GameLoadingWindow from '../components/GameComponents/GameLoadingWindow';
 import GameEndWindow from "../components/GameComponents/GameEndWindow";
-function Game() {
-  // handlePlayGame(), gameState == "loading", gameState == "landing" are commented out to remove from development. May be added back in later once game is funcitonal.
-  const gameState = useSelector((state) => state.gameFunction.gameState);
+import { assignGameState } from "../redux/slices/gameFunctionSlice";
 
-  // const handlePlayGame = () => {
-  //     setGameState("loading")
-  //     console.log("game mode", gameState)
-  // }
+function Game(props) {
+  const dispatch = useDispatch();
+  const gameState = useSelector((state) => state.gameFunction.gameState);
+  let gameName = useSelector((state) => state.gameFunction.gameType);
+ 
+  const handlePlayGame = () => {
+      dispatch(assignGameState("loading"))
+      console.log("game mode", gameState)
+  }
   return (
     <div className="grid h-screen grid-rows-3">
-      <GameHeading cname="hidden md:border-2 md:border-black md:row-span-1 md:flex" />
-      <div className="row-span-3 md:container md:row-span-2 md:mx-auto">
+      <GameHeading currentUser={props.currentUser} cname="hidden  md:row-span-1 md:flex" />
+      <div className="row-span-3 md:container md:row-span-2 md:mx-auto md:p-20">
         {gameState == "play" ? (
           <div className="">
             <div className="game-window-play__border">
@@ -35,21 +35,19 @@ function Game() {
             </div>
             <GameControls cname="flex justify-around items-center m-1 md:hidden row-span-2" />
           </div>
-        ) : // : gameState == "loading"
-        //     ? <div className='md:game-window__border h-96'>
-        //         <GameLoadingWindow
-        //         setGameState={setGameState}
-        //         cname='grid grid-rows-4 h-full'
-        //         />
-        //     </div>
-        // : gameState == "landing"
-        //     ? <div className='md:game-window__border h-96'>
-        //         <GameLandingWindow
-        //         handlePlayGame={handlePlayGame}
-        //         cname='grid grid-rows-4 h-full'
-        //         />
-        //     </div>
-        gameState == "end" ? (
+        ) : gameState == "loading" ? (
+          <div className="md:game-window__border h-96">
+            <GameLoadingWindow cname="grid grid-rows-4 h-full" />
+          </div>
+        ) : gameState == "landing" ? (
+          <div className="md:game-window__border h-96">
+            <GameLandingWindow
+              handlePlayGame={handlePlayGame}
+              gameName={gameName}
+              cname="grid grid-rows-4 h-full"
+            />
+          </div>
+        ) : gameState == "end" ? (
           <div className="md:game-window__border h-96">
             <GameEndWindow cname="grid grid-rows-4 h-full" />
           </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import faqVector from "../assets/faqPage/faqVector.svg";
 import faqVector1 from "../assets/faqPage/faqVector1.svg";
+import imgage1 from "../assets/faqPage/faqVector.svg";
 
 function FAQ() {
   
@@ -48,9 +49,9 @@ function FAQ() {
   return (
     <div className="min-h-screen relative p-5 md:p-0">
       <div className="lg:translate-y-30 absolute hidden h-40 w-5 translate-y-20 bg-purple md:block lg:h-60 lg:w-8"></div>
-      <div className="absolute right-0 -z-20 hidden h-40 w-4/6 bg-light-orange md:block lg:h-60">
+      <div className="absolute right-0 hidden h-40 w-4/6 bg-light-orange md:block lg:h-60">
         <img
-          className="absolute left-44 w-28 lg:left-96 lg:w-40"
+          className=" absolute left-44 w-28 lg:left-96 lg:w-40"
           src={faqVector}
           alt="faq vector"
         />
@@ -60,7 +61,7 @@ function FAQ() {
           alt="faq vector"
         />
       </div>
-      <section className="pb-12 md:pt-16 md:pb-24">
+      <section className="pb-12 md:pt-16 md:pb-24 relative z-10">
         <h2 className="text-7xl font-extrabold md:hidden">FAQ</h2>
         <span className="hidden text-7xl font-extrabold md:block md:pl-14 md:pb-6 lg:pl-32 lg:text-9xl">
           Frequently

@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { useDispatch } from "react-redux";
+import { assignGameState } from "../../redux/slices/gameFunctionSlice";
 
 
 function GameLoadingWindow (props) {
+
+    const dispatch = useDispatch();
 
     const [progress, setProgress ] = useState(0)
 
@@ -12,7 +16,7 @@ function GameLoadingWindow (props) {
     }, [])
 
     if(progress >= 100) {
-        props.setGameState("play")
+        dispatch(assignGameState("play"))
     }
 
       console.log("progress", progress)

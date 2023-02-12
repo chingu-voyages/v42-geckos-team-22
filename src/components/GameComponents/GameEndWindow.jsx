@@ -18,7 +18,7 @@ function GameEndWindow(props) {
   const dispatch = useDispatch();
 
   const handleEnd = () => {
-    gameState = "play";
+    gameState = "landing";
     currentQuestion = 0;
     dispatch(assignGameState(gameState));
     dispatch(resetCurrentQuestion(currentQuestion));
@@ -42,10 +42,10 @@ function GameEndWindow(props) {
       </div>
       <div className="row-start-3 row-end-5 flex flex-col justify-self-center md:block">
         <button className="btn-end" type="button" onClick={handlePlayAgain}>
-          <span className="btn-answer-text">Play Again</span>
+          Play Again
         </button>
         <button className="btn-end" type="button" onClick={handleEnd}>
-          <span className="btn-answer-text">End Game</span>
+          End Game
         </button>
       </div>
     </div>

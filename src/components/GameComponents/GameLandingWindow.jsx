@@ -1,6 +1,9 @@
 import React from 'react';
 
-function GameLandingWindow (props) {
+function GameLandingWindow (props) { 
+
+ 
+    const currentGame = window.location.pathname.substring(6)
 
     return (
         <div className={props.cname}>
@@ -10,11 +13,9 @@ function GameLandingWindow (props) {
                     className='btn-answer mx-10 w-72 h-24'
                     type='button'
                     onClick={props.handlePlayGame}>
-                    <span className='btn-answer-text'>Play</span>
+                    <span className='btn-answer-text'>Play {currentGame.toUpperCase()}S</span>
                 </button>
             </div>
-            
-            
         </div>
     )
 }
