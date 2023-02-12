@@ -35,7 +35,7 @@ function FAQ() {
   const content = faqData.map((item) => {
     return (
       <div key={item.id} className="background--shadow mx-auto md:w-11/12">
-        <details id="deets" className="mt-5 mb-5 rounded-lg p-2 text-gray-500 outline outline-2 outline-black hover:bg-gray-200 md:mt-0 md:mb-14 md:p-10">
+        <details className="mt-5 mb-12 rounded-lg p-2 text-gray-500 outline outline-2 outline-black hover:bg-gray-200 md:mt-0 md:mb-14 md:p-10">
           <summary className="cursor-pointer text-dark-grey">
             {item.question}
           </summary>
@@ -46,7 +46,7 @@ function FAQ() {
   });
 
   return (
-    <div className="relative h-screen p-5 md:p-0">
+    <div className="relative p-5 md:p-0">
       <div className="lg:translate-y-30 absolute hidden h-40 w-5 translate-y-20 bg-purple md:block lg:h-60 lg:w-8"></div>
       <div className="absolute right-0 -z-20 hidden h-40 w-4/6 bg-light-orange md:block lg:h-60">
         <img
