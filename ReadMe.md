@@ -35,9 +35,8 @@ The core functionality of Flashy is complete. When initially drafting this idea,
 ## Project Screen Shot(s)
 ---
 
-![Homepage screenshot](https://github.com/chingu-voyages/v42-geckos-team-22/screenshot1.PNG)
-
-![Shapes game screenshot](https://github.com/chingu-voyages/v42-geckos-team-22/screenshot2.PNG)
+![Homepage screenshot](/screenshot1.PNG)
+![Shapes game screenshot](/screenshot2.PNG)
 
    
 
