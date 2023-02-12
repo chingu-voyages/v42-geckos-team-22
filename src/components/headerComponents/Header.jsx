@@ -54,7 +54,7 @@ function Header(props) {
             onMouseLeave={() => setExpandDropDown(false)}
             className="cursor-pointer uppercase"
           >
-            <span className="flex flex-row items-center hover:font-extrabold hover:text-white">
+            <span className="flex flex-row items-center whitespace-nowrap hover:font-extrabold hover:text-white">
               <button className="cursor-pointer pr-1 uppercase">
                 game type
               </button>
@@ -79,7 +79,7 @@ function Header(props) {
             <>
               <button
                 onClick={props.toggleSignInModal}
-                className=" uppercase text-gray-100 hover:font-extrabold hover:text-white md:inline-block"
+                className="whitespace-nowrap uppercase text-gray-100 hover:font-extrabold hover:text-white md:inline-block"
               >
                 Sign In
               </button>

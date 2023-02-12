@@ -46,12 +46,12 @@ function HomePage() {
           </div>
         </div>
         <div className="h-16 w-full place-items-center bg-purple py-1 text-center md:row-span-1 md:grid md:h-full md:border-r-4 md:border-t-4 md:border-b-4 md:border-black md:py-0">
-          <p className="mt-4 text-lg font-bold capitalize text-off-white md:mt-0 md:text-2xl md:font-semibold md:uppercase">
+          <p className="mt-4 whitespace-nowrap text-lg font-bold capitalize text-off-white md:mt-0 md:text-2xl md:font-semibold md:uppercase">
             effective memory-aid tools
           </p>
         </div>
         <div className="mb-10 h-16 w-full bg-dark-grey py-1 text-center md:row-span-1 md:mb-0 md:grid md:h-full md:place-items-center  md:border-t-4 md:border-b-4 md:border-black md:py-0">
-          <p className="mt-4 text-lg font-bold capitalize text-off-white md:mt-0 md:text-2xl md:font-semibold md:uppercase">
+          <p className="mt-4 whitespace-nowrap text-lg font-bold capitalize text-off-white md:mt-0 md:text-2xl md:font-semibold md:uppercase">
             learn new materials quickly
           </p>
         </div>
