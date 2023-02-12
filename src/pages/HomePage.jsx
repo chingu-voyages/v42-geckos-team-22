@@ -1,14 +1,30 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 import homedots from "../assets/homePage/homedots.svg";
 import homewaves from "../assets/homePage/homewaves.svg";
 import animal from "../assets/homePage/animal.svg";
 import shape from "../assets/homePage/shape.svg";
 import number from "../assets/homePage/number.svg";
 import lettercase from "../assets/homePage/lettercase.svg";
+import { assignGameState, resetCurrentQuestion, calculateScore } from "../redux/slices/gameFunctionSlice";
 
 function HomePage() {
   const [seeMore, setSeeMore] = useState(false);
+  const dispatch = useDispatch();
+
+  let gameState = useSelector((state) => state.gameFunction.gameState);
+  let currentQuestion = useSelector(
+    (state) => state.gameFunction.currentQuestion
+  );
+
+  const handleToggleGame = () => {
+    gameState = "landing";
+    currentQuestion = 0;
+    dispatch(assignGameState(gameState));
+    dispatch(resetCurrentQuestion(currentQuestion));
+    dispatch(calculateScore(0));
+  };
 
   return (
     <div className=" h-full md:h-screen">
@@ -58,6 +74,7 @@ function HomePage() {
         <Link
           to="/game/number"
           className="mt-5 mb-16 h-full w-4/6 py-14 ring-4 ring-black md:row-span-3 md:mb-0 md:mt-0 md:grid md:w-full md:place-items-center md:border-r-4 md:border-b-4 md:border-black md:py-0  md:ring-0 "
+          onClick={handleToggleGame}
         >
           <h2 className="text-center text-2xl font-bold uppercase tracking-wide">
             number
@@ -69,6 +86,7 @@ function HomePage() {
         <Link
           to="/game/shape"
           className="mb-16 h-full w-4/6 py-14 ring-4 ring-black md:row-span-3 md:mb-0 md:grid md:w-full md:place-items-center md:border-b-4 md:border-black md:py-0 md:ring-0"
+          onClick={handleToggleGame}
         >
           <h2 className="text-center text-2xl font-bold uppercase tracking-wide">
             shape
@@ -80,6 +98,7 @@ function HomePage() {
         <Link
           to="/game/animal"
           className="mb-16 h-full w-4/6 py-14 ring-4 ring-black md:row-span-3 md:mb-0 md:grid md:w-full md:place-items-center md:border-r-4 md:border-b-4 md:border-black md:py-0 md:ring-0"
+          onClick={handleToggleGame}
         >
           <h2 className="text-center text-2xl font-bold uppercase tracking-wide">
             animal
@@ -91,6 +110,7 @@ function HomePage() {
         <Link
           to="/game/letter"
           className="mb-16 h-full w-4/6 py-14 ring-4 ring-black md:row-span-3 md:mb-0 md:grid md:w-full md:place-items-center md:border-b-4 md:border-black md:py-0 md:ring-0"
+          onClick={handleToggleGame}
         >
           <h2 className="text-center text-2xl font-bold uppercase tracking-wide">
             lettercase

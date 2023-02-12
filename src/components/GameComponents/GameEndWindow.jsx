@@ -13,6 +13,7 @@ function GameEndWindow(props) {
     (state) => state.gameFunction.currentQuestion
   );
   const score = useSelector((state) => state.gameFunction.score);
+  const totalQuestions = useSelector((state) => state.gameFunction.totalQuestions);
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -38,7 +39,7 @@ function GameEndWindow(props) {
     <div className={props.cname}>
       <div className="row-start-1 row-end-2 w-full bg-red-orange" />
       <div className="row-start-2 row-end-3 self-center justify-self-center">
-        <p className="btn-answer-text ">Your Score is: {score}!</p>
+        <p className="btn-answer-text ">Your Score is: {score}/{totalQuestions} points!</p>
       </div>
       <div className="row-start-3 row-end-5 flex flex-col justify-self-center md:block">
         <button className="btn-end" type="button" onClick={handlePlayAgain}>
