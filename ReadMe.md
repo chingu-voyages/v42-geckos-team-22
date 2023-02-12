@@ -10,7 +10,7 @@ This app was part of a 6-week collaborative project, organized by [Chingu](https
 - Elliot | [GitHub](https://github.com/MoxElliot)
 - Eric | [GitHub](https://github.com/E-wang42)
 - Danney | [GitHub](https://github.com/Danneytrieu)
-- Angela Sun Flores | [LinkedIn](https://linkedin.com/in/angela-sun-flores) | [GitHub](https://github.com/valanex)
+- Angela | [LinkedIn](https://linkedin.com/in/angela-sun-flores) | [GitHub](https://github.com/valanex)
 
 ## Tech Stack
 ---
@@ -35,11 +35,10 @@ The core functionality of Flashy is complete. When initially drafting this idea,
 ## Project Screen Shot(s)
 ---
 
+![Homepage screenshot](https://github.com/chingu-voyages/v42-geckos-team-22/screenshot1.PNG)
 
+![Shapes game screenshot](https://github.com/chingu-voyages/v42-geckos-team-22/screenshot2.PNG)
 
-[ PRETEND SCREEN SHOT IS HERE ]
-
-[ PRETEND OTHER SCREEN SHOT IS HERE ]
    
 
 ## Installation and Setup Instructions
@@ -50,11 +49,7 @@ Installation:
 
 `npm install`
 
-To Run Test Suite:
-
-`npm test`
-
 To Start Server:
 
-`npm start`
+`npm run dev`
 
