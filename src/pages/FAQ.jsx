@@ -4,32 +4,38 @@ import faqVector1 from "../assets/faqPage/faqVector1.svg";
 import imgage1 from "../assets/faqPage/faqVector.svg";
 
 function FAQ() {
-  //Update questions and answers here:
+  
   const faqData = [
     {
       id: 1,
-      question: "At vero eos et accusamus et iusto odio dignissimos?",
+      question: "Who are the team behind Flashy?",
       answer:
-        "Ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti occaecati cupiditate nonquos dolores et quas molestias excepturi sint.",
+        `There are 4 team members who built Flashy: Elliot, Eric, Danney, and Angela. Brought together by Chingu, we were officially known as Geckos Team 22.`,
     },
     {
       id: 2,
-      question: "Consequatur aut perferendis doloribus asperiores repellat?",
+      question: "What was the purpose of this project?",
       answer:
-        "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint ut aut reiciendis voluptatibus maiores alias.",
+        "This project was part of Chingu Voyage 42. After brainstorming some ideas, we decided together to create a fun app for children to help improve literacy. This was an idea that we felt was both meaningful and achievable in the given 6-week timeframe. ",
     },
     {
       id: 3,
-      question: "Sed ut perspiciatis unde omnis iste natus error?",
+      question: "What tech stack was used?",
       answer:
-        "Toluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.",
+        "Flashy was built with a combination of: React, Redux Toolkit, React Router, Tailwind, Firebase, Pixabay API, and Vite.",
+    },
+    {
+      id: 4,
+      question: "What was the inspiration for the website design?",
+      answer:
+        "The target audience for Flashy is children, so we needed strong, bright, fun colors. To keep the style modern, we implemented a brutalist design.",
     },
   ];
 
   const content = faqData.map((item) => {
     return (
       <div key={item.id} className="background--shadow mx-auto md:w-11/12">
-        <details className="mt-5 mb-5 rounded-lg p-2 text-gray-500 outline outline-2 outline-black hover:bg-gray-200 md:mt-0 md:mb-14 md:p-10">
+        <details className="mt-5 mb-12 rounded-lg p-2 text-gray-500 outline outline-2 outline-black hover:bg-gray-200 md:mt-0 md:mb-14 md:p-10">
           <summary className="cursor-pointer text-dark-grey">
             {item.question}
           </summary>
@@ -40,7 +46,7 @@ function FAQ() {
   });
 
   return (
-    <div className="relative h-screen p-5 md:p-0 ">
+    <div className="min-h-screen relative p-5 md:p-0">
       <div className="lg:translate-y-30 absolute hidden h-40 w-5 translate-y-20 bg-purple md:block lg:h-60 lg:w-8"></div>
       <div className="absolute right-0 hidden h-40 w-4/6 bg-light-orange md:block lg:h-60">
         <img

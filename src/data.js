@@ -1,7 +1,7 @@
 const dataJson = [
   {
     id: 1,
-    gameType: "number", //use on homepage and nav for game type selection  "one" "two" "three" "four" "five" "six" "seven" "eight" "nine" "zero"
+    gameType: "number", 
     games: [ 
       {
         img: "149956",
@@ -66,12 +66,30 @@ const dataJson = [
   },
   {
     id: 2,
-    gameType: "shape", //use on homepage and nav for game type selection
+    gameType: "shape", 
     games: [
+      {
+        img: "7767636",
+        name: "Triangle",
+        options: ["Arrow", "Oval", "Triangle"],
+        correctAnswer: "Triangle", 
+      },
+      {
+        img: "7767635",
+        name: "Circle",
+        options: ["Circle", "Diamond", "Star"],
+        correctAnswer: "Circle", 
+      },
+      {
+        img: "7767634",
+        name: "Square",
+        options: ["Triangle", "Square", "Oval"],
+        correctAnswer: "Square", 
+      },
       {
         img: "7765866",
         name: "Heart",
-        options: ["Heart", "Square", "Tear Drop"],
+        options: ["Heart", "Star", "Tear Drop"],
         correctAnswer: "Heart", 
       },
       {
@@ -81,7 +99,7 @@ const dataJson = [
         correctAnswer: "Oval", 
       },
       {
-        img: "7765876",
+        img: "7765874",
         name: "Star",
         options: ["Circle", "Star", "Rectangle"],
         correctAnswer: "Star", 
@@ -104,17 +122,11 @@ const dataJson = [
         options: ["Heart", "Arrow", "Triangle"],
         correctAnswer: "Arrow", 
       },
-      {
-        img: "7765875",
-        name: "Rectangle",
-        options: ["Rectangle", "Star", "Oval"],
-        correctAnswer: "Rectangle", 
-      },
     ],
   },
   {
     id: 3,
-    gameType: "animal", //use on homepage and nav for game type selection
+    gameType: "animal", 
     games: [
       {
         img: "159731",

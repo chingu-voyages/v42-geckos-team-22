@@ -1,14 +1,30 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 import homedots from "../assets/homePage/homedots.svg";
 import homewaves from "../assets/homePage/homewaves.svg";
 import animal from "../assets/homePage/animal.svg";
 import shape from "../assets/homePage/shape.svg";
 import number from "../assets/homePage/number.svg";
 import lettercase from "../assets/homePage/lettercase.svg";
+import { assignGameState, resetCurrentQuestion, calculateScore } from "../redux/slices/gameFunctionSlice";
 
 function HomePage() {
   const [seeMore, setSeeMore] = useState(false);
+  const dispatch = useDispatch();
+
+  let gameState = useSelector((state) => state.gameFunction.gameState);
+  let currentQuestion = useSelector(
+    (state) => state.gameFunction.currentQuestion
+  );
+
+  const handleToggleGame = () => {
+    gameState = "landing";
+    currentQuestion = 0;
+    dispatch(assignGameState(gameState));
+    dispatch(resetCurrentQuestion(currentQuestion));
+    dispatch(calculateScore(0));
+  };
 
   return (
     <div className=" h-full md:h-screen">
@@ -46,18 +62,19 @@ function HomePage() {
           </div>
         </div>
         <div className="h-16 w-full place-items-center bg-purple py-1 text-center md:row-span-1 md:grid md:h-full md:border-r-4 md:border-t-4 md:border-b-4 md:border-black md:py-0">
-          <p className="mt-4 text-lg font-bold capitalize text-off-white md:mt-0 md:text-2xl md:font-semibold md:uppercase">
+          <p className="mt-4 whitespace-nowrap text-lg font-bold capitalize text-off-white md:mt-0 md:text-2xl md:font-semibold md:uppercase">
             effective memory-aid tools
           </p>
         </div>
         <div className="mb-10 h-16 w-full bg-dark-grey py-1 text-center md:row-span-1 md:mb-0 md:grid md:h-full md:place-items-center  md:border-t-4 md:border-b-4 md:border-black md:py-0">
-          <p className="mt-4 text-lg font-bold capitalize text-off-white md:mt-0 md:text-2xl md:font-semibold md:uppercase">
+          <p className="mt-4 whitespace-nowrap text-lg font-bold capitalize text-off-white md:mt-0 md:text-2xl md:font-semibold md:uppercase">
             learn new materials quickly
           </p>
         </div>
         <Link
           to="/game/number"
           className="mt-5 mb-16 h-full w-4/6 py-14 ring-4 ring-black md:row-span-3 md:mb-0 md:mt-0 md:grid md:w-full md:place-items-center md:border-r-4 md:border-b-4 md:border-black md:py-0  md:ring-0 "
+          onClick={handleToggleGame}
         >
           <h2 className="text-center text-2xl font-bold uppercase tracking-wide">
             number
@@ -69,6 +86,7 @@ function HomePage() {
         <Link
           to="/game/shape"
           className="mb-16 h-full w-4/6 py-14 ring-4 ring-black md:row-span-3 md:mb-0 md:grid md:w-full md:place-items-center md:border-b-4 md:border-black md:py-0 md:ring-0"
+          onClick={handleToggleGame}
         >
           <h2 className="text-center text-2xl font-bold uppercase tracking-wide">
             shape
@@ -80,6 +98,7 @@ function HomePage() {
         <Link
           to="/game/animal"
           className="mb-16 h-full w-4/6 py-14 ring-4 ring-black md:row-span-3 md:mb-0 md:grid md:w-full md:place-items-center md:border-r-4 md:border-b-4 md:border-black md:py-0 md:ring-0"
+          onClick={handleToggleGame}
         >
           <h2 className="text-center text-2xl font-bold uppercase tracking-wide">
             animal
@@ -91,6 +110,7 @@ function HomePage() {
         <Link
           to="/game/letter"
           className="mb-16 h-full w-4/6 py-14 ring-4 ring-black md:row-span-3 md:mb-0 md:grid md:w-full md:place-items-center md:border-b-4 md:border-black md:py-0 md:ring-0"
+          onClick={handleToggleGame}
         >
           <h2 className="text-center text-2xl font-bold uppercase tracking-wide">
             lettercase
@@ -104,7 +124,7 @@ function HomePage() {
           <>
             <Link
               to="/"
-              className="mb-16 h-full w-4/6 py-14 md:row-span-3 md:mb-0 md:grid md:w-full md:place-items-center md:border-r-4 md:border-black md:py-0 "
+              className="mb-16 h-full w-4/6 py-14 ring-4 ring-black md:row-span-3 md:mb-0 md:grid md:w-full md:place-items-center md:border-r-4 md:border-black md:py-0 md:ring-0"
             >
               <h2 className="text-center text-2xl font-bold uppercase tracking-wide">
                 COMING SOON
@@ -115,7 +135,7 @@ function HomePage() {
             </Link>
             <Link
               to="/"
-              className="mb-16 h-full w-4/6 py-14 md:row-span-3 md:mb-0 md:grid md:w-full md:place-items-center  md:border-black md:py-0 "
+              className="mb-16 h-full w-4/6 py-14 ring-4 ring-black md:row-span-3 md:mb-0 md:grid md:w-full md:place-items-center md:border-black  md:py-0 md:ring-0 "
             >
               <h2 className="text-center text-2xl font-bold uppercase tracking-wide">
                 COMING SOON
