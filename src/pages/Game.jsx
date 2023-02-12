@@ -17,7 +17,6 @@ function Game(props) {
  
   const handlePlayGame = () => {
       dispatch(assignGameState("loading"))
-      console.log("game mode", gameState)
   }
   return (
     <div className="grid h-screen grid-rows-3">
