@@ -15,13 +15,13 @@ export default function SignInModal({
   const [leftArmStyle, setLeftArmStyle] = React.useState({
     position: "absolute",
     top: "-8rem",
-    left: "-7rem",
+    left: "-5.3rem",
     transition: "800ms ease all",
   });
   const [rightArmStyle, setRightArmStyle] = React.useState({
     position: "absolute",
-    top: "-10rem",
-    right: "-7rem",
+    top: "-9.4rem",
+    right: "-5rem",
     transform: "rotate(45deg)",
     transition: "800ms ease all",
   });
@@ -40,8 +40,11 @@ export default function SignInModal({
             className="border-8 relative flex flex-col items-center justify-center rounded-xl bg-white  py-14 px-20 text-dark-grey"
           >
             <div className="relative flex flex-col space-y-2">
-              <img src={foxHead} alt="fox head" className="absolute -top-60 " />
-              <img src={foxLeftArm} alt="fox left arm" style={leftArmStyle} />
+              <img src={foxHead} alt="fox head" className="absolute -top-52 " />
+              <img 
+                src={foxLeftArm} 
+                alt="fox left arm" 
+                style={leftArmStyle} />
               <img
                 src={foxRightArm}
                 alt="fox right arm"
@@ -50,12 +53,12 @@ export default function SignInModal({
               <img
                 src={foxLeftLeg}
                 alt="fox left leg"
-                className="absolute -left-10 -bottom-28 -z-10 h-56"
+                className="absolute -left-12 -bottom-28 -z-10 h-56"
               />
               <img
                 src={foxRightLeg}
                 alt="fox right leg"
-                className="absolute -right-1 -bottom-28 -z-10 h-56"
+                className="absolute -right-14 -bottom-28 -z-10 h-56"
               />
               <label className="font-bold" htmlFor="username">
                 Email:
