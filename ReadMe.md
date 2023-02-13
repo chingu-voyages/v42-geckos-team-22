@@ -7,8 +7,8 @@ Flashy was designed as a fun and simple game to aid literacy in young children.
 
 This app was part of a 6-week collaborative project, organized by [Chingu](https://chingu.io) and developed by Geckos Team 22. The team members, in no particular order, are:
 
-- Elliot | [GitHub](https://github.com/MoxElliot)
-- Eric | [GitHub](https://github.com/E-wang42)
+- Elliot | [LinkedIn](https://www.linkedin.com/in/elliot-e-7a786822a/) | [GitHub](https://github.com/MoxElliot)
+- Eric | [LinkedIn](https://www.linkedin.com/in/ewang42/) | [GitHub](https://github.com/E-wang42)
 - Danney | [LinkedIn](https://www.linkedin.com/in/danneytrieu) | [GitHub](https://github.com/Danneytrieu)
 - Angela | [LinkedIn](https://linkedin.com/in/angela-sun-flores) | [GitHub](https://github.com/valanex)
 
