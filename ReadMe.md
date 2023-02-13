@@ -12,7 +12,8 @@ This app was part of a 6-week collaborative project, organized by [Chingu](https
 - Danney | [LinkedIn](https://www.linkedin.com/in/danneytrieu) | [GitHub](https://github.com/Danneytrieu)
 - Angela | [LinkedIn](https://linkedin.com/in/angela-sun-flores) | [GitHub](https://github.com/valanex)
 
-## Figma design
+## Figma Design
+---
 [LINK](https://www.figma.com/file/OAKUcYBLP3UOaRlnKrcf1G/FLASHCARD-GAME-APP?node-id=1%3A4&t=kC80RcSCPyy504z6-1)
 
 ## Tech Stack
